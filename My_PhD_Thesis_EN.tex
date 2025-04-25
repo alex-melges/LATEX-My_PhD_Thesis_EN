@@ -1,0 +1,298 @@
+\documentclass[12pt,oneside]{book}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{color}
+\usepackage{amscd,amsfonts,amssymb,amsmath,amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[all]{xy}
+\usepackage{enumerate}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{makeidx}
+\usepackage[backend=biber,style=numeric,sorting=nyt]{biblatex}
+
+\addbibresource{referencias.bib}
+
+\geometry{textwidth=150mm,textheight=247mm,top=30mm,bottom=30mm,left=30mm,right=30mm,headsep=10mm,
+footskip=10mm}
+
+
+\pagestyle{fancy}
+\fancyhead[LO]{\rightmark}
+\fancyhead[RO]{\thepage}
+\fancyfoot[C]{\empty}
+
+\makeindex
+
+\newtheorem{defi}   {Definition}[chapter]
+\newtheorem{teo}    {Theorem}[chapter]
+\newtheorem{ex}     {Example}[chapter]
+\newtheorem{prop}   {Proposition}[chapter]
+\newtheorem{lem}    {Lemma}[chapter]
+\newtheorem{cor}    {Corollary}[chapter]
+\newtheorem{obs}    {Observation}[chapter]
+\newtheorem{conj}	{Conjecture}
+
+\newcommand{\ds}{\displaystyle}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\RP}{\mathbb{R}P}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\ccup}{\smile}
+\newcommand{\ccap}{\frown}
+\newcommand{\tensor}{\otimes}
+\newcommand{\wt}{\widetilde}
+
+
+
+
+
+\begin{document}
+
+
+
+
+
+\fontfamily{ptm}\selectfont
+
+\begin{titlepage}
+    \begin{center}
+        \textbf{FEDERAL UNIVERSITY OF SÃO CARLOS}
+    \end{center}
+
+    \vspace{-0.8cm}
+
+    \begin{center}  
+        \fontsize{10}{12}\selectfont CENTER OF EXACT SCIENCES AND TECHNOLOGY
+    \end{center}
+
+    \vspace{-0.8cm}
+
+    \begin{center}
+        \fontsize{10}{12}\selectfont GRADUATE PROGRAM IN MATHEMATICS
+    \end{center}
+
+    \vspace{3cm}
+
+    \begin{center}
+        \small{Alex Melges Barbosa}
+    \end{center}
+
+    \vspace{3cm}
+
+    \begin{center}
+        \Large{\textbf{Characteristic Classes of \\ Topological and Generalized Manifolds}}
+    \end{center}
+
+    \vspace{10cm}
+
+    \begin{center}
+        São Carlos - SP
+    \end{center}
+
+    \vspace{-0.8cm}
+
+    \begin{center}
+        2022
+    \end{center}
+\end{titlepage}
+
+
+
+\newpage
+\thispagestyle{empty}
+
+\begin{center}
+    \small{Alex Melges Barbosa}
+\end{center}
+
+\vspace{3cm}
+
+\begin{center}
+    \Large{\textbf{Characteristic Classes of \\ Topological and Generalized Manifolds}}
+\end{center}
+
+\vspace{2cm}
+
+\begin{flushright}
+    \begin{minipage}{0.55\textwidth}
+        Thesis submitted to the Graduate Program in Mathematics at the Federal University of São Carlos 
+        as part of the requirements for the degree of PhD in Mathematics \\[0.5cm] 
+        Advisor: Prof. Dr. Edivaldo Lopes dos Santos
+    \end{minipage}
+\end{flushright}
+
+\vfill
+
+\begin{center}
+    São Carlos - SP
+\end{center}
+
+\vspace{-0.8cm}
+
+\begin{center}
+    2022
+\end{center}
+
+
+
+\newpage
+\thispagestyle{empty}
+
+\vspace{\fill}
+
+\begin{flushright}
+    \begin{minipage}{5cm}
+        \begin{flushright}
+            \vspace{22cm}\textit{To my parents \\ Antonio Carlos and Edith \\ and my siblings \\ 
+            Carol and André.}
+        \end{flushright}
+    \end{minipage}
+\end{flushright}
+
+
+
+\newpage
+\chapter*{Acknowledgements}
+\thispagestyle{empty}
+\
+
+First of all, I would like to thank God for the opportunities and doors that have opened throughout my 
+11-year academic journey, spanning my undergraduate, master’s, and doctoral degrees. There have been 
+many moments—both good and challenging—that have shaped me into the person and professional I am today.
+
+I would also like to express my gratitude to my parents, Antonio Carlos and Edith, and my siblings, 
+Carol and André, who have been my unwavering support every day.
+
+A special thanks goes to two individuals who have been my mentors throughout this process: Edivaldo and 
+João Peres. They have not only helped shape me into the mathematician I am today but, more importantly, 
+have played a key role in shaping the person I’ve become. Thank you both very much.
+
+Last but not least, I want to thank my friends, who have been like a second family to me during this 
+long journey. There’s no need for me to mention them by name, as only those who have lifted me up during 
+my stumbles and celebrated my successes with me truly understand the depth of my gratitude and affection 
+for them.
+
+This work was supported financially by CAPES.
+
+
+
+\vspace{2cm}
+
+\begin{center}
+    \begin{minipage}{10cm}
+        \textit{In memory of my father, Antonio Carlos Barbosa. Unfortunately, you couldn't be 
+        physically present on the day of my defense, but you certainly were and will always be present 
+        in the hearts of our entire family. Thank you for everything!}
+    \end{minipage}
+\end{center}
+
+
+
+\newpage
+\thispagestyle{empty}
+
+\begin{flushright}
+    \begin{minipage}{7cm}
+        \begin{flushright}
+            \vspace{22cm}\textit{Either you have a strategy, or you're part of someone else's strategy.}
+
+            \vspace{0.2cm} Alvin Toffler
+        \end{flushright}
+    \end{minipage}
+\end{flushright}
+
+
+
+\chapter*{Abstract}
+\thispagestyle{empty}
+
+In this work, we will initially present generalized bundles, a concept developed by Fadell with the 
+objective of generalizing vector bundles, Stiefel-Whitney classes and Wu's formula from the context of 
+smooth manifolds to topological manifolds. After that, we will use the generalized bundles to obtain 
+original results of Thom, Stiefel-Whitney, Wu and Euler classes of topological manifolds, as well as 
+present a second proof of Wu's formula for topological manifolds and the topological version of the 
+Poincaré-Hopf theorem. Finally, we will use the Poincaré and Poincaré-Lefschetz dualities to more 
+comprehensively construct the Stiefel-Whitney classes of generalized manifolds in order to present, 
+for the first time in the literature, a proof of the Wu's formula for such manifolds.
+
+\
+
+\noindent Keywords: characteristic classes, generalized bundles, topological manifolds, generalized 
+manifolds, Wu's formula.
+
+
+
+\tableofcontents
+\thispagestyle{empty}
+
+\listoffigures
+\thispagestyle{empty}
+
+
+
+\chapter*{List of notations}
+\thispagestyle{empty}
+
+\begin{enumerate}
+	\item Saying that $f:X\to Y$ is a map means the same as $f$ being a continuous function between 
+    topological spaces.
+    \item $f:X \rightleftarrows Y:g$ denotes two maps when $f:X\to Y$ and $g:Y\to X$, not necessarily 
+    inverses of each other.
+	\item $1:X\to X$ denotes the identity map on $X$.
+	\item $f^{-1}$ denotes the preimage of a map $f$, as well as its inverse map (when it exists).
+	\item If $f:X\to Y$ is a map, then $f(\_)$ denotes $f(x)$ for every $x\in X$.
+	\item If $H:X\times Y\to Z$ is a map defined on a Cartesian product, then $H(\_,y)$ denotes $H(x,y)$ 
+    for every $x\in X$. The same applies for $H(x,\_)$.
+    
+	\item $p_{i}:X_{1}\times \cdots\times X_{n}\to X_{i}$ denota a projeção no $i-$ésimo fator.
+	\item $d:X\to X\times X$ denota a aplicação diagonal\index{aplicação!diagonal} dada por $d(x)=(x,x)$.
+	\item Dizer que $U\subset X$ é uma vizinhança aberta de algum subconjunto $A\subset X$ significa o mesmo que $U$ ser um subespaço aberto de $X$ que contem A.
+	\item Dizer que $\mathcal{U}$ é uma cobertura aberta de um espaço topológico $B$ significa o mesmo que dizer que $\mathcal{U}=\{ U\subset B \}$, de modo que $U\subset B$ é um subespaço aberto de $B$ para todo $U\in\mathcal{U}$ e $\ds\bigcup_{U\in\mathcal{U}}U=B$.
+	\item $X \approx Y$ denota quando dois espaços topológicos são homeomorfos.
+	\item $f \sim g$ denota quando duas funções são homotópicas.
+	\item $X\sim Y$ denota quando dois espaços topológicos tem o mesmo tipo de homotopia.
+	\item $G_{1}\cong G_{2}$ denota quando dois objetos algébricos são, apropriadamente, isomorfos.
+	\item $\mathbb{S}^{n-1}=\{ x\in\R^{n} \ : \ \| x \|=1 \}$ 	.
+	\item $D^{n}=\{ x\in\R^{n} \ : \ \| x \|\leq1 \}$.
+	\item $B^{n}=\{ x\in\R^{n} \ : \ \| x \|<1 \}$.								
+	\item $I=[0,1]\subset \R$.														
+	\item $X^{I}$ denota o espaço topológico dos caminhos em $X$.
+	\item $\Omega(X,x_{0})=\{ \omega\in X^{I} \ : \ \omega(0)=\omega(1)=x_{0} \}$
+	\item $H_{k}(X,A;R)$ e $H^{k}(X,A;R)$ denotam os $k-$ésimos $R-$módulos de homologia e cohomologia singular, respectivamente, do par $(X,A)$ com coeficientes em um anel $R$ comutativo e com unidade.
+	\item $H_{k}^{c}(X,A;R)$ e $H^{k}_{c}(X,A;R)$ denotam, respectivamente, os $k-$ésimos $R-$módulos de homologia e cohomologia singular com suporte compacto.
+	\item $\wt{H}_{k}(X,A;R)$ e $\wt{H}^{k}(X,A;R)$ denotam, respectivamente, os $k-$ésimos $R-$módulos de homologia e cohomologia singular reduzidos.
+	\item $\check{H}^{k}(X,A;R)$ denota o $k-$ésimo $R-$módulo de cohomologia de \v{C}ech.
+	\item $H^{k}(X,A;R)=(x)$ denota que o $k-$ésimo $R-$módulo de cohomologia do par $(X,A)$ é gerado pelo elemento $x\in H^{k}(X,A;R)$. O mesmo para módulos de homologia.
+	\item se $x\in H^{k}(X,A;R)$, então denotamos $|x|=k$. O mesmo para módulos de homologia.
+	\item $<,>:H^{k}(X,A;R)\tensor H_{k}(X,A;R)\to R$, que associa $\varphi\tensor\sigma\mapsto <\varphi,\sigma>$, denota o produto de Kronecker.
+	\item $\ccap:H_{k}(X,A\cup B;R)\tensor H^{l}(X,A;R)\to H_{k-l}(X,B;R)$, que associa $\sigma\tensor\varphi\mapsto\sigma\ccap\varphi$, denota o produto cap.
+	\item $\ccup:H^{k}(X,A;R)\tensor H^{l}(X,B;R)\to H^{k+l}(X,A\cup B;R)$, que associa $\varphi\tensor\psi\mapsto\varphi\ccup\psi$, denota o produto cup.
+	\item $\times:H^{k}(X,A;R)\tensor H^{l}(Y,B;R)\to H^{k+l}(X\times Y,(X\times B)\cup(A\times Y);R)$, que associa $\varphi\tensor\psi\mapsto\varphi\times\psi$, denota o produto cross.
+	\thispagestyle{empty}
+\end{enumerate}
+
+
+
+\chapter{Introduction}
+\thispagestyle{empty}
+
+
+
+
+    %\printbibliography
+    %\printindex
+
+    \newpage
+    \addcontentsline{toc}{chapter}{Reference Index}
+    \thispagestyle{empty}
+    \printindex
+
+
+
+
+
+\end{document}
