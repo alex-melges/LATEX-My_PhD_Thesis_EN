@@ -13,6 +13,10 @@
 \usepackage{tabularx}
 \usepackage{makeidx}
 \usepackage[backend=biber,style=numeric,sorting=nyt]{biblatex}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\definecolor{navyblue}{rgb}{0.0, 0.0, 0.5}
 
 \addbibresource{referencias.bib}
 
@@ -56,29 +60,63 @@ footskip=10mm}
 
 
 
-\fontfamily{ptm}\selectfont
+    \fontfamily{ptm}\selectfont
 
-\begin{titlepage}
-    \begin{center}
-        \textbf{FEDERAL UNIVERSITY OF SÃO CARLOS}
-    \end{center}
+    \begin{titlepage}
+        \begin{center}
+            \textbf{FEDERAL UNIVERSITY OF SÃO CARLOS}
+        \end{center}
 
-    \vspace{-0.8cm}
+        \vspace{-0.8cm}
 
-    \begin{center}  
-        \fontsize{10}{12}\selectfont CENTER OF EXACT SCIENCES AND TECHNOLOGY
-    \end{center}
+        \begin{center}  
+            \fontsize{10}{12}\selectfont CENTER OF EXACT SCIENCES AND TECHNOLOGY
+        \end{center}
 
-    \vspace{-0.8cm}
+        \vspace{-0.8cm}
 
-    \begin{center}
-        \fontsize{10}{12}\selectfont GRADUATE PROGRAM IN MATHEMATICS
-    \end{center}
+        \begin{center}
+            \fontsize{10}{12}\selectfont GRADUATE PROGRAM IN MATHEMATICS
+        \end{center}
 
-    \vspace{3cm}
+        \vspace{3cm}
+
+        \begin{center}
+            \small{Alex Melges Barbosa}
+        \end{center}
+
+        \vspace{3cm}
+
+        \begin{center}
+            \Large{\textbf{Characteristic Classes of \\ Topological and Generalized Manifolds}}
+        \end{center}
+
+        \vspace{10cm}
+
+        \begin{center}
+            São Carlos - SP/Brazil
+        \end{center}
+
+        \vspace{-0.8cm}
+
+        \begin{center}
+            2022
+        \end{center}
+    \end{titlepage}
+
+
+
+    \newpage
+    \thispagestyle{empty}
 
     \begin{center}
         \small{Alex Melges Barbosa}
+
+        \scriptsize{\href{mailto:exemplo@dominio.com}{\textcolor{navyblue}{melges.ab@gmail.com}}}
+
+        \scriptsize{\href{https://www.linkedin.com/in/alexmelgesbarbosa/}{ \textcolor{navyblue}{LinkedIn profile}}}
+
+        \scriptsize{\href{https://github.com/alex-melges}{\textcolor{navyblue}{GitHub profile}}}
     \end{center}
 
     \vspace{3cm}
@@ -87,10 +125,22 @@ footskip=10mm}
         \Large{\textbf{Characteristic Classes of \\ Topological and Generalized Manifolds}}
     \end{center}
 
-    \vspace{10cm}
+    \vspace{2cm}
+
+    \begin{flushright}
+        \begin{minipage}{0.55\textwidth}
+            Thesis submitted to the Graduate Program in Mathematics at the Federal University of 
+            São Carlos as part of the requirements for the degree of PhD in Mathematics \\[0.5cm] 
+            Advisor: Prof. Dr. Edivaldo Lopes dos Santos
+
+            \hspace{1.7cm}\scriptsize{\href{mailto:exemplo@dominio.com}{\textcolor{navyblue}{edivaldo@ufscar.br}}}
+        \end{minipage}
+    \end{flushright}
+
+    \vfill
 
     \begin{center}
-        São Carlos - SP
+        São Carlos - SP/Brazil
     \end{center}
 
     \vspace{-0.8cm}
@@ -98,193 +148,583 @@ footskip=10mm}
     \begin{center}
         2022
     \end{center}
-\end{titlepage}
 
 
 
-\newpage
-\thispagestyle{empty}
+    \newpage
+    \thispagestyle{empty}
 
-\begin{center}
-    \small{Alex Melges Barbosa}
-\end{center}
+    \vspace{\fill}
 
-\vspace{3cm}
-
-\begin{center}
-    \Large{\textbf{Characteristic Classes of \\ Topological and Generalized Manifolds}}
-\end{center}
-
-\vspace{2cm}
-
-\begin{flushright}
-    \begin{minipage}{0.55\textwidth}
-        Thesis submitted to the Graduate Program in Mathematics at the Federal University of São Carlos 
-        as part of the requirements for the degree of PhD in Mathematics \\[0.5cm] 
-        Advisor: Prof. Dr. Edivaldo Lopes dos Santos
-    \end{minipage}
-\end{flushright}
-
-\vfill
-
-\begin{center}
-    São Carlos - SP
-\end{center}
-
-\vspace{-0.8cm}
-
-\begin{center}
-    2022
-\end{center}
+    \begin{flushright}
+        \begin{minipage}{5cm}
+            \begin{flushright}
+                \vspace{22cm}\textit{To my parents \\ Antonio Carlos and Edith \\ and my siblings \\ 
+                Carol and André.}
+            \end{flushright}
+        \end{minipage}
+    \end{flushright}
 
 
 
-\newpage
-\thispagestyle{empty}
+    \newpage
+    \chapter*{Acknowledgements}
+    \thispagestyle{empty}
+    \
 
-\vspace{\fill}
+    First of all, I would like to thank God for the opportunities and doors that have opened throughout 
+    my 11-year academic journey, spanning my undergraduate, master’s, and doctoral degrees. There have 
+    been many moments—both good and challenging—that have shaped me into the person and professional I 
+    am today.
 
-\begin{flushright}
-    \begin{minipage}{5cm}
-        \begin{flushright}
-            \vspace{22cm}\textit{To my parents \\ Antonio Carlos and Edith \\ and my siblings \\ 
-            Carol and André.}
-        \end{flushright}
-    \end{minipage}
-\end{flushright}
+    I would also like to express my gratitude to my parents, Antonio Carlos and Edith, and my siblings, 
+    Carol and André, who have been my unwavering support every day.
 
+    A special thanks goes to two individuals who have been my mentors throughout this process: Edivaldo 
+    and João Peres. They have not only helped shape me into the mathematician I am today but, more 
+    importantly, have played a key role in shaping the person I’ve become. Thank you both very much.
 
+    Last but not least, I want to thank my friends, who have been like a second family to me during this 
+    long journey. There’s no need for me to mention them by name, as only those who have lifted me up 
+    during my stumbles and celebrated my successes with me truly understand the depth of my gratitude 
+    and affection for them.
 
-\newpage
-\chapter*{Acknowledgements}
-\thispagestyle{empty}
-\
-
-First of all, I would like to thank God for the opportunities and doors that have opened throughout my 
-11-year academic journey, spanning my undergraduate, master’s, and doctoral degrees. There have been 
-many moments—both good and challenging—that have shaped me into the person and professional I am today.
-
-I would also like to express my gratitude to my parents, Antonio Carlos and Edith, and my siblings, 
-Carol and André, who have been my unwavering support every day.
-
-A special thanks goes to two individuals who have been my mentors throughout this process: Edivaldo and 
-João Peres. They have not only helped shape me into the mathematician I am today but, more importantly, 
-have played a key role in shaping the person I’ve become. Thank you both very much.
-
-Last but not least, I want to thank my friends, who have been like a second family to me during this 
-long journey. There’s no need for me to mention them by name, as only those who have lifted me up during 
-my stumbles and celebrated my successes with me truly understand the depth of my gratitude and affection 
-for them.
-
-This work was supported financially by CAPES.
+    This work was supported financially by CAPES.
 
 
 
-\vspace{2cm}
+    \vspace{2cm}
 
-\begin{center}
-    \begin{minipage}{10cm}
-        \textit{In memory of my father, Antonio Carlos Barbosa. Unfortunately, you couldn't be 
-        physically present on the day of my defense, but you certainly were and will always be present 
-        in the hearts of our entire family. Thank you for everything!}
-    \end{minipage}
-\end{center}
-
-
-
-\newpage
-\thispagestyle{empty}
-
-\begin{flushright}
-    \begin{minipage}{7cm}
-        \begin{flushright}
-            \vspace{22cm}\textit{Either you have a strategy, or you're part of someone else's strategy.}
-
-            \vspace{0.2cm} Alvin Toffler
-        \end{flushright}
-    \end{minipage}
-\end{flushright}
+    \begin{center}
+        \begin{minipage}{10cm}
+            \textit{In memory of my father, Antonio Carlos Barbosa. Unfortunately, you couldn't be 
+            physically present on the day of my defense, but you certainly were and will always be 
+            present in the hearts of our entire family. Thank you for everything!}
+        \end{minipage}
+    \end{center}
 
 
 
-\chapter*{Abstract}
-\thispagestyle{empty}
+    \newpage
+    \thispagestyle{empty}
 
-In this work, we will initially present generalized bundles, a concept developed by Fadell with the 
-objective of generalizing vector bundles, Stiefel-Whitney classes and Wu's formula from the context of 
-smooth manifolds to topological manifolds. After that, we will use the generalized bundles to obtain 
-original results of Thom, Stiefel-Whitney, Wu and Euler classes of topological manifolds, as well as 
-present a second proof of Wu's formula for topological manifolds and the topological version of the 
-Poincaré-Hopf theorem. Finally, we will use the Poincaré and Poincaré-Lefschetz dualities to more 
-comprehensively construct the Stiefel-Whitney classes of generalized manifolds in order to present, 
-for the first time in the literature, a proof of the Wu's formula for such manifolds.
+    \begin{flushright}
+        \begin{minipage}{7cm}
+            \begin{flushright}
+                \vspace{22cm}\textit{Either you have a strategy, or you're part of someone else's 
+                strategy.}
 
-\
-
-\noindent Keywords: characteristic classes, generalized bundles, topological manifolds, generalized 
-manifolds, Wu's formula.
+                \vspace{0.2cm} Alvin Toffler
+            \end{flushright}
+        \end{minipage}
+    \end{flushright}
 
 
 
-\tableofcontents
-\thispagestyle{empty}
+    \chapter*{Abstract}
+    \thispagestyle{empty}
 
-\listoffigures
-\thispagestyle{empty}
+    In this work, we will first present generalized fiber bundles, a concept developed by Fadell with the aim 
+    of generalizing vector bundles, Stiefel-Whitney classes, and Wu's formula from the context of smooth 
+    manifolds to topological manifolds. After that, we will use generalized fiber bundles to obtain original 
+    results concerning the Thom, Stiefel-Whitney, Wu, and Euler classes of topological manifolds, as 
+    well as to provide a second proof of Wu's formula for topological manifolds and to establish the 
+    topological version of the Poincaré-Hopf Theorem. Finally, we will use Poincaré and 
+    Poincaré-Lefschetz dualities to construct the Stiefel-Whitney classes of generalized manifolds in a 
+    broader manner, aiming to present, for the first time in the literature, a proof of Wu's formula 
+    for such manifolds.
+
+    \
+
+    \noindent Keywords: characteristic classes, generalized fiber bundles, topological manifolds, generalized 
+    manifolds, Wu's formula.
 
 
 
-\chapter*{List of notations}
-\thispagestyle{empty}
+    \tableofcontents
+    \thispagestyle{empty}
 
-\begin{enumerate}
-	\item Saying that $f:X\to Y$ is a map means the same as $f$ being a continuous function between 
-    topological spaces.
-    \item $f:X \rightleftarrows Y:g$ denotes two maps when $f:X\to Y$ and $g:Y\to X$, not necessarily 
-    inverses of each other.
-	\item $1:X\to X$ denotes the identity map on $X$.
-	\item $f^{-1}$ denotes the preimage of a map $f$, as well as its inverse map (when it exists).
-	\item If $f:X\to Y$ is a map, then $f(\_)$ denotes $f(x)$ for every $x\in X$.
-	\item If $H:X\times Y\to Z$ is a map defined on a Cartesian product, then $H(\_,y)$ denotes $H(x,y)$ 
-    for every $x\in X$. The same applies for $H(x,\_)$.
+    \listoffigures
+    \thispagestyle{empty}
+
+
+
+    \chapter*{List of Notations}
+    \thispagestyle{empty}
+
+    \begin{enumerate}
+        \item Saying that $f:X\to Y$ is a map means the same as saying that $f$ is a continuous function 
+        between topological spaces.
+        \item $f:X \rightleftarrows Y:g$ denotes two maps when $f:X\to Y$ and $g:Y\to X$, not necessarily 
+        inverses of each other. 
+        \item $1:X\to X$ denotes the identity map on $X$.
+        \item $f^{-1}$ denotes the preimage of a map $f$, as well as its inverse mapping (when it exists).
+        \item If $f:X\to Y$ is a map, then $f(\_)$ denotes $f(x)$ for every $x\in X$.
+        \item If $H:X\times Y\to Z$ is a map defined on a Cartesian product, then $H(\_,y)$ denotes 
+        $H(x,y)$ for every $x\in X$. The same holds for $H(x,\_)$.
+        \item $p_{i}:X_{1}\times \cdots\times X_{n}\to X_{i}$ denotes the projection on the $i$-th factor.
+        \item $d:X\to X\times X$ denotes the diagonal map\index{diagonal!map} given by $d(x)=(x,x)$.
+        \item Saying that $U\subset X$ is an open neighborhood of some subset $A\subset X$ means the 
+        same as saying that $U$ is an open subspace of $X$ that contains $A$.
+        \item Saying that $\mathcal{U}$ is an open cover of a topological space $B$ means the same as 
+        saying that $\mathcal{U}=\{ U\subset B \}$, such that $U\subset B$ is an open subspace of $B$ 
+        for every $U\in\mathcal{U}$ and $\ds\bigcup_{U\in\mathcal{U}}U=B$.  
+        \item $X \approx Y$ denotes when two topological spaces are homeomorphic.
+        \item $f \sim g$ denotes when two maps are homotopic.
+        \item $X\sim Y$ denotes when two topological spaces have the same type of homotopy.
+        \item $G_{1}\cong G_{2}$ denotes when two algebraic objects are, appropriately, isomorphic.
+        \item $\mathbb{S}^{n-1}=\{ x\in\R^{n} \ : \ \| x \|=1 \}$.
+        \item $D^{n}=\{ x\in\R^{n} \ : \ \| x \|\leq1 \}$.
+        \item $B^{n}=\{ x\in\R^{n} \ : \ \| x \|<1 \}$.
+        \item $I=[0,1]\subset \R$.
+        \item $X^{I}$ denotes the topological space of paths in $X$.
+        \item $\Omega(X,x_{0})=\{ \omega\in X^{I} \ : \ \omega(0)=\omega(1)=x_{0} \}$.
+        \item $H_{k}(X,A;R)$ and $H^{k}(X,A;R)$ denote the $k$-th $R$-modules of singular homology and 
+        cohomology, respectively, of the pair $(X,A)$ with coefficients in a commutative ring $R$ with 
+        unity.
+        \item $H_{k}^{c}(X,A;R)$ and $H^{k}_{c}(X,A;R)$ denote, respectively, the $k$-th $R$-modules of 
+        singular homology and cohomology with compact support.
+        \item $\wt{H}_{k}(X,A;R)$ and $\wt{H}^{k}(X,A;R)$ denote, respectively, the $k$-th $R$-modules of 
+        reduced singular homology and cohomology.
+        \item $\check{H}^{k}(X,A;R)$ denotes the $k$-th $R$-module of Čech cohomology.
+        \item $H^{k}(X,A;R)=(x)$ denotes that the $k$-th $R$-module of cohomology of the pair $(X,A)$ is 
+        generated by the element $x\in H^{k}(X,A;R)$. The same applies for homology modules.
+        \item If $x\in H^{k}(X,A;R)$, then we denote $|x|=k$. The same applies for homology modules.
+        \item $<,>:H^{k}(X,A;R)\tensor H_{k}(X,A;R)\to R$ denotes the Kronecker product, which maps 
+        $\varphi\tensor\sigma\mapsto <\varphi,\sigma>$.
+        \item $\ccap:H_{k}(X,A\cup B;R)\tensor H^{l}(X,A;R)\to H_{k-l}(X,B;R)$ denotes the cap product, 
+        which maps $\sigma\tensor\varphi\mapsto\sigma\ccap\varphi$.
+        \item $\ccup:H^{k}(X,A;R)\tensor H^{l}(X,B;R)\to H^{k+l}(X,A\cup B;R)$ denotes the cup product, 
+        which maps $\varphi\tensor\psi\mapsto\varphi\ccup\psi$.
+        \item $\times:H^{k}(X,A;R)\tensor H^{l}(Y,B;R)\to H^{k+l}(X\times Y,(X\times B)\cup(A\times Y);R)$ 
+        denotes the cross product, which maps $\varphi\tensor\psi\mapsto\varphi\times\psi$.
+        \thispagestyle{empty}
+    \end{enumerate}
+
+
+
+    \chapter{Introduction}
+    \thispagestyle{empty}
+
+    \
+
+    \textit{"Between the 4th and 10th of September 1935, during the International Congress of Topology 
+    held in Moscow, several works were presented that would forever change the future of Algebraic 
+    Topology, with some of these works now considered foundational research lines in this theory. 
+    Among these works, we can mention:
+        \begin{itemize}
+            \item The introduction by Witold Hurewicz to homotopy groups.
+            \item The lectures by Heinz Hopf and Hassler Whitney on vector fields and sphere bundles, 
+            which initiated the study of vector bundles and, consequently, characteristic classes.
+            \item The independent introductions by James Alexander and Andrei Kolmogorov to cohomology 
+            theory, as well as the cup product."
+        \end{itemize}}
     
-	\item $p_{i}:X_{1}\times \cdots\times X_{n}\to X_{i}$ denota a projeção no $i-$ésimo fator.
-	\item $d:X\to X\times X$ denota a aplicação diagonal\index{aplicação!diagonal} dada por $d(x)=(x,x)$.
-	\item Dizer que $U\subset X$ é uma vizinhança aberta de algum subconjunto $A\subset X$ significa o mesmo que $U$ ser um subespaço aberto de $X$ que contem A.
-	\item Dizer que $\mathcal{U}$ é uma cobertura aberta de um espaço topológico $B$ significa o mesmo que dizer que $\mathcal{U}=\{ U\subset B \}$, de modo que $U\subset B$ é um subespaço aberto de $B$ para todo $U\in\mathcal{U}$ e $\ds\bigcup_{U\in\mathcal{U}}U=B$.
-	\item $X \approx Y$ denota quando dois espaços topológicos são homeomorfos.
-	\item $f \sim g$ denota quando duas funções são homotópicas.
-	\item $X\sim Y$ denota quando dois espaços topológicos tem o mesmo tipo de homotopia.
-	\item $G_{1}\cong G_{2}$ denota quando dois objetos algébricos são, apropriadamente, isomorfos.
-	\item $\mathbb{S}^{n-1}=\{ x\in\R^{n} \ : \ \| x \|=1 \}$ 	.
-	\item $D^{n}=\{ x\in\R^{n} \ : \ \| x \|\leq1 \}$.
-	\item $B^{n}=\{ x\in\R^{n} \ : \ \| x \|<1 \}$.								
-	\item $I=[0,1]\subset \R$.														
-	\item $X^{I}$ denota o espaço topológico dos caminhos em $X$.
-	\item $\Omega(X,x_{0})=\{ \omega\in X^{I} \ : \ \omega(0)=\omega(1)=x_{0} \}$
-	\item $H_{k}(X,A;R)$ e $H^{k}(X,A;R)$ denotam os $k-$ésimos $R-$módulos de homologia e cohomologia singular, respectivamente, do par $(X,A)$ com coeficientes em um anel $R$ comutativo e com unidade.
-	\item $H_{k}^{c}(X,A;R)$ e $H^{k}_{c}(X,A;R)$ denotam, respectivamente, os $k-$ésimos $R-$módulos de homologia e cohomologia singular com suporte compacto.
-	\item $\wt{H}_{k}(X,A;R)$ e $\wt{H}^{k}(X,A;R)$ denotam, respectivamente, os $k-$ésimos $R-$módulos de homologia e cohomologia singular reduzidos.
-	\item $\check{H}^{k}(X,A;R)$ denota o $k-$ésimo $R-$módulo de cohomologia de \v{C}ech.
-	\item $H^{k}(X,A;R)=(x)$ denota que o $k-$ésimo $R-$módulo de cohomologia do par $(X,A)$ é gerado pelo elemento $x\in H^{k}(X,A;R)$. O mesmo para módulos de homologia.
-	\item se $x\in H^{k}(X,A;R)$, então denotamos $|x|=k$. O mesmo para módulos de homologia.
-	\item $<,>:H^{k}(X,A;R)\tensor H_{k}(X,A;R)\to R$, que associa $\varphi\tensor\sigma\mapsto <\varphi,\sigma>$, denota o produto de Kronecker.
-	\item $\ccap:H_{k}(X,A\cup B;R)\tensor H^{l}(X,A;R)\to H_{k-l}(X,B;R)$, que associa $\sigma\tensor\varphi\mapsto\sigma\ccap\varphi$, denota o produto cap.
-	\item $\ccup:H^{k}(X,A;R)\tensor H^{l}(X,B;R)\to H^{k+l}(X,A\cup B;R)$, que associa $\varphi\tensor\psi\mapsto\varphi\ccup\psi$, denota o produto cup.
-	\item $\times:H^{k}(X,A;R)\tensor H^{l}(Y,B;R)\to H^{k+l}(X\times Y,(X\times B)\cup(A\times Y);R)$, que associa $\varphi\tensor\psi\mapsto\varphi\times\psi$, denota o produto cross.
-	\thispagestyle{empty}
-\end{enumerate}
+    \
+    
+    In this work, we will contribute to the theory of characteristic classes, more specifically, 
+    characteristic classes of topological and generalized manifolds.
+    
+    After this historical context on the emergence of characteristic class theory, we will begin 
+    introducing the basic concepts used for the development of this work.
+    
+    In 1955, Nash introduced in \cite{nash} the concept that would become known as the field of 
+    non-singular paths of a topological manifold, which can be understood as the topological version of 
+    a non-zero vector field. Essentially, Nash showed that given a smooth manifold $M$ and fixing a 
+    point $b\in M$, the space of non-zero tangent vectors of $M$ at $b$ can also be defined from the 
+    topological viewpoint, up to a homotopy equivalence, as the set:
+    $$\{ \omega \in M^{I} : \omega(t) = b \Leftrightarrow t = 0 \}$$
+
+    \
+    
+    A decade later, in 1965, Fadell defined in \cite{fadell_1} generalized fiber bundles, a concept that 
+    not only generalized vector bundles, but also allowed the extension, through Nash's ideas in 
+    \cite{nash}, of the notions of tangent and normal fiber bundles from the context of smooth manifolds 
+    to topological manifolds. Furthermore, Fadell constructed the Stiefel-Whitney classes of generalized 
+    fiber bundles in order to obtain Whitney's duality for specific topological embeddings and to prove 
+    the Wu formula for topological manifolds.
+    
+    The theory developed by Fadell in \cite{fadell_1} will serve as the foundation for the development 
+    of our entire work, which can be divided into two parts:
+        \begin{itemize}
+            \item The first part will consist of chapters \ref{cap_fib}, \ref{cap_clas_carac}, and 
+            \ref{cap_aplic}. These chapters can be interpreted as a modern re-reading of the results 
+            obtained by Fadell in \cite{fadell_1}, as well as a continuation of the same, since we will 
+            present additional results both on generalized fiber bundles themselves and on Thom, 
+            Stiefel-Whitney, Euler, and Wu classes of topological manifolds.
+            \item The second part of this work will consist solely of chapter \ref{cap_wu_gen}, in which 
+            we will construct more extensively the Stiefel-Whitney classes of generalized manifolds in 
+            order to present for the first time in the literature a proof of the Wu formula for such 
+            manifolds.
+        \end{itemize}
+    
+    Now, we will look in more detail at how we will organize the structure of our work, pointing out our 
+    contributions and the relevance of the results that will be presented here.
+    
+    In chapter \ref{cap_fib}, we will begin our work by presenting the studies conducted on generalized 
+    fiber bundles\index{generalized!fiber bundle}, a tool developed by Fadell in \cite{fadell_1}, which 
+    not only generalized the concepts of tangent and normal vector bundles from the context of smooth 
+    manifolds to topological manifolds, but also allowed him to define the 
+    Stiefel-Whitney\index{Stiefel-Whitney!class} classes and prove Whitney's 
+    duality\index{Whitney!duality} and the Wu formula\index{Wu!formula} for the context of topological 
+    manifolds\index{topological!manifold}.
+    
+    Concatenating definitions \ref{PLH}, \ref{defi_par-fib}, and \ref{defi_fib_gen}, we can define a 
+    generalized fiber bundle more directly as follows:
+
+    \
+
+        \textbf{Definition. } \textit{Given $E$ and $B$ topological spaces, $E_{0}\subset E$ and 
+        $p:E\to B$ a onto map, we call the pair $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,B)$ an 
+        $\R^{n}-$generalized fiber bundle when:
+            \hspace{1cm}\begin{enumerate}
+                \item For any maps $h:X\to E$ and $H:X\times I\to B$, such that $H(\_,0)=p\circ h$, 
+                there exists a map $\wt{H}:X\times I\to E$ such that $\wt{H}(\_,0)=h$ and 
+                $p\circ\wt{H}=H$.
+                \item If $x_{0}\in X$ is such that $h(x_{0})\in E_{0}$, then $\wt{H}(x_{0},\_)\in E_{0}$.
+                \item There exists a map $s:B\to E$ such that $E_{0}=E-s(B)$.
+                \item For all $b\in B$, $(p^{-1}(b),p^{-1}(b)\bigcap E_{0})\sim (\R^{n},\R^{n}-\{0\})$.
+            \end{enumerate}}
+    
+    \
+
+    With this definition, we can interpret a generalized fiber bundle as a fibration with the following 
+    characteristics:
+        \begin{itemize}
+            \item The total space is a pair of topological spaces.
+            \item There is always at least one global section.
+            \item The fiber behaves, up to homotopy equivalence, like a Euclidean space.
+        \end{itemize}
+    
+    \
+    
+    During the reading of Chapter \ref{cap_fib}, the reader will notice that the development of the 
+    chapter will not be as straightforward compared to the definition above, since our main goal 
+    will be to present the theory of generalized fiber bundles in a more detailed way and using a more 
+    modern language than the results presented by Fadell in the first half of \cite{fadell_1}.
+
+    More explicitly, we will show in Example \ref{fht_fv} how generalized fiber bundles indeed generalize 
+    vector bundles, and in Proposition \ref{iso_fv_fht} how the notion of isomorphism between vector 
+    bundles remains valid when extended to the category of generalized fiber bundles. We will also show that 
+    it is possible to construct new generalized fiber bundles from others, just as it happens with vector 
+    bundles, for example: restriction bundles, product bundles, and Whitney sum bundles.
+
+    Although Chapter \ref{cap_fib} is a preliminary chapter, we will contribute with original results 
+    concerning the pullback generalized fiber bundle, which was developed by Brown in \cite{brown} but was 
+    neither cited nor used by Fadell in \cite{fadell_1}. These results will prove to be quite relevant 
+    when we use them in the construction of some maps regarding characteristic classes of topological 
+    manifolds in Chapters \ref{cap_clas_carac} and \ref{cap_aplic}.
+
+    \
+
+    In Chapter \ref{cap_clas_carac}, we will address the topic of characteristic classes of generalized 
+    bundles and topological manifolds, more specifically, Thom classes, Stiefel-Whitney classes, and 
+    Euler classes. Initially, we will introduce the notion of $R$-orientability of generalized fiber bundles, 
+    where $R$ is a commutative ring with unity, and their respective Thom classes, concepts originally 
+    proposed by Fadell in \cite{fadell_1}, but little explored by him, since the main topic developed 
+    in the second half of \cite{fadell_1} was about Stiefel-Whitney classes, in which case orientability 
+    is not a concern.
+
+    Thus, we will detail a little more the definition of $R$-orientability of generalized fiber bundles and 
+    present some technical results on the behavior of Thom classes under pullback and product generalized 
+    bundles, as well as show what happens when we reverse the orientability of a generalized fiber bundle and 
+    the relation between the dimension of a $\Z$-orientable topological manifold and the Thom class of 
+    its tangent generalized fiber bundle. Even though these results are already known in the context of vector 
+    bundles and smooth manifolds, they can be considered original since they have not yet been described 
+    in the context of generalized fiber bundles and topological manifolds.
+
+    The second topic we will address in Chapter \ref{cap_clas_carac} will be about Stiefel-Whitney 
+    classes. The purpose of this topic will be to rewrite the main properties and consequences of these 
+    classes, already widespread in the literature, for the context of generalized fiber bundles and topological 
+    manifolds, following the same steps used by Milnor in (\cite{milnor_1}, Chapter 8) for vector bundles 
+    and smooth manifolds. In doing so, we will offer a broader, more modern, and detailed reinterpretation 
+    of the results proposed by Fadell in the second half of \cite{fadell_1}. Our contributions to this 
+    topic will involve results concerning pullback generalized fiber bundles.
+
+    The third and last topic addressed in Chapter \ref{cap_clas_carac} will be about Euler classes. 
+    Differently from Stiefel-Whitney classes, Euler classes can only be defined for $\Z$-orientable 
+    generalized fiber bundles. Thus, due to the technical lemmas related to Thom classes of $\Z$-orientable 
+    generalized fiber bundles obtained at the beginning of Chapter \ref{cap_clas_carac}, we will be able to 
+    conclude several consequences and applications concerning Euler classes of generalized fiber bundles and 
+    $\Z$-orientable topological manifolds. In this topic, except for Proposition \ref{euler_2}, all other 
+    results will be original, being generalizations of known results about Euler classes for vector 
+    bundles and smooth manifolds. Among these generalizations, we highlight:
+
+    \
+
+    \textbf{Proposition 3.7.} \textit{Let $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,B)$ be an 
+    $\R^{n}$-generalized fiber bundle that is $\Z$-orientable. If $(\mathcal{F},\mathcal{F}_{0})$ admits a 
+    section $s:B\to E$ such that $s(B)\subset E_{0}$, then 
+    $e(\mathcal{F},\mathcal{F}_{0})=0$.}\footnote{$e(\mathcal{F},\mathcal{F}_{0})$ will denote the Euler 
+    class of the generalized fiber bundle $(\mathcal{F},\mathcal{F}_{0})$.}
+
+    The proposition above, in its version for vector bundles, is widely known, as it allows interpreting 
+    the Euler class of a vector bundle as an obstruction to the existence of a nowhere-vanishing section. 
+    In this work, we will present the generalized version of this interpretation, which will allow us to 
+    obtain the main application related to the Euler class in Chapter \ref{cap_aplic}, the topological 
+    version of the Poincaré-Hopf theorem.
+
+    Up to this point, the reader should already have noticed the main goal of Chapters \ref{cap_fib} and 
+    \ref{cap_clas_carac} of our work, which is to structure in detail and using a more up-to-date 
+    language the theory of generalized fiber bundles and their characteristic classes, while also presenting 
+    several technical contributions, aiming to generalize applications regarding characteristic classes 
+    of smooth manifolds to the context of topological manifolds, as we will see next.
+
+    \
+
+    The conclusion of our work regarding characteristic classes of generalized fiber bundles will be presented 
+    in Chapter \ref{cap_aplic}, where we will present three major applications with original technical 
+    proofs concerning Stiefel-Whitney, Euler, and Wu classes of closed topological manifolds. Initially, 
+    we will present an alternative proof of the topological version of the famous Wu formula, which 
+    relates the Stiefel-Whitney and Wu classes of a smooth manifold through Steenrod squares.
+
+    In \cite{fadell_1}, Fadell uses generalized fiber bundles to give a first proof of Wu's formula for 
+    topological manifolds, based on the techniques used by Milnor in (\cite{milnor_2}, Chapter 9). 
+    Furthermore, the preliminary results that Fadell develops to prove Wu's formula are all in the 
+    framework of singular (co)homology $\Z_{2}$-modules. Meanwhile, the alternative proof of Wu's 
+    formula for topological manifolds that we will present in Chapter \ref{cap_aplic} will be based on 
+    different techniques also introduced by Milnor, now found in (\cite{milnor_1}, Chapter 11).
+
+    Comparing the proofs presented by us in this work and by Fadell in \cite{fadell_1}, the main 
+    differences will be found in the preliminary lemmas used in Wu's formula, as we will prove them in 
+    the framework of singular (co)homology $R$-modules with $R=\Z$ or $R=\Z_{2}$. Since we will use the 
+    same sequence of results employed by Milnor in \cite{milnor_1}, now using generalized fiber bundles 
+    instead of vector bundles, our main contribution will be obtaining the case $R=\Z$ of the following 
+    result:
+
+    \
+
+    \textbf{Lemma 4.1.} \textit{Let $M^{m}$ be a closed, connected, $R$-orientable topological manifold 
+    with $R=\Z$ or $R=\Z_{2}$, $b\in M$ arbitrary, 
+    $j_{b}:(M,M-\{b\})\hookrightarrow (M\times M,(M\times M)-\Delta)$ the canonical inclusion, 
+    $[M]_{b}\in H_{m}(M,M-\{b\};R)$ the local $R$-orientation class of $M$ at $b$, and 
+    $(\tau')\in H^{m}(M\times M,(M\times M)-\Delta;R)$ the generator uniquely defined by the Thom class 
+    of the tangent generalized fiber bundle of $M$. Then:
+        $$ <j_{b}^{*}(\tau'),[M]_{b}>=1\in R $$}
+    
+    \
+
+    The proof of the lemma above, in its version for smooth manifolds, can be found in (\cite{milnor_1}, 
+    Lemma 11.7, p. 123), where the Riemannian structure of the manifold and the existence of the 
+    exponential map are used, whereas our proof will be entirely algebraic, allowing generalization to 
+    the context of topological manifolds, which will be crucial for the topological applications of the 
+    Euler class.
+
+    The second application of Chapter \ref{cap_aplic} will concern Euler classes. In fact, we will 
+    present two applications on this topic, one being the relation between the Euler class and the Euler 
+    characteristic of a topological manifold, and the other being the topological version of the 
+    Poincaré-Hopf theorem. The reader will notice the importance of the $R=\Z$ case of Lemma 4.1 for the 
+    first application, whose statement is as follows:
+
+    \
+
+    \textbf{Theorem 4.2. }\textit{If $M$ is a closed, connected, and $\Z$-orientable topological 
+    manifold, then\footnote{$e(M)$, $[M]$, and $\chi(M)$ will denote, respectively, the Euler class, 
+    the global orientation class, and the Euler characteristic of the manifold $M$.}:
+    $$ <e(M),[M]>=\chi(M> $$}
+
+    \
+
+    For the second map involving the Euler class, we will need to define the concept of a path field on 
+    a topological manifold, which was introduced by Nash in \cite{nash} as follows:
+    
+    \
+
+    \textbf{Definition 4.1. }\textit{A path field on a topological manifold $M$ is any section of its 
+    generalized fiber bundle $(\tau M,\tau_{0}M)=(TM,T_{0}M,p,M)$. Moreover, a nonsingular path field on $M$ 
+    is a section $s:M\to TM$ such that $s(M)\subset T_{0}M$.}
+
+    \
+
+    As we will show in Chapter \ref{cap_aplic}, generalized fiber bundles will allow us to generalize the 
+    notion of nowhere-vanishing vector fields from the smooth manifold context to the topological 
+    manifold setting, since a smooth manifold admits a nowhere-vanishing vector field if and only if it 
+    admits a nonsingular path field. With that, we will be able to prove the topological version of the 
+    Poincaré-Hopf theorem, whose statement is:
+
+    \
+
+    \textbf{Theorem 4.3. }\textit{Let $M$ be a closed, connected, and $\Z$-orientable topological 
+    manifold. If $M$ admits a nonsingular path field, then $\chi(M)=0$.}
+
+    \
+
+    This result was first presented by Brown in \cite{brown}, using essentially Lefschetz numbers in his 
+    proof. In our work, we will present an alternative proof of this result using the Euler class.
+
+    As the final map in Chapter \ref{cap_aplic}, we will see how some technical results about generalized 
+    bundles will allow us to prove the following:
+
+    \
+    
+    \textbf{Theorem 4.4. }\textit{If $i:M^{m}\hookrightarrow S^{m+k}$ is a locally flat 
+    embedding\footnote{A locally flat embedding is a topological embedding that locally behaves like a 
+    smooth embedding, whose formal definition can be found in Definition 2.14.} between closed, 
+    connected topological manifolds with trivial normal generalized fiber bundle, then:\footnote{$v(M)$ and 
+    $v(S)$ will denote, respectively, the total Wu classes of $M$ and $S$.}
+    $$v(M)=i^{*}(v(S))$$}
+
+    \
+    
+    At first glance, the theorem above seems quite clear and straightforward, since if we replace the 
+    total Wu classes with the total Stiefel-Whitney classes, this result becomes an immediate consequence 
+    of Whitney duality. However, upon closer examination of the proof of Theorem 4.4 in its version for 
+    vector bundles and smooth manifolds, as given by Stong in \cite{stong} and presented in more detail 
+    in \cite{joao}, it becomes evident that the proof makes direct use of the existence of a tubular 
+    neighborhood for smooth embeddings.
+
+    Since we cannot guarantee the existence of a tubular neighborhood in the topological context, our 
+    main contribution was to circumvent this problem using only results about generalized fiber bundles, 
+    showing that the existence of a tubular neighborhood is not essential, but rather certain algebraic 
+    consequences of a locally flat embedding.
+
+    \
+    
+    In the last chapter of our work, Chapter \ref{cap_wu_gen}, we will present for the first time in the 
+    literature a proof of Wu's formula in the context of generalized manifolds, using their Poincaré and 
+    Poincaré-Lefschetz dualities. To this end, we will begin the chapter with a brief summary, based 
+    on \cite{biasi}, \cite{denise}, and \cite{bredon_2}, about the concept of generalized manifolds. 
+    More explicitly, the constructions in this chapter will be carried out for $\Z_{2}$-homological 
+    ENR-manifolds, which are particular generalized manifolds. For convenience, we will continue to 
+    refer to these spaces simply as generalized manifolds.
+
+    In this initial summary, we will see that generalized manifolds are essentially topological spaces 
+    that behave like topological manifolds in the realm of singular (co)homology $\Z_{2}$-modules. In 
+    particular, we will be able to construct the Wu classes for such manifolds, as well as their Poincaré 
+    and Poincaré-Lefschetz dualities.
+
+    After establishing these objects, we will associate to each embedding $s:M^{m}\to N^{2m}$ between 
+    compact, connected generalized manifolds, such that there exists a retraction\footnote{That is, 
+    $p\circ s=1$.} $p:N\to M$, its transfer isomorphism given by the following composition of the 
+    Poincaré-Lefschetz duality of the embedding $s$ with the Poincaré duality of the manifold $M$:
+    $$ \xymatrix @C=0.5cm {
+    s_{!}:H_{k}(N,N-M;\Z_{2}) \ar[rrr]^-{\mathcal{D}^{-1}_{N,M}} &&& H^{2m-k}(M;\Z_{2}) \ar[rrr]^-{\mathcal{D}_{M}} &&& H_{k-m}(M;\Z_{2})
+    } $$
+
+    \
+
+    Thus, the transfer isomorphism associated to the embedding $s$ will allow us to define the Thom class 
+    also associated to the embedding $s$ as the generator: 
+    $$(\tau_{s})=H^{m}(N,N-M;\Z_{2})$$
+
+    \
+
+    Inspired by the techniques presented by Dold in (\cite{dold}, Chapter 8), we will demonstrate that the homomorphism 
+    $\phi_{s}:H^{k}(M;\Z_{2})\to H^{k+m}(N,N-M;\Z_{2})$ given by $\phi_{s}(x)=p^{*}(x)\ccup \tau_{s}$ is, in fact, the dualization 
+    (via Universal Coefficients) of the transfer isomorphism $s_{!}$.
+
+    Having done this, we will call $\phi_{s}$ the Thom isomorphism associated to the embedding $s$ and 
+    define the $k$-th Stiefel-Whitney class associated to the embedding $s$ as:
+
+    $$ w_{k}(s)=\phi_{s}^{-1}\circ Sq^{k}(\tau_{s})\in H^{k}(M;\Z_{2}) $$
+
+    \
+
+    In particular, we will define the $k$-th Stiefel-Whitney class of a generalized manifold $M$ as 
+    the $k$-th Stiefel-Whitney class associated to the embedding given by the diagonal map 
+    $d:M\to M\times M$. Moreover, to ensure that this definition is indeed well-defined, we will use 
+    some results about generalized fiber bundles presented in Chapter \ref{cap_aplic} to show in Theorem 5.5 
+    that, in the context of topological manifolds, the definition of Stiefel-Whitney classes via 
+    generalized fiber bundles coincides with the definition we propose via the Stiefel-Whitney classes 
+    associated to the embedding given by the diagonal map.
+
+    Finally, motivated by the techniques presented by Bredon in (\cite{bredon}, Chapter 6), we will 
+    conclude Chapter \ref{cap_wu_gen}, and consequently our work, by showing that it is possible to 
+    obtain Wu's formula for generalized manifolds using our definition of Stiefel-Whitney classes 
+    associated to the embedding given by the diagonal map of a generalized manifold.
+
+    Since Biasi, Daccach, and Saeki defined in \cite{biasi} the Stiefel-Whitney classes of generalized 
+    manifolds as Wu's formula itself and presented several results in this context, we highlight the 
+    originality of Chapter \ref{cap_wu_gen} where we define the Stiefel-Whitney classes for generalized 
+    manifolds in an alternative way and prove Wu's formula for such manifolds.
+
+    \
+    
+    We will conclude the introduction chapter of our work with the words of Massey, which can be found 
+    in (\cite{james}, Chapter 21), providing additional historical context for the emergence of 
+    characteristic classes:
+
+    \
+
+    \begin{center}
+        \begin{minipage}{12cm}
+            \textit{"At the 1935 conference in Moscow, Hopf presented the work of one of his students, 
+            Stiefel, whose publication appeared only in the following year. In this work, Stiefel 
+            defined certain homology classes of a smooth manifold that, in modern language, are the 
+            Poincaré-dual classes of the Stiefel-Whitney classes of the tangent vector bundle. His 
+            method consisted of constructing, through a very geometric process, the cycles that 
+            represented these homology classes."}
+        \end{minipage}
+    \end{center}
+
+    \vspace{0.5cm}
+
+    \begin{center}
+        \begin{minipage}{12cm}
+            \textit{"Whitney gave a lecture at the Moscow conference entitled 'Sphere spaces,' which we 
+            now call sphere bundles. These two lectures, and the subsequent papers, marked the beginning 
+            of work on the general topic of vector bundles. The most important invariants of vector 
+            bundles are generally various characteristic classes, but always cohomology classes."}
+            \begin{flushright}
+                William S. Massey
+            \end{flushright}
+        \end{minipage}
+    \end{center}
+
+    
+
+    \chapter{Bundles}\label{cap_fib}
+    \thispagestyle{empty}
+
+    \
+
+    We will begin this work by presenting the so-called generalized fiber bundles\index{generalized!fiber bundle}, a 
+    tool developed by Fadell in \cite{fadell_1} with the purpose of defining the Stiefel-Whitney 
+    classes\index{Stiefel-Whitney!class} and proving Whitney's duality\index{Whitney!duality} and Wu's 
+    formula\index{Wu!formula} in the context of topological manifolds\index{topological!manifold}.
+
+    At first, in Section \ref{secao_fib_vet}, we will review specific concepts about vector bundles in 
+    order to fix notation and clarify to the reader how vector bundles will be naturally generalized 
+    throughout this chapter.
+
+    After that, Section \ref{secao_fib_pares} will serve as an intermediate step for defining generalized 
+    bundles and for presenting the results that will be shown in Section \ref{secao_fib_gener} in a 
+    clearer and more succinct way.
+
+    Finally, in Section \ref{secao_fib_gener}, we will find the definition and properties involving 
+    generalized fiber bundles, almost all of which are taken from \cite{fadell_1}.
+
+    As will be explained in Observation \ref{obs_varied_bordo}, every topological manifold mentioned 
+    throughout this work will be assumed to be a manifold without boundary.
 
 
 
-\chapter{Introduction}
-\thispagestyle{empty}
+    \chapter{Characteristic Classes of Topological Manifolds}\label{cap_clas_carac}
+    \thispagestyle{empty}
 
+
+
+    \chapter{Applications in Closed Topological Manifolds}\label{cap_aplic}
+    \thispagestyle{empty}
+
+
+
+    \chapter{Characteristic Classes of Generalized Manifolds}\label{cap_wu_gen}
+    \thispagestyle{empty}
+
+
+
+    \appendix
+
+    \chapter{Singular (Co)homology}\label{ap_(co)_sing}
+    \thispagestyle{empty}
 
 
 
     %\printbibliography
     %\printindex
+
+
 
     \newpage
     \addcontentsline{toc}{chapter}{Reference Index}

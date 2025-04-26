@@ -9,3 +9,8 @@ My thesis had two main objectives. The work was initially based on the paper *"G
 In this project, we rewrite some results from Fadell's paper using more modern language and current tools, aiming to present additional results about the Thom, Stiefel-Whitney, Euler, and Wu classes of topological manifolds. We also provide a second proof of Wu's formula for topological manifolds and, using the Euler class, we demonstrate the topological version of the Poincaré-Hopf Theorem.
 
 Additionally, the work aimed to define the Stiefel-Whitney classes for generalized manifolds through the Poincaré and Poincaré-Lefschetz dualities. For the first time in the literature, we present a proof of Wu's formula for these manifolds.
+
+## Where to Find the Thesis
+
+The English (en-US) version of my PhD thesis is available on arXiv at the following link:  
+[Link to arXiv (to be updated soon)](#)
