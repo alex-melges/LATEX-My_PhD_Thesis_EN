@@ -146,7 +146,7 @@ footskip=10mm}
     \vspace{-0.8cm}
 
     \begin{center}
-        2022
+        03/24/2022
     \end{center}
 
 
@@ -719,7 +719,715 @@ footskip=10mm}
     \chapter{Singular (Co)homology}\label{ap_(co)_sing}
     \thispagestyle{empty}
 
+    \
 
+    In order to keep this work concise, yet complete and self-explanatory, we will use this appendix as 
+    a brief review of some well-known concepts from Algebraic Topology.
+
+    When referring simultaneously to the singular homology and cohomology modules, for convenience, we 
+    will simply write singular (co)homology modules\index{singular (co)homology}. Thus, we ask the 
+    reader to already be familiar with the concepts of these theories.
+    
+    \section{Main results}\label{ap_principais_res}
+    
+    We will use this section to state general results on singular (co)homology that will be useful for 
+    the development of this work and for a better understanding of the constructions made in the 
+    following sections of this appendix.
+    
+    \begin{teo}{\bf (Universal Coefficients)\index{theorem!of Universal Coefficients}}
+        Let $(X,A)$ be any pair of topological spaces. Then:
+        \begin{enumerate}
+            \item \textbf{(general case for homology)\footnote{Can be found in (\cite{hatcher}, 
+            Corollary 3A.4, p. 264).}} If $H_{k}(X,A;\Z)$ is a free 
+            module\footnote{A module is called free if it admits a basis.}\index{module!free} for 
+            all $k\geq 0$ or $R$ is a free module, then:
+            $$ H_{k}(X,A;R)\cong H_{k}(X,A;\Z)\tensor R, \ \forall k\geq 0 $$
+            \item \textbf{(general case for cohomology)\footnote{Can be found in (\cite{hatcher}, 
+            Theorem 3.2, p. 195).}} If $H_{k}(X,A;\Z)$ is a free module for all $k\geq 0$, then:
+            $$ H^{k}(X,A;R)\cong Hom(H_{k}(X,A;\Z);R), \ \forall k\geq 0 $$
+            \item \textbf{(particular case)\footnote{Can be found in (\cite{hatcher}, p. 198).}} 
+            If $\mathbb{F}$ is a field, then the Kronecker product ensures that:
+            $$ H^{k}(X,A;\F)\cong Hom(H_{k}(X,A;\F);\F), \ \forall k\geq 0 $$
+        \end{enumerate}
+        For $R=\Z$ in case 2 or $R=\F$ in case 3, the isomorphism is given by the relation 
+        $x\in H^{k}(X,A;R)\mapsto\overline{x}(a)=<x,a>\in R$.
+    \end{teo}
+    
+    \begin{teo}{\bf (Künneth Formula)\index{formula!of Künneth}}
+        Let $X$ and $Y$ be any topological spaces and $R$ a finitely generated principal ideal 
+        domain\index{principal ideal domain}. Then:
+        \begin{enumerate}
+            \item \textbf{(case for absolute cohomology)\footnote{Can be found in (\cite{spanier}, 
+            Theorem 1, p. 249).}} If all the singular homology $R$-modules of $Y$ are finitely 
+            generated\index{module!finitely generated}, then:
+            $$ H^{k}(X\times Y;R)\cong \ds\bigoplus_{i+j=k}\left[ H^{i}(X;R)\tensor H^{j}(Y;R)\right], \ 
+            \forall k\geq 0 $$
+            \item \textbf{(case for absolute homology)\footnote{Can be found in (\cite{spanier}, 
+            Theorem 10, p. 235).}}
+            $$ H_{k}(X\times Y;R)\cong \ds\bigoplus_{i+j=k}\left[ H_{i}(X;R)\tensor H_{j}(Y;R)\right], \ 
+            \forall k\geq 0 $$
+        \end{enumerate}
+    \end{teo}
+    
+    The proofs of the general cases of the Universal Coefficients Theorem can be found in (\cite{spanier}, 
+    Chapter 5, Sections 2 and 5).
+    
+    The proofs of the Künneth formulas, in their general versions for pairs, can be found in 
+    (\cite{spanier}, Chapter 5, Sections 3 and 5).
+    
+    Now, let us briefly review some properties about the cap\index{product!cap}, cup\index{product!cup}, 
+    cross\index{product!cross}, and Kronecker\index{product!Kronecker} products.
+
+    \begin{lem}\label{propriedades_produtos}
+        Let $X$, $X'$, $Y$, and $Y'$ be arbitrary topological spaces, $f:X\to X'$ and $g:Y\to Y'$ any 
+        maps, $p_{1}:X\times Y\to X$ and $p_{2}:X\times Y\to Y$ the canonical projections, and 
+        $d:X\to X\times X$ the diagonal map\index{map!diagonal}. If $a\in H_{q}(X;R)$, $b\in H_{r}(Y;R)$, 
+        $x\in H^{i}(X;R)$, $x_{1}\in H^{i_{1}}(X;R)$, $x_{2}\in H^{i_{2}}(X;R)$, $y\in H^{j}(Y;R)$, 
+        $y_{1}\in H^{j_{1}}(Y;R)$, $y_{2}\in H^{j_{2}}(Y;R)$, $a'\in H_{q'}(X;R)$, $x'\in H^{i'}(X';R)$, 
+        $x'_{1}\in H^{i_{1}'}(X';R)$, $x'_{2}\in H^{i_{2}'}(X';R)$, $y'\in H^{j'}(Y';R)$, then:
+    
+        \begin{enumerate}
+            \item $1\ccup x=x=x\ccup 1$
+            \item $0\ccup x=0=x\ccup 0$
+            \item $x_{1}\ccup x_{2}=0$ \  $\Longleftrightarrow$ \ $x_{1}=0$ or $x_{2}=0$, when $R=\Z_{2}$
+            \item $a\ccap 1=a$
+            \item $x_{1}\ccup x_{2}=(-1)^{|x_{1}|.|x_{2}|}(x_{2}\ccup x_{1})$
+            \item $(a\ccap x_{1})\ccap x_{2}=a\ccap (x_{2}\ccup x_{1})$
+            \item $(x_{1}\times y_{1})\ccup (x_{2}\times y_{2})=(-1)^{|y_{1}|.|x_{2}|}(x_{1}\ccup x_{2})\times (y_{1}\ccup y_{2})$
+            \item $(a\times b)\ccap (x\times y)=(-1)^{|a|.(|y|-|b|)}(a\ccap x)\times (b\ccap y)$
+            \item $<x_{1}\ccup x_{2},a>=<x_{1},a\ccap x_{2}>$
+            \item $<x\times y,a\times b>=(-1)^{|x|.|y|}<x,a>.<y,b>$
+            \item $p_{1}^{*}(x)=x\times 1$ and $p_{2}^{*}(y)=1\times y$
+            \item $x\times y=p_{1}^{*}(x)\ccup p_{2}^{*}(y)$
+            \item $x_{1}\ccup x_{2}=d^{*}(x_{1}\times x_{2})$
+            \item $f_{*}(a\ccap f^{*}(x'))=f_{*}(a)\ccap x'$
+            \item $(f\times g)^{*}(x'\times y')=f^{*}(x')\times g^{*}(y')$
+            \item $f^{*}(x'_{1}\ccup x'_{2})=f^{*}(x'_{1})\ccup f^{*}(x'_{2})$
+            \item $<f^{*}(x'),a>=<x',f_{*}(a)>$
+            \item $<(f^{*})^{-1}(x),a'>=<x,(f_{*})^{-1}(a')>$, if $f^{*}$ and $f_{*}$ are isomorphisms.
+        \end{enumerate}
+    \end{lem}
+    
+    The properties in the lemma above can be found, in their general versions for pairs, in 
+    (\cite{spanier}, Chapter 5).
+    
+    Moreover, item 16 of Lemma \ref{propriedades_produtos} admits a particular case when involving the 
+    inclusion map, in the following sense:
+    
+    \begin{lem}\label{propriedades_produtos_2}
+        Let $(X,A)$ and $j:X\hookrightarrow (X,A)$ be an arbitrary pair of topological spaces and the 
+        canonical inclusion, respectively. Then, for any $x_{1}\in H^{i_{1}}(X;R)$ and $x_{2}\in H^{i_{2}}(X,A;R)$, 
+        we have:
+        $$ j^{*}(x_{1}\ccup x_{2})=x_{1}\ccup j^{*}(x_{2}) $$
+    \end{lem}
+    
+    The proof of the lemma above can also be found in (\cite{spanier}, Chapter 5).
+    
+    That said, item 14 of Lemma \ref{propriedades_produtos} admits the following particular case:
+
+    \begin{lem}\label{propriedades_produtos_3}
+        Let $(X,A)$ be any pair of topological spaces and let $j:X\hookrightarrow (X,A)$ be the canonical inclusion. Then, for any 
+        $x\in H^{i_{1}}(X,A;R)$ and $a\in H_{i_{2}}(X;R)$, we have:
+        $$
+        j_{*}(a)\ccap x = a\ccap j^{*}(x)
+        $$
+    \end{lem}
+    
+    \begin{proof}
+
+        \
+
+        It suffices to observe that, for any $y\in H^{i_{2}-i_{1}}(X;R)$, we have:
+
+        \
+        
+        $\begin{array}{rl}
+            \langle y, j_{*}(a)\ccap x \rangle & = \langle y\ccup x, j^{*}(a) \rangle \\
+            & = \langle j^{*}(y\ccup x), a \rangle \\
+            & = \langle y\ccup j^{*}(x), a \rangle \\
+            & = \langle y, a\ccap j^{*}(x) \rangle
+        \end{array}$
+
+        \
+
+        \
+    
+        Thus, the Universal Coefficient Theorem ensures that $j_{*}(a)\ccap x = a\ccap j^{*}(x)$.
+    \end{proof}
+    
+    Now, also due to the Universal Coefficient Theorem\index{theorem!Universal Coefficient}, the 
+    following result is a direct consequence of (\cite{hungerford}, Theorem 4.11, p. 204):
+    
+    \begin{prop}\label{prop_alg_comut}
+        Let $R=\mathbb{Z}$ or $R=\mathbb{F}$ be any field, and let $(X,A)$ be any pair of topological 
+        spaces such that $H_{k}(X,A;R)$ is a finitely generated 
+        $R$-module\index{module!finitely generated} for all $k\geq 0$. Then, for any $k\geq 0$, 
+        $\alpha\in R$ and $a\in H_{k}(X,A;R)$ with $a\neq 0$, there exists a unique $x\in H^{k}(X,A;R)$ 
+        such that $x\neq 0$ and $\langle x, a \rangle = \alpha$.
+    \end{prop}
+    
+    Proceeding, we will construct the cohomology ring of a pair $(X,A)$.
+    
+    \begin{defi}{\bf (Cohomology Ring)}
+        We call $(H^{*}(X,A;R), +, \ccup)$ the cohomology ring\index{cohomology ring} of the pair 
+        $(X,A)$ with coefficients in $R$, the set formed by the following formal infinite series:
+        $$
+        H^{*}(X,A;R) = \{ x = x_{0} + x_{1} + x_{2} + \ldots \ : \ x_{k}\in H^{k}(X,A;R), \ \forall 
+        k\geq 0 \}
+        $$
+        
+        Furthermore, given $x = x_{0} + x_{1} + x_{2} + \ldots$ and $y = y_{0} + y_{1} + y_{2} + \ldots$ 
+        in $H^{*}(X,A;R)$, the operations that define this ring are given by:
+        
+        \begin{enumerate}
+            \item $x + y = z_{0} + z_{1} + z_{2} + \ldots$, where $z_{k} = x_{k} + y_{k}$ for all 
+            $k\geq 0$
+            \item $x\ccup y = z_{0} + z_{1} + z_{2} + \ldots$, where $z_{k} = 
+            \displaystyle\sum_{i+j=k} x_{i}\ccup y_{j}$ for all $k\geq 0$
+        \end{enumerate}
+    \end{defi}
+
+    Since the cup product is a commutative operation when $R=\Z_{2}$, then $H^{*}(X,A;\Z_{2})$ will be a commutative ring with identity 
+    element $1+0+0+\dots\in H^{*}(X,A;\Z_{2})$.
+
+    \begin{teo}\label{teo_elemento_inversivel}
+        The units of the ring $H^{*}(X,A;\Z_{2})$ are elements of the following form:
+        $$ x=x_{0}+x_{1}+x_{2}+\dots\in H^{*}(X,A;\Z_{2}) \ : \ x_{0}=1 $$
+        
+        Furthermore, the inverse of a unit $x=1+x_{1}+x_{2}+\dots$ is the following element:
+        $$ x^{-1}=1+x^{-1}_{1}+x^{-1}_{2}+\dots, \quad \text{where} \quad x^{-1}_{k}=\ds\sum_{\stackrel{i+j=k}{i\neq 0}}x_{i}\ccup 
+        x^{-1}_{j}, \ \forall k\geq 1 $$
+    \end{teo}
+    
+    The proof of the theorem above can be found in (\cite{alex}, Lemma 6.1, p. 53).
+    
+    At this point, let us see when a topological space has all its singular (co)homology modules finitely generated and under which conditions 
+    we can define the Euler characteristic of an arbitrary topological space.
+    
+    \begin{prop}
+        All singular homology modules of a compact ENR space\footnote{An ENR is a topological space that is a retract\index{retract} of an open 
+        neighborhood in some Euclidean space, that is, it can be embedded in some Euclidean space as a retract of an open neighborhood of that 
+        Euclidean space. More details about these spaces can be found in (\cite{dold}, Chapter 4, Section 8).}\index{ENR} are finitely 
+        generated\index{module!finitely generated}.
+    \end{prop}
+    
+    The proof of the proposition above can be found in (\cite{hatcher}, Corollary A.8, p. 527). As a particular consequence, all singular 
+    homology modules of a compact topological manifold are free, since every topological manifold\index{manifold!topological} is an ENR and 
+    every finitely generated module is free\index{module!free}. Furthermore, due to the Universal Coefficient Theorem, every singular 
+    cohomology module of a compact topological manifold is free.
+    
+    \begin{defi}{\bf (Euler Characteristic)}
+        Let $X$ be a topological space such that there exists an integer $n>0$ such that $H_{k}(X;\Z)=0$ for $k>n$ and $H_{k}(X;\Z)$ is a 
+        finitely generated $\Z$-module for every $0\leq k\leq n$. Thus, the Euler characteristic\index{Euler characteristic} of $X$ is given 
+        by the following alternating sum:
+        $$ \chi(X)=\ds\sum_{k=0}^{n}(-1)^{k}\operatorname{rank}(H_{k}(X;\Z)) $$
+    \end{defi}
+    
+    Due to the Universal Coefficient Theorem\index{theorem!Universal Coefficient Theorem}, the Euler characteristic of a space $X$ under the 
+    conditions of the definition above can be computed using singular homology modules with coefficients in any field $\F$ as follows:
+    $$ \chi(X)=\ds\sum_{k=0}^{n}(-1)^{k}\dim(H_{k}(X;\F)) $$
+    
+    To conclude this section, let us make some considerations about the infinite real projective space\index{real projective space!infinite} 
+    $\RP^{\infty}$, which will be useful for calculating the Stiefel–Whitney classes\index{class!Stiefel–Whitney} of real projective spaces 
+    using the topological version of Wu's formula\index{formula!Wu}.
+    
+    Denoting by $\RP^{k}$ the $k$-dimensional real projective space\index{real projective space!finite}, we can define the infinite real 
+    projective space $\RP^{\infty}$ as the direct limit of the following sequence:
+    $$ \RP^{0} \subset \RP^{1} \subset \cdots \subset \RP^{k} \subset \cdots $$
+    
+    In other words, we have that $\RP^{\infty}=\ds\bigcup_{k\geq 0}\RP^{k}$, endowed with the following topology:
+    
+    \begin{center}
+        "$U$ is an open subset of $\RP^{\infty}$ if and only if $U\cap\RP^{k}$ is an open subset of $\RP^{k}$ for every $k\geq 0$."
+    \end{center}
+    
+    Thus, we can state the following:
+    
+    \begin{lem}\label{iso_proj}
+        The canonical inclusion $i:\RP^{n}\hookrightarrow \RP^{\infty}$ gives rise to an isomorphism 
+        $i^{*}:H^{k}(\RP^{\infty};\Z_{2})\to H^{k}(\RP^{n};\Z_{2})$ for every $0\leq k\leq n$.
+    \end{lem}
+    
+    \begin{proof}
+    
+    First, recall that $\RP^{n+1}$ is a CW-complex\index{CW-complex} with one open cell in each dimension, with $\RP^{k}$ being its 
+    $k$-skeleton.
+    
+    Now, consider $e_{n+1}$ as the open $(n+1)$-dimensional cell of $\RP^{n+1}$ and fix $x\in e_{n+1}$. Then, $\RP^{n+1}-\{ x \}$ is a 
+    deformation retract\index{deformation retract} of $\RP^{n}$.
+    
+    On the other hand, considering, up to homeomorphism, $x\in D^{n+1}\subset e_{n+1}$, then $U=\RP^{n+1}-D^{n+1}$ will be an open subspace 
+    of $\RP^{n+1}$ such that:
+    $$ \overline{U}\subset \operatorname{int}(\RP^{n+1}-\{ x \})=\RP^{n+1}-\{ x \}. $$
+    
+    Thus, $\mathbb{S}^{n}=\partial D^{n+1}$ is a deformation retract of $(\RP^{n+1}-\{ x \})-U=D^{n+1}-\{ x \}$, and we also obtain the 
+    following excision:
+    $$ (\RP^{n+1}-U,(\RP^{n+1}-\{ x \})-U)\hookrightarrow (\RP^{n+1},\RP^{n+1}-\{ x \}). $$
+    
+    Therefore, we have the following isomorphisms:
+    
+    \[
+    \begin{array}{rl}
+    H^{k}(\RP^{n+1},\RP^{n};\Z_{2}) \ \cong & H^{k}(\RP^{n+1},\RP^{n+1}-\{ x \};\Z_{2}) \\[8pt]
+    \cong & H^{k}(\RP^{n+1}-U,(\RP^{n+1}-\{ x \})-U;\Z_{2}) \\[8pt]
+    \cong & H^{k}(D^{n+1},\mathbb{S}^{n};\Z_{2}) \\[8pt]
+    \cong & \left\{
+    \begin{array}{cl}
+    \Z_{2} & ,\quad k=n+1 \\
+    0      & ,\quad k\neq n+1
+    \end{array}
+    \right.
+    \end{array}
+    \]
+    
+    In particular, $H^{k}(\RP^{n+1},\RP^{n};\Z_{2})=0$ for $0\leq k\leq n$. From now on in this proof, fix $0\leq k\leq n$.
+    
+    Now, we prove by induction on $t\geq 2$ that $H^{k}(\RP^{n+t},\RP^{n};\Z_{2})=0$.
+    
+    To do so, consider initially the long exact cohomology sequence of the triple\footnote{For more details about the long exact cohomology 
+    sequence of a triple, see (\cite{hatcher}, p. 200).} $(\RP^{n+2},\RP^{n+1},\RP^{n})$:
+    $$ \cdots \to H^{k}(\RP^{n+2},\RP^{n+1};\Z_{2}) \to H^{k}(\RP^{n+2},\RP^{n};\Z_{2}) \to H^{k}(\RP^{n+1},\RP^{n};\Z_{2}) \to \cdots $$
+    
+    Since $H^{k}(\RP^{n+2},\RP^{n+1};\Z_{2})=0=H^{k}(\RP^{n+1},\RP^{n};\Z_{2})$, the exactness of the sequence above ensures that 
+    $H^{k}(\RP^{n+2},\RP^{n};\Z_{2})=0$.
+    
+    Thus, assuming $H^{k}(\RP^{n+t_{0}},\RP^{n};\Z_{2})=0$ for some $t_{0}>2$, we similarly obtain that 
+    $H^{k}(\RP^{n+(t_{0}+1)},\RP^{n};\Z_{2})=0$, simply by using the long exact cohomology sequence of the triple 
+    $(\RP^{n+(t_{0}+1)},\RP^{n+t_{0}},\RP^{n})$.
+    
+    Therefore, we conclude that $H^{k}(\RP^{n+t},\RP^{n};\Z_{2})=0$ for any $t\geq 0$. Consequently:
+    $$ H^{k}(\RP^{\infty},\RP^{n};\Z_{2})=\lim_{\longrightarrow}H^{k}(\RP^{n+t},\RP^{n};\Z_{2})=0. $$
+    
+    Finally, consider the long exact cohomology sequence of the pair $(\RP^{\infty},\RP^{n})$:
+    $$
+    \xymatrix @C=0.5cm {
+    \cdots \ar[rr] && H^{k}(\RP^{\infty},\RP^{n};\Z_{2}) \ar[rr] && H^{k}(\RP^{\infty};\Z_{2}) \ar[rr]^-{i^{*}} && H^{k}(\RP^{n};\Z_{2}) \ar[rr] && \cdots
+    }
+    $$
+    
+    Since $H^{k}(\RP^{\infty},\RP^{n};\Z_{2})=0$ and $H^{k}(\RP^{\infty};\Z_{2})\cong\Z_{2}\cong H^{k}(\RP^{n};\Z_{2})$, then $i^{*}$ is a 
+    monomorphism between modules of the same dimension, that is, $i^{*}$ is an isomorphism.
+    
+    \end{proof}
+
+
+
+    \section{Slant Product}\label{ap_slant}
+
+    In this section, we will define a specific product between singular (co)homology modules that will be fundamental in the proof of the Wu 
+    formula\index{formula!Wu's formula} for topological\index{manifold!topological} and homological\index{manifold!homological} manifolds.
+
+    This product, which we will later call the slant product, is defined for arbitrary topological spaces using singular (co)homology modules 
+    with coefficients in an arbitrary commutative unital ring, and it is also used in the proof of the Wu formula for smooth 
+    manifolds\index{manifold!smooth}, as seen in (\cite{milnor_1}, Chapter 11).
+    
+    For our context, let $R=\Z$ or $R=\Z_{2}$, $X$ and $Y$ be arbitrary topological spaces with $H_{k}(Y;R)$ finitely generated for all 
+    $k\geq 0$, and integers $i,j\geq 0$. Thus, define the following homomorphism involving $R$-modules of singular (co)homology:
+    $$ H^{i}(X;R)\tensor H^{j}(Y;R)\tensor H_{j}(Y;R)\to H^{i}(X;R) $$
+    $$ x\tensor y\tensor b\mapsto <y,b>x $$
+    
+    Now, the Künneth formula\index{formula!Künneth formula} ensures that $H^{*}(X\times Y;R)\cong H^{*}(X;R)\tensor H^{*}(Y;R)$, and since 
+    $H^{*}(X\times Y;R)$ is a ring generated by elements of the form $x\times y$, the following homomorphism is well defined:
+
+    \newpage
+    $$ H^{i+j}(X\times Y;R)\tensor H_{j}(Y;R)\to H^{i}(X;R) $$
+    $$ (x\times y)\tensor b\mapsto (x\times y)/b=<y,b>x $$
+    
+    Thus, we have the following:
+    
+    \begin{defi}{\bf (Slant Product)}
+        The slant product\index{product!slant} refers to the homomorphism $H^{i+j}(X\times Y;R)\tensor H_{j}(Y;R)\to H^{i}(X;R)$ given by 
+        $z\tensor b\mapsto z/b$.
+    \end{defi}
+    
+    We will conclude this section with two particular properties of the slant product. For more details about this operation in its most 
+    general form, we suggest the reader see (\cite{spanier}, Chapter 6, Section 1).
+    
+    \begin{lem}\label{lema_slant}
+        Let $x\times 1\in H^{i}(X\times Y;R)$, $z\in H^{i+j}(X\times Y;R)$, $a\in H_{i'}(X;R)$, $b\in H_{j}(Y;R)$, and $p_{1}:X\times Y\to X$ 
+        be the canonical projection. Then, we have the following relations:
+        
+        \begin{enumerate}
+            \item $[(x\times 1)\ccup z]/b=x\ccup(z /b)$
+            \item $(p_{1})_{*}((a\times b)\ccap z)=a\ccap (z/b)$
+        \end{enumerate}
+    \end{lem}
+
+    
+
+    \section{Steenrod Squares}\label{ap_steenrod}
+
+    \
+
+    The Steenrod squares\index{Steenrod square} are cohomological operations of great importance for the development of this work, as they 
+    are essential for defining the Stiefel-Whitney classes\index{Stiefel-Whitney class} of vector bundles\index{vector bundle}, 
+    generalized\index{generalized bundle}, and homological\index{homological variety} manifolds\index{manifold}. Furthermore, the Wu 
+    formula\index{Wu formula} relates, through these Steenrod squares, the Stiefel-Whitney and Wu classes of a smooth\index{smooth manifold}, 
+    topological\index{topological manifold}, and homological variety.
+
+    Here, we will state only the basic properties of these operations. For more details on Steenrod squares, we refer the reader to 
+    (\cite{spanier}, Chapter 5, Section 9).
+    
+    Given $(X,A)$ a pair of topological spaces and integers $m,k\geq 0$, the Steenrod squares are additive cohomological operations 
+    $Sq^{k}:H^{m}(X,A;\Z_{2})\to H^{m+k}(X,A;\Z_{2})$ satisfying the following properties:
+    
+    \begin{enumerate}
+        \item If $x\in H^{m}(X,A;\Z_{2})$ and $y\in H^{n}(X,A;\Z_{2})$, then the Cartan formula\index{Cartan formula} holds, i.e., 
+        $$ Sq^{k}(x\ccup y)=\ds\sum_{i+j=k}Sq^{i}(x)\ccup Sq^{j}(y) $$	
+        \item If $x\in H^{m}(X,A;\Z_{2})$, then: 
+        \begin{enumerate}
+            \item $Sq^{0}(x)=x$		
+            \item $Sq^{m}(x)=x\ccup x$		
+            \item $Sq^{k}(x)=0$, for $k>m$
+        \end{enumerate}
+        
+        \item If $f:(X,A)\to (Y,B)$ is a map of pairs, then $Sq^{k}\circ f^{*}=f^{*}\circ Sq^{k}$, i.e., the following diagram commutes:
+        $$\xymatrix @C=0.5cm {
+            H^{m}(Y,B;\Z_{2}) \ar[rrr]^{f^{*}} \ar[dd]_{Sq^{k}} & & & H^{m}(X,A;\Z_{2}) \ar[dd]_{Sq^{k}} \\
+            & & & \\
+            H^{m+k}(Y,B;\Z_{2}) \ar[rrr]^{f^{*}} & & & H^{m+k}(X,A;\Z_{2})
+        }$$ 
+    \end{enumerate}
+    
+    Furthermore, if $f:(X,A)\to (Y,B)$ is a map that induces an isomorphism in the context of $\Z_{2}$-modules of singular cohomology, then 
+    it follows from the property above that:
+    $$ Sq^{k}\circ(f^{*})^{-1}=(f^{*})^{-1}\circ Sq^{k} $$
+    
+    On the other hand, given $x\in H^{m}(X,A;\Z_{2})$, we can define the total square operation as follows:
+    $$ Sq(x)=x+Sq^{1}(x)+Sq^{2}(x)+...+Sq^{m}(x) $$
+    
+    Thus, for any $x\in H^{m}(X,A;\Z_{2})$ and $y\in H^{n}(X,A;\Z_{2})$, the Cartan formula\index{Cartan formula} can be rewritten as:
+    $$ Sq(x\ccup y)=Sq(x)\ccup Sq(y) $$
+    
+    To conclude this section, given $x\in H^{m}(X,A;\Z_{2})$ and $y\in H^{n}(Y,B;\Z_{2})$, we can derive, using the cross 
+    product\index{cross product} and the Cartan formula, the following relations:
+    $$ Sq^{k}(x\times y)=\ds\sum_{i+j=k}Sq^{i}(x)\times Sq^{k}(y) $$ 
+    $$ Sq(x\times y)=Sq(x)\times Sq(y) $$
+    
+    
+
+    \section{$R-$Orientation Classes and e Dualities}\label{ap_orient}
+
+    \
+
+    In this section, we will define the notion of $R$-orientability of a topological manifold\index{manifold!topological} and state some 
+    results in this context. Afterward, we will present the most important results involving topological manifolds in the realm of 
+    (co)homology\index{(co)homology} theory, known as dualities.
+
+    For a more detailed reading on orientations and the dualities mentioned here, we suggest (\cite{hatcher}, Chapter 3, Section 3.3).
+    
+    \begin{defi}{\bf (Local Orientation)}
+        Consider $M^{m}$ a topological manifold. Then:
+        \begin{enumerate}
+            \item An $R$-local orientation\index{orientation!local} of $M$ at $b \in M$ is the choice of a generator which we denote by 
+            $([M]_{b}) = H_{m}(M, M-\{b\}; R) \cong R$.
+            \item An $R$-local orientation of $M$ along a subspace $U \subset M$ is the choice of an element $[M]_{U} \in H_{m}(M, M-U; R)$ 
+            such that, for all $b \in U$, we have $((j_{b}^{U})_{*}([M]_{U})) = H_{m}(M, M-\{b\}; R)$, where 
+            $j_{b}^{U}:(M, M-U) \hookrightarrow (M, M-\{b\})$ is the canonical inclusion.
+        \end{enumerate}
+        
+        The elements $[M]_{b}$ and $[M]_{U}$ are called the classes of local $R$-orientation\index{class!of local orientation} of $M$ at 
+        $b \in M$ and along $U$, respectively.
+    \end{defi}
+    
+    \begin{defi}{\bf (Global Orientation\index{orientation!global})}
+        A topological manifold $M^{m}$ is said to be $R$-orientable if there exists an open cover $\mathcal{U}$ of $M$ such that:
+        \begin{enumerate}
+            \item if $U_{i}, U_{j} \in \mathcal{U}$ and $b \in U_{i} \cap U_{j}$, then 
+            $(j_{b}^{U_{i}})_{*}([M]_{U_{i}}) = (j_{b}^{U_{j}})_{*}([M]_{U_{j}})$.
+            \item for every $U \in \mathcal{U}$ and $b \in U$, we have $[M]_{b} = (j_{b}^{U})_{*}([M]_{U})$
+        \end{enumerate}
+    \end{defi}
+    
+    After defining local and global orientations, let us consider the following:
+    
+    \begin{prop}\label{orient_local}
+        Let $M^{m}$ be an $R$-orientable topological manifold. Then:
+        \begin{enumerate}
+            \item If $M$ is connected and closed, the inclusion $j_{b}^{M} = j_{b}: M \hookrightarrow (M, M-\{b\})$ is such that 
+            $(j_{b})_{*}: H_{m}(M; R) \to H_{m}(M, M-\{b\}; R)$ is an isomorphism for all $b \in M$.
+            \item For each compact $K \subset M$, there exists a unique class of $R$-local orientation of $M$ along 
+            $K$, $[M]_{K} \in H_{m}(M, M-K; R)$, such that $(j_{b}^{K})_{*}([M]_{K}) = [M]_{b}$ for all $b \in K$.
+        \end{enumerate}
+    \end{prop}
+    
+    \begin{defi}
+        Let $M^{m}$ be a connected, closed, and $R$-orientable topological manifold. We call the global $R$-orientation 
+        class\index{class!of global orientation} the generator denoted by $([M]) = H_{m}(M; R)$, which is such that 
+        $(j_{b})_{*}([M]) = [M]_{b}$ for all $b \in M$.
+    \end{defi}
+    
+    It is known in the literature that every topological manifold $M^{m}$ is $\Z_{2}$-orientable. Therefore, if $M$ is closed and connected, 
+    its classes of $\Z_{2}$-orientation (both local and global) are the only generators 
+    $([M]) = H_{m}(M; \Z_{2}) \cong \Z_{2} \cong H_{m}(M, M-\{b\}; \Z_{2}) = ([M]_{b})$ such that $(j_{b})_{*}([M]) = [M]_{b}$ for all 
+    $b \in M$.
+    
+    \begin{lem}
+        If $M^{m}$ and $N^{n}$ are two closed and connected topological manifolds, then their classes of global $\Z_{2}$-orientation satisfy:
+        $$ [M \times N] = [M] \times [N] $$
+    \end{lem}
+    \begin{proof}
+        
+        First, from the Künneth formula\index{Künneth formula}, we have:
+        $$ H^{m+n}(M \times N; \Z_{2}) \cong H^{m}(M; \Z_{2}) \otimes H^{n}(N; \Z_{2}) $$
+    
+        On the other hand, since $H^{m}(M; \Z_{2})$ and $H^{n}(N; \Z_{2})$ are modules generated uniquely by the classes of global 
+        $\Z_{2}$-orientation $[M]$ and $[N]$, respectively, it follows from (\cite{hungerford}, Corollary 5.12, p. 215) that 
+        $H^{m}(M; \Z_{2}) \otimes H^{n}(N; \Z_{2})$ is generated uniquely by $[M] \otimes [N]$.
+        
+        Since the isomorphism in the Künneth formula is given by the cross product\index{cross product}, the class of global 
+        $\Z_{2}$-orientation of the product manifold $M \times N$ will be the product $[M] \times [N]$.
+        
+    \end{proof}
+
+    Before stating the dualities we will use in this work, let us examine an alternative way to visualize the cap 
+    product \index{product!cap} in the context of topological manifolds\index{manifold!topological}.
+
+    To do so, consider $M^{m}$ a topological manifold and a subspace $K\subset M$ that is compact and ENR. As seen in (\cite{dold}, 
+    Chapter 8, Section 7), we can consider the cap product as a homomorphism between the following $R$-modules of (co)homology:
+    $$ \ccap:H_{i}(M,M-K;R)\tensor H^{j}(K;R) \to H_{i-j}(M,M-K;R) $$
+    
+    With this, we can state the following:
+    
+    \begin{teo}{\bf (Poincaré-Lefschetz Duality)\index{duality!Poincaré-Lefschetz}}
+    Let $M^{m}$ be an $R$-orientable topological manifold and $K\subset M$ a compact and ENR subspace. Then, the homomorphism 
+    $\mathcal{D}_{M,K}:H^{k}(K;R)\to H_{m-k}(M,M-K;R)$ given by $\mathcal{D}_{M,K}(x)=[M]_{K}\ccap x$ is an isomorphism for all $k\geq 0$.
+    \end{teo}
+    
+    \begin{teo}{\bf (Poincaré Duality)\index{duality!Poincaré}}
+    If $M^{m}$ is a compact $R$-orientable topological manifold, then the homomorphism $\mathcal{D}_{M}:H^{k}(M;R)\to H_{m-k}(M;R)$ given 
+    by $\mathcal{D}_{M}(x)=[M]\ccap x$ is an isomorphism for all $k\geq 0$.
+    \end{teo}
+    
+    Concluding this section, let us examine some consequences of Poincaré duality.
+    
+    \begin{teo}\label{base_dual_1}
+    Let $M^{m}$ be a compact and $R$-orientable topological manifold, with $R=\Z$ or $R=\F$ a finite field. Thus, we have, for all $k\geq 0$, 
+    that the homomorphism $H^{k}(M;R)\to Hom(H^{m-k}(M;R);R)$ that associates $x\mapsto x'(y)=<x\ccup y,[M]>$ is an isomorphism.
+    \end{teo}
+    
+    \begin{proof}
+    
+    \
+    
+    By directly composing the Universal Coefficients Theorem\index{theorem!Universal Coefficients} and the Poincaré duality for the 
+    topological manifold $M^{m}$, we obtain, for all $k\geq 0$, the following isomorphism:
+    $$ H^{k}(M;R)\to Hom(H_{k}(M;R);R)\to Hom(H^{m-k}(M;R);R) $$
+    $$  x\mapsto\overline{x}\mapsto\wt{x} $$
+    
+    where $\overline{x}\in Hom(H_{k}(M;R);R)$ and $\wt{x}\in Hom(H^{m-k}(M;R);R)$ are defined, respectively, by $\overline{x}(a)=<x,a>$ and 
+    $\wt{x}(y)=\overline{x}([M]\ccap y)$.
+    
+    Thus, the isomorphism $H^{k}(M;R)\to Hom(H^{m-k}(M;R);R)$ is given, for all $k\geq 0$, by the following association:
+    \newline 
+    $\begin{array}{rl}
+            x\mapsto\wt{x}(y) \ = & \overline{x}([M]\ccap y) \\ 
+            & \\
+            = & <x,[M]\ccap y> \\
+            & \\
+            = & <x\ccup y,[M]> \\
+            & \\
+            = & x'(y)
+        \end{array}$
+    
+    \end{proof}
+
+    \begin{teo}\label{base_dual_2}{\bf (Dual Basis\index{dual basis})}
+        Consider $M^{m}$ a compact, $R$-orientable topological manifold, with $R=\Z$ or $R=\F$ a field. Then, for every basis 
+        $\{b_{i}\}_{i=1}^{r}$ of $H^{*}(M;R)$, there exists a unique corresponding basis $\{b^{\#}_{i}\}_{i=1}^{r}$ of $H^{*}(M;R)$, called 
+        the dual basis, satisfying the following identity:
+        $$ <b_{i}\ccup b_{j}^{\#},[M]> \ =\left\{ \begin{array}{rl}
+            1, & i=j \\
+            0, & i\neq j
+        \end{array}\right. $$
+    \end{teo}
+    
+    \begin{proof}
+        
+        \
+        
+        By the previous theorem, the correspondence $H^{k}(M;R)\to Hom(H^{m-k}(M;R);R)$ that maps 
+        $b\mapsto <b\ccup \_,[M]>:H^{m-k}(M;R)\to R$ is an isomorphism for all $k\geq 0$.
+        
+        Now, fix an arbitrary $k\geq 0$. Recall that since $H^{m-k}(M;R)$ is a finitely generated $R$-module, say by the basis 
+        $\{b^{\#}_{j}\}_{j=1}^{l}$, the result from (\cite{hungerford}, Theorem 4.11, p. 204) ensures that $Hom(H^{m-k}(M;R);R)$ is also a 
+        finitely generated $R$-module by the homomorphisms $h_{i}:H^{m-k}(M;R)\to R$ defined, for all $i=1,\cdots,l$, by:
+        $$ h_{i}(b^{\#}_{j}) \ =\left\{ \begin{array}{rl}
+            1, & i=j \\
+            0, & i\neq j
+        \end{array}\right. $$
+    
+        Thus, for each basic element $b\in H^{k}(M;R)$, there exists a unique basic element $b^{\#}\in H^{m-k}(M;R)$ such that 
+        $<b\ccup b^{\#},[M]>=1$.
+        
+    \end{proof}
+    
+    \begin{cor}\label{base_dual_3}
+        Consider $M^{m}$ a compact, $R$-orientable topological manifold, with $R=\Z$ or $R=\F$ a field. Let $\{b_{i}\}_{i=1}^{r}$ be a basis 
+        of $H^{*}(M;R)$ and $\{b^{\#}_{i}\}_{i=1}^{r}$ its dual basis. Then every $x\in H^{*}(M;R)$ can be written as follows:
+        $$ x=\ds\sum_{i=1}^{r}<x\ccup b^{\#}_{i},[M]>b_{i} $$
+    \end{cor}
+    
+    \begin{proof}
+        
+        \
+        
+        Since $\{b_{i}\}_{i=1}^{r}$ is a basis of $H^{*}(M;R)$, for each $x\in H^{*}(M;R)$, there exist unique coefficients 
+        $\alpha_{1},\cdots, \alpha_{r}\in R$ such that $x=\ds\sum_{i=1}^{r}\alpha_{i}b_{i}$. Thus, for each 
+        $b^{\#}_{j}\in \{b^{\#}_{i}\}_{i=1}^{r}$, we have:
+        
+        $ \begin{array}{rl}
+            <x\ccup b_{j}^{\#},[M]> \ = & <\left( \ds\sum_{i=1}^{r}b_{i}\alpha_{i} \right) \ccup b_{j}^{\#},[M]> \\
+            = & \ds\sum_{i=1}^{r}\alpha_{i}<b_{i}\ccup b^{\#}_{j},[M]> \\
+            = & \alpha_{j}
+        \end{array} $
+        
+    \end{proof}
+    
+
+      
+    \section{Classes de Wu}\label{ap_wu}
+
+    \
+
+    Now, we will see how to construct the so-called Wu classes of a closed topological manifold\index{topological!manifold}. The construction 
+    of such classes depends solely on the Universal Coefficients Theorem\index{theorem!Universal Coefficients} and Poincaré 
+    duality\index{duality!Poincaré}.
+
+    To this end, consider a closed and connected topological manifold $M^{m}$, an arbitrary integer $k\geq 0$, and the Steenrod squares 
+    $Sq^{k}:H^{m-k}(M;\Z_{2})\to H^{m}(M;\Z_{2})$. Thus, by taking the homomorphism in $Hom(H^{m-k}(M;\Z_{2});\Z_{2})$ that maps 
+    $x \mapsto <Sq^{k}(x),[M]>$, we obtain, by Theorem \ref{base_dual_1}, that there exists a unique cohomology class 
+    $v_{k}(M)\in H^{k}(M;\Z_{2})$ such that:
+    $$ <v_{k}(M)\ccup x,[M]>=<Sq^{k}(x),[M]>, \ \forall x\in H^{m-k}(M;\Z_{2}) $$
+    
+    \begin{defi}{\bf (Wu Class)}
+    Given a closed and connected topological manifold $M^{m}$ and an integer $k\geq 0$, we call the $k$-th Wu class\index{Wu!class} of the 
+    manifold $M$ the class $v_{k}(M)\in H^{k}(M;\Z_{2})$, uniquely characterized by the following relation:
+    $$ <v_{k}(M)\ccup x,[M]>=<Sq^{k}(x),[M]>, \ \forall x\in H^{m-k}(M;\Z_{2}) $$
+    
+    Additionally, we call $v(M)=\ds\sum_{k=0}^{m} v_{k}(M)\in H^{*}(M;\Z_{2})$ the total Wu class\index{total Wu!class} of $M$.
+    \end{defi}
+    
+    Due to the uniqueness of the Wu classes, we obtain that $v_{0}(M)=1\in H^{0}(M;\Z_{2})$, since for all $x\in H^{m}(M;\Z_{2})$, we have:
+    $$ <Sq^{0}(x),[M]>=<x,[M]>=<1\ccup x,[M]> $$
+    
+    As an example, let us compute the total Wu class of the real projective space\index{real projective space!finite} $\RP^{n}$:
+    
+    \begin{ex}\label{wu_rpn}
+    Given $H^{1}(\RP^{n};\Z_{2})=(a)$, then $v(\RP^{n})=\ds\sum_{k=0}^{n}\binom{n-k}{k} a^{k}$.
+    \end{ex}
+    \begin{proof}
+    
+    Initially, we will show, by induction on $i\geq 0$, that $Sq^{k}(a^{i})=\binom{i}{k}a^{i+k}$ for any $k\geq 0$. To this end, we fix that 
+    $\binom{i}{k}=0$ when $i<k$ or $k<0$.
+    
+    Thus, for $i=0$, we have: \newline
+    
+    $\begin{array}{rl}
+        Sq^{k}(a^{0}) \ = & Sq^{k}(1) \\
+        & \\
+        = & \left\{ \begin{array}{cl}
+            0 & , \ k>0 \\
+            1 & , \ k=0
+        \end{array} \right. \\
+        & \\
+        = & \binom{0}{k}a^{k}
+    \end{array}$ \newline
+    
+    Now, assuming $Sq^{k}(a^{i})=\binom{i}{k}a^{i+k}$ for all $k\geq 0$, note that: \newline
+    
+    $\begin{array}{rl}
+        Sq^{k}(a^{i+1}) \ = & Sq^{k}(a^{i}\ccup a) \\
+        & \\
+        = & \ds\sum_{r+s=k}\left[ Sq^{r}(a^{i})\ccup Sq^{s}(a)\right] \\
+        & \\
+        = & \left[ Sq^{k}(a^{i})\ccup Sq^{0}(a)\right]+\left[ Sq^{k-1}(a^{i})\ccup Sq^{1}(a)\right] \\
+        & \\
+        = & \left[ \binom{i}{k}a^{i+k}\ccup a\right]+\left[ \binom{i}{k-1}a^{i+k-1}\ccup a^{2}\right] \\
+        & \\
+        = & \left[ \binom{i}{k}+\binom{i}{k-1}\right]a^{i+k+1} \\
+        & \\
+        = & \binom{i+1}{k}a^{(i+1)+k}
+    \end{array}$ \newline
+
+    Thus, $Sq^{k}(a^{i})=\binom{i}{k}a^{i+k}$ for any $i,k\geq 0$. Finally, let's show that $v_{k}(\RP^{n})=\binom{n-k}{k}a^{k}$ for all 
+    $0\leq k\leq n$. To do so, it is sufficient to verify that:
+    $$ <\binom{n-k}{k}a^{k}\cup x,[\RP^{n}]=<Sq^{k}(x),[\RP^{n}]>, \ \forall x\in H^{n-k}(\RP^{n};\Z_{2}) $$
+    
+    Since $H^{n-k}(\RP^{n};\Z_{2})=(a^{n-k})=\{ 0,a^{n-k} \}$, it is enough to check the above equality for $x=a^{n-k}$, as for $x=0$ the 
+    result is immediate. Thus:
+    \[
+    \begin{array}{rl}
+        <\binom{n-k}{k}a^{k}\cup a^{n-k},[\RP^{n}]> = & <\binom{n-k}{k}a^{n}> \\
+        = & <Sq^{k}(a^{n-k}),[\RP^{n}]>
+    \end{array}
+    \]
+    
+    Therefore, $v(\RP^{n})=\ds\sum_{k=0}^{n}\binom{n-k}{k}a^{k}$.
+    
+    \end{proof}
+    
+    \begin{lem}
+        Given two closed and connected manifolds $M^{m}$ and $N^{n}$, we have $v(M\times N)=v(M)\times v(N)$.
+    \end{lem}
+    \begin{proof}
+    
+    \
+    
+    Initially, denote the $k$-th Wu class of the total class $v(M)\times v(N)$ as:
+    $$ [v(M)\times v(N)]_{k}=\sum_{i+j=k}\left[ v_{i}(M)\times v_{j}(N)\right] $$
+    
+    For $v_{k}(M\times N)=[v(M)\times v(N)]_{k}$, it is sufficient to show the following relation:
+    $$ <[v(M)\times v(N)]_{k}\cup z,[M\times N]>=<Sq^{k}(z),[M\times N]>, \ \forall z\in H^{m+n-k}(M\times N;\Z_{2}) $$
+    
+    On the other hand, the Künneth formula guarantees that:
+    $$ H^{m+n-k}(M\times N;\Z_{2})\cong \bigoplus_{r+s=k}\left[ H^{m-r}(M;\Z_{2})\otimes H^{n-s}(N;\Z_{2})\right] $$
+    
+    Thus, it is enough to show the previous equality for an arbitrary generator $z=x\times y\in H^{m+n-k}(M\times N;\Z_{2})$, where 
+    $x\in H^{m-r}(M;\Z_{2})$ and $y\in H^{n-s}(N;\Z_{2})$, with $r+s=k$. Thus:
+    \[
+    <[v(M)\times v(N)]_{k}\cup z,[M\times N]> = 
+    \]
+    \[
+    \begin{array}{rl}
+        = & <\left( \sum_{i+j=k}v_{i}(M)\times v_{j}(N) \right) \cup (x\times y),[M\times N]> \\
+        = & <\sum_{i+j=k}\left[ (v_{i}(M)\cup x)\times( v_{j}(N)\cup y) \right],[M\times N]>
+    \end{array}
+    \]
+    
+    Note that, when considering $i+j=k=r+s$, with $i>r$ or $j>s$, we conclude that $v_{i}(M)\cup x\in H^{m-r+i}(M;\Z_{2})=0$ or 
+    $v_{j}(N)\cup y\in H^{n-s+j}(N;\Z_{2})=0$, and so:
+    \[
+    <[v(M)\times v(N)]_{k}\cup z,[M\times N]> = 
+    \]
+    \[
+    \begin{array}{rl}
+        = & <\sum_{i+j=k}[(v_{i}(M)\cup x)\times( v_{j}(N)\cup y)],[M\times N]> \\
+        = & <(v_{r}(M)\cup x)\times (v_{s}(N)\cup y),[M\times N]> \\
+        = & <(v_{r}(M)\cup x)\times (v_{s}(N)\cup y),[M]\times [N]> \\
+        = & <v_{r}(M)\cup x,[M]><v_{s}(N)\cup y,[N]> \\
+        = & <Sq^{r}(x),[M]><Sq^{s}(y),[N]> \\
+        = & <Sq^{r}(x)\times Sq^{s}(y),[M]\times [N]> \\
+        = & <Sq^{r}(x)\times Sq^{s}(y),[M\times N]>
+    \end{array}
+    \]
+    
+    Again, if we consider $i+j=k=r+s$, with $i>r$ or $j>s$, we obtain that $Sq^{i}(x)\in H^{m-r+i}(M;\Z_{2})=0$ or 
+    $Sq^{j}(y)\in H^{n-s+j}(N;\Z_{2})=0$, and consequently:
+    \[
+    \begin{array}{rl}
+        <[v(M)\times v(N)]_{k}\cup z,[M\times N]> = & <Sq^{r}(x)\times Sq^{s}(y),[M\times N]> \\
+        = & <\sum_{i+j=k}Sq^{i}(x)\times Sq^{j}(y),[M\times N]> \\
+        = & <Sq^{k}(x\times y),[M\times N]> \\
+        = & <Sq^{k}(z),[M\times N]>
+    \end{array}
+    \]
+    
+    Therefore, we conclude that $v(M\times N)=v(M)\times v(N)$.
+    
+    \end{proof}
+ 
+    
 
     %\printbibliography
     %\printindex
