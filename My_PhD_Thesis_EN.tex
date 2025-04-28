@@ -224,9 +224,9 @@ footskip=10mm}
     \chapter*{Abstract}
     \thispagestyle{empty}
 
-    In this work, we will first present generalized fiber bundles, a concept developed by Fadell with the aim 
+    In this work, we will first present generalized bundles, a concept developed by Fadell with the aim 
     of generalizing vector bundles, Stiefel-Whitney classes, and Wu's formula from the context of smooth 
-    manifolds to topological manifolds. After that, we will use generalized fiber bundles to obtain original 
+    manifolds to topological manifolds. After that, we will use generalized bundles to obtain original 
     results concerning the Thom, Stiefel-Whitney, Wu, and Euler classes of topological manifolds, as 
     well as to provide a second proof of Wu's formula for topological manifolds and to establish the 
     topological version of the Poincaré-Hopf Theorem. Finally, we will use Poincaré and 
@@ -236,7 +236,7 @@ footskip=10mm}
 
     \
 
-    \noindent Keywords: characteristic classes, generalized fiber bundles, topological manifolds, generalized 
+    \noindent Keywords: characteristic classes, generalized bundles, topological manifolds, generalized 
     manifolds, Wu's formula.
 
 
@@ -337,7 +337,7 @@ footskip=10mm}
 
     \
     
-    A decade later, in 1965, Fadell defined in \cite{fadell_1} generalized fiber bundles, a concept that 
+    A decade later, in 1965, Fadell defined in \cite{fadell_1} generalized bundles, a concept that 
     not only generalized vector bundles, but also allowed the extension, through Nash's ideas in 
     \cite{nash}, of the notions of tangent and normal fiber bundles from the context of smooth manifolds 
     to topological manifolds. Furthermore, Fadell constructed the Stiefel-Whitney classes of generalized 
@@ -350,7 +350,7 @@ footskip=10mm}
             \item The first part will consist of chapters \ref{cap_fib}, \ref{cap_clas_carac}, and 
             \ref{cap_aplic}. These chapters can be interpreted as a modern re-reading of the results 
             obtained by Fadell in \cite{fadell_1}, as well as a continuation of the same, since we will 
-            present additional results both on generalized fiber bundles themselves and on Thom, 
+            present additional results both on generalized bundles themselves and on Thom, 
             Stiefel-Whitney, Euler, and Wu classes of topological manifolds.
             \item The second part of this work will consist solely of chapter \ref{cap_wu_gen}, in which 
             we will construct more extensively the Stiefel-Whitney classes of generalized manifolds in 
@@ -370,13 +370,13 @@ footskip=10mm}
     manifolds\index{topological!manifold}.
     
     Concatenating definitions \ref{PLH}, \ref{defi_par-fib}, and \ref{defi_fib_gen}, we can define a 
-    generalized fiber bundle more directly as follows:
+    generalized bundle more directly as follows:
 
     \
 
         \textbf{Definition. } \textit{Given $E$ and $B$ topological spaces, $E_{0}\subset E$ and 
         $p:E\to B$ a onto map, we call the pair $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,B)$ an 
-        $\R^{n}-$generalized fiber bundle when:
+        $\R^{n}-$generalized bundle when:
             \hspace{1cm}\begin{enumerate}
                 \item For any maps $h:X\to E$ and $H:X\times I\to B$, such that $H(\_,0)=p\circ h$, 
                 there exists a map $\wt{H}:X\times I\to E$ such that $\wt{H}(\_,0)=h$ and 
@@ -388,7 +388,7 @@ footskip=10mm}
     
     \
 
-    With this definition, we can interpret a generalized fiber bundle as a fibration with the following 
+    With this definition, we can interpret a generalized bundle as a fibration with the following 
     characteristics:
         \begin{itemize}
             \item The total space is a pair of topological spaces.
@@ -400,17 +400,17 @@ footskip=10mm}
     
     During the reading of Chapter \ref{cap_fib}, the reader will notice that the development of the 
     chapter will not be as straightforward compared to the definition above, since our main goal 
-    will be to present the theory of generalized fiber bundles in a more detailed way and using a more 
+    will be to present the theory of generalized bundles in a more detailed way and using a more 
     modern language than the results presented by Fadell in the first half of \cite{fadell_1}.
 
-    More explicitly, we will show in Example \ref{fht_fv} how generalized fiber bundles indeed generalize 
+    More explicitly, we will show in Example \ref{fht_fv} how generalized bundles indeed generalize 
     vector bundles, and in Proposition \ref{iso_fv_fht} how the notion of isomorphism between vector 
-    bundles remains valid when extended to the category of generalized fiber bundles. We will also show that 
-    it is possible to construct new generalized fiber bundles from others, just as it happens with vector 
+    bundles remains valid when extended to the category of generalized bundles. We will also show that 
+    it is possible to construct new generalized bundles from others, just as it happens with vector 
     bundles, for example: restriction bundles, product bundles, and Whitney sum bundles.
 
     Although Chapter \ref{cap_fib} is a preliminary chapter, we will contribute with original results 
-    concerning the pullback generalized fiber bundle, which was developed by Brown in \cite{brown} but was 
+    concerning the pullback generalized bundle, which was developed by Brown in \cite{brown} but was 
     neither cited nor used by Fadell in \cite{fadell_1}. These results will prove to be quite relevant 
     when we use them in the construction of some maps regarding characteristic classes of topological 
     manifolds in Chapters \ref{cap_clas_carac} and \ref{cap_aplic}.
@@ -419,33 +419,33 @@ footskip=10mm}
 
     In Chapter \ref{cap_clas_carac}, we will address the topic of characteristic classes of generalized 
     bundles and topological manifolds, more specifically, Thom classes, Stiefel-Whitney classes, and 
-    Euler classes. Initially, we will introduce the notion of $R$-orientability of generalized fiber bundles, 
+    Euler classes. Initially, we will introduce the notion of $R$-orientability of generalized bundles, 
     where $R$ is a commutative ring with unity, and their respective Thom classes, concepts originally 
     proposed by Fadell in \cite{fadell_1}, but little explored by him, since the main topic developed 
     in the second half of \cite{fadell_1} was about Stiefel-Whitney classes, in which case orientability 
     is not a concern.
 
-    Thus, we will detail a little more the definition of $R$-orientability of generalized fiber bundles and 
+    Thus, we will detail a little more the definition of $R$-orientability of generalized bundles and 
     present some technical results on the behavior of Thom classes under pullback and product generalized 
-    bundles, as well as show what happens when we reverse the orientability of a generalized fiber bundle and 
+    bundles, as well as show what happens when we reverse the orientability of a generalized bundle and 
     the relation between the dimension of a $\Z$-orientable topological manifold and the Thom class of 
-    its tangent generalized fiber bundle. Even though these results are already known in the context of vector 
+    its tangent generalized bundle. Even though these results are already known in the context of vector 
     bundles and smooth manifolds, they can be considered original since they have not yet been described 
-    in the context of generalized fiber bundles and topological manifolds.
+    in the context of generalized bundles and topological manifolds.
 
     The second topic we will address in Chapter \ref{cap_clas_carac} will be about Stiefel-Whitney 
     classes. The purpose of this topic will be to rewrite the main properties and consequences of these 
-    classes, already widespread in the literature, for the context of generalized fiber bundles and topological 
+    classes, already widespread in the literature, for the context of generalized bundles and topological 
     manifolds, following the same steps used by Milnor in (\cite{milnor_1}, Chapter 8) for vector bundles 
     and smooth manifolds. In doing so, we will offer a broader, more modern, and detailed reinterpretation 
     of the results proposed by Fadell in the second half of \cite{fadell_1}. Our contributions to this 
-    topic will involve results concerning pullback generalized fiber bundles.
+    topic will involve results concerning pullback generalized bundles.
 
     The third and last topic addressed in Chapter \ref{cap_clas_carac} will be about Euler classes. 
     Differently from Stiefel-Whitney classes, Euler classes can only be defined for $\Z$-orientable 
-    generalized fiber bundles. Thus, due to the technical lemmas related to Thom classes of $\Z$-orientable 
-    generalized fiber bundles obtained at the beginning of Chapter \ref{cap_clas_carac}, we will be able to 
-    conclude several consequences and applications concerning Euler classes of generalized fiber bundles and 
+    generalized bundles. Thus, due to the technical lemmas related to Thom classes of $\Z$-orientable 
+    generalized bundles obtained at the beginning of Chapter \ref{cap_clas_carac}, we will be able to 
+    conclude several consequences and applications concerning Euler classes of generalized bundles and 
     $\Z$-orientable topological manifolds. In this topic, except for Proposition \ref{euler_2}, all other 
     results will be original, being generalizations of known results about Euler classes for vector 
     bundles and smooth manifolds. Among these generalizations, we highlight:
@@ -453,10 +453,10 @@ footskip=10mm}
     \
 
     \textbf{Proposition 3.7.} \textit{Let $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,B)$ be an 
-    $\R^{n}$-generalized fiber bundle that is $\Z$-orientable. If $(\mathcal{F},\mathcal{F}_{0})$ admits a 
+    $\R^{n}-$generalized bundle that is $\Z$-orientable. If $(\mathcal{F},\mathcal{F}_{0})$ admits a 
     section $s:B\to E$ such that $s(B)\subset E_{0}$, then 
     $e(\mathcal{F},\mathcal{F}_{0})=0$.}\footnote{$e(\mathcal{F},\mathcal{F}_{0})$ will denote the Euler 
-    class of the generalized fiber bundle $(\mathcal{F},\mathcal{F}_{0})$.}
+    class of the generalized bundle $(\mathcal{F},\mathcal{F}_{0})$.}
 
     The proposition above, in its version for vector bundles, is widely known, as it allows interpreting 
     the Euler class of a vector bundle as an obstruction to the existence of a nowhere-vanishing section. 
@@ -466,19 +466,19 @@ footskip=10mm}
 
     Up to this point, the reader should already have noticed the main goal of Chapters \ref{cap_fib} and 
     \ref{cap_clas_carac} of our work, which is to structure in detail and using a more up-to-date 
-    language the theory of generalized fiber bundles and their characteristic classes, while also presenting 
+    language the theory of generalized bundles and their characteristic classes, while also presenting 
     several technical contributions, aiming to generalize applications regarding characteristic classes 
     of smooth manifolds to the context of topological manifolds, as we will see next.
 
     \
 
-    The conclusion of our work regarding characteristic classes of generalized fiber bundles will be presented 
+    The conclusion of our work regarding characteristic classes of generalized bundles will be presented 
     in Chapter \ref{cap_aplic}, where we will present three major applications with original technical 
     proofs concerning Stiefel-Whitney, Euler, and Wu classes of closed topological manifolds. Initially, 
     we will present an alternative proof of the topological version of the famous Wu formula, which 
     relates the Stiefel-Whitney and Wu classes of a smooth manifold through Steenrod squares.
 
-    In \cite{fadell_1}, Fadell uses generalized fiber bundles to give a first proof of Wu's formula for 
+    In \cite{fadell_1}, Fadell uses generalized bundles to give a first proof of Wu's formula for 
     topological manifolds, based on the techniques used by Milnor in (\cite{milnor_2}, Chapter 9). 
     Furthermore, the preliminary results that Fadell develops to prove Wu's formula are all in the 
     framework of singular (co)homology $\Z_{2}$-modules. Meanwhile, the alternative proof of Wu's 
@@ -488,7 +488,7 @@ footskip=10mm}
     Comparing the proofs presented by us in this work and by Fadell in \cite{fadell_1}, the main 
     differences will be found in the preliminary lemmas used in Wu's formula, as we will prove them in 
     the framework of singular (co)homology $R$-modules with $R=\Z$ or $R=\Z_{2}$. Since we will use the 
-    same sequence of results employed by Milnor in \cite{milnor_1}, now using generalized fiber bundles 
+    same sequence of results employed by Milnor in \cite{milnor_1}, now using generalized bundles 
     instead of vector bundles, our main contribution will be obtaining the case $R=\Z$ of the following 
     result:
 
@@ -499,7 +499,7 @@ footskip=10mm}
     $j_{b}:(M,M-\{b\})\hookrightarrow (M\times M,(M\times M)-\Delta)$ the canonical inclusion, 
     $[M]_{b}\in H_{m}(M,M-\{b\};R)$ the local $R$-orientation class of $M$ at $b$, and 
     $(\tau')\in H^{m}(M\times M,(M\times M)-\Delta;R)$ the generator uniquely defined by the Thom class 
-    of the tangent generalized fiber bundle of $M$. Then:
+    of the tangent generalized bundle of $M$. Then:
         $$ <j_{b}^{*}(\tau'),[M]_{b}>=1\in R $$}
     
     \
@@ -531,12 +531,12 @@ footskip=10mm}
     \
 
     \textbf{Definition 4.1. }\textit{A path field on a topological manifold $M$ is any section of its 
-    generalized fiber bundle $(\tau M,\tau_{0}M)=(TM,T_{0}M,p,M)$. Moreover, a nonsingular path field on $M$ 
+    generalized bundle $(\tau M,\tau_{0}M)=(TM,T_{0}M,p,M)$. Moreover, a nonsingular path field on $M$ 
     is a section $s:M\to TM$ such that $s(M)\subset T_{0}M$.}
 
     \
 
-    As we will show in Chapter \ref{cap_aplic}, generalized fiber bundles will allow us to generalize the 
+    As we will show in Chapter \ref{cap_aplic}, generalized bundles will allow us to generalize the 
     notion of nowhere-vanishing vector fields from the smooth manifold context to the topological 
     manifold setting, since a smooth manifold admits a nowhere-vanishing vector field if and only if it 
     admits a nonsingular path field. With that, we will be able to prove the topological version of the 
@@ -560,7 +560,7 @@ footskip=10mm}
     \textbf{Theorem 4.4. }\textit{If $i:M^{m}\hookrightarrow S^{m+k}$ is a locally flat 
     embedding\footnote{A locally flat embedding is a topological embedding that locally behaves like a 
     smooth embedding, whose formal definition can be found in Definition 2.14.} between closed, 
-    connected topological manifolds with trivial normal generalized fiber bundle, then:\footnote{$v(M)$ and 
+    connected topological manifolds with trivial normal generalized bundle, then:\footnote{$v(M)$ and 
     $v(S)$ will denote, respectively, the total Wu classes of $M$ and $S$.}
     $$v(M)=i^{*}(v(S))$$}
 
@@ -574,7 +574,7 @@ footskip=10mm}
     neighborhood for smooth embeddings.
 
     Since we cannot guarantee the existence of a tubular neighborhood in the topological context, our 
-    main contribution was to circumvent this problem using only results about generalized fiber bundles, 
+    main contribution was to circumvent this problem using only results about generalized bundles, 
     showing that the existence of a tubular neighborhood is not essential, but rather certain algebraic 
     consequences of a locally flat embedding.
 
@@ -623,9 +623,9 @@ footskip=10mm}
     In particular, we will define the $k$-th Stiefel-Whitney class of a generalized manifold $M$ as 
     the $k$-th Stiefel-Whitney class associated to the embedding given by the diagonal map 
     $d:M\to M\times M$. Moreover, to ensure that this definition is indeed well-defined, we will use 
-    some results about generalized fiber bundles presented in Chapter \ref{cap_aplic} to show in Theorem 5.5 
+    some results about generalized bundles presented in Chapter \ref{cap_aplic} to show in Theorem 5.5 
     that, in the context of topological manifolds, the definition of Stiefel-Whitney classes via 
-    generalized fiber bundles coincides with the definition we propose via the Stiefel-Whitney classes 
+    generalized bundles coincides with the definition we propose via the Stiefel-Whitney classes 
     associated to the embedding given by the diagonal map.
 
     Finally, motivated by the techniques presented by Bredon in (\cite{bredon}, Chapter 6), we will 
@@ -678,7 +678,7 @@ footskip=10mm}
 
     \
 
-    We will begin this work by presenting the so-called generalized fiber bundles\index{generalized!fiber bundle}, a 
+    We will begin this work by presenting the so-called generalized bundles\index{generalized!fiber bundle}, a 
     tool developed by Fadell in \cite{fadell_1} with the purpose of defining the Stiefel-Whitney 
     classes\index{Stiefel-Whitney!class} and proving Whitney's duality\index{Whitney!duality} and Wu's 
     formula\index{Wu!formula} in the context of topological manifolds\index{topological!manifold}.
@@ -692,15 +692,1497 @@ footskip=10mm}
     clearer and more succinct way.
 
     Finally, in Section \ref{secao_fib_gener}, we will find the definition and properties involving 
-    generalized fiber bundles, almost all of which are taken from \cite{fadell_1}.
+    generalized bundles, almost all of which are taken from \cite{fadell_1}.
 
     As will be explained in Observation \ref{obs_varied_bordo}, every topological manifold mentioned 
     throughout this work will be assumed to be a manifold without boundary.
 
 
 
+    \section{Vector Bundle}\label{secao_fib_vet}
+
+    \
+
+    For a more specific and detailed reading about the theory of vector bundles, aimed at defining characteristic classes, we suggest 
+    \cite{alex}, \cite{hatcher_2}, \cite{husemoller}, and \cite{milnor_1}.
+
+    \begin{defi}{\bf (Vector Bundle)}\label{fv_defi}
+        Considering $E$ and $B$ topological spaces and a onto map $p:E\to B$, we call the triple $\xi=(E,p,B)$ an $\R^{n}-$vector 
+        bundle\index{bundle!vector} if:
+        
+        \begin{itemize}
+            \item For every $b\in B$, the set $p^{-1}(b)$ admits a structure of a real $n$-dimensional vector space.
+            \item We require that $\xi$ is locally trivial\index{locally trivial}, that is: there exists an open cover 
+            $\ds\bigcup_{\alpha}U_{\alpha}=B$ such that, for each open set $U_{\alpha}$, there exists 
+            $h_{\alpha}:U_{\alpha}\times\R^{n}\to p^{-1}(U_{\alpha})$ a homeomorphism  making the following diagram commute:
+            
+            $$\xymatrix @C=0.5cm {
+                U_{\alpha}\times\R^{n} \ar[rrrr]^{h_{\alpha}} \ar[ddrr]_{p_{1}} && && p^{-1}(U_{\alpha}) \ar[ddll]^{p} \\
+                && && \\
+                && U_{\alpha} && 
+            }$$
+            
+            \item Moreover, $h_{\alpha}|_{\{b\}\times\R^{n}}:\{b\}\times\R^{n}\to p^{-1}(b)$ is a vector space isomorphism for every 
+            $b\in U_{\alpha}$ and each $\alpha$.
+        \end{itemize}
+        
+        In this context, we call $\xi$ a vector bundle over a base space $B$, with total space $E$ and fiber $F=p^{-1}(b)$ over $b\in B$. 
+        Furthermore, we say that a map $s:B\to E$ is a section\index{section} of $\xi$ if $p\circ s=1$.
+    \end{defi}
+    
+    \begin{figure}[h]
+        \centering
+        \includegraphics[scale=0.3]{fibrado.pdf}
+        \caption{Illustration of the local triviality of a vector bundle.}
+    \end{figure}
+    
+    Note that every vector bundle $\xi=(E,p,B)$ admits a section $s:B\to E$, called the zero section\index{section!zero}, defined by 
+    $s(b)=0\in p^{-1}(b)$.
+    
+    \begin{defi}\label{fv_iso}
+        We say that two $\R^{n}-$vector bundles $\xi=(E,p,B)$ and $\xi'=(E',q,B)$ are isomorphic\index{isomorphism}, denoted by 
+        $\xi\cong\xi'$, if there exists a homeomorphism $h:E\to E'$ such that $q\circ h=p$ and $h|_{p^{-1}(b)}:p^{-1}(b)\to q^{-1}(b)$ is a 
+        vector space isomorphism\index{isomorphism!vector space} for every $b\in B$.
+    \end{defi}
+    
+    Now, let us recall how to specifically define the tangent and normal vector bundles of a smooth manifold and of a smooth embedding, 
+    respectively.
+    
+    Consider $M^{m}$ a smooth $m$-dimensional manifold and define $TM=\ds\bigcup_{b\in M}\{b\}\times T_{b}M$, recalling that $T_{b}M$ is the 
+    tangent space of $M$ at $b$.
+    
+    Thus, $\tau(M)=(TM,p_{1},M)$ defines an $\R^{m}$-vector bundle, where the fiber over $b\in M$ is $p_{1}^{-1}(b)=\{b\}\times T_{b}M$.
+    
+    \begin{defi}\label{defi_fvt}
+        $\tau(M)$ is called the tangent vector bundle\index{bundle!vector!tangent} of the smooth manifold\index{manifold!smooth} $M$.
+    \end{defi}
+    
+    Recall that an immersion\index{immersion} $i:N^{n}\to M^{n+k}$ is a map between smooth manifolds such that its differential 
+    $d_{b}i:T_{b}N\to T_{i(b)}M$ is an injective linear transformation for every $b\in N$.
+
+    In this context, we can ensure that $d_{b}i(T_{b}N)$ is a linear subspace of $T_{i(b)}M$. Thus, the set 
+    $E(i)=\{ (b,v)\in N\times T_{i(b)}M \ : \ v\in [d_{b}i(T_{b}N)]^{\perp}\subset T_{i(b)}M \}$ is well defined.
+    
+    Therefore, $\nu(i)=(E(i),p_{1},N)$ is an $\R^{k}$-vector bundle, where the fiber over $b\in N$ is given by 
+    $p_{1}^{-1}(b)=\{b\}\times [d_{b}i(T_{b}N)]^{\perp}$.
+    
+    \begin{defi}\label{defi_fvn}
+        $\nu(i)$ is called the normal vector bundle\index{vector bundle!normal} of the immersion $i:N\to M$.
+    \end{defi}
+    
+    Note that the normal vector bundle can also be defined for a smooth embedding\index{embedding!smooth}, since every smooth embedding is 
+    both a topological embedding\index{embedding!topological} and an immersion\index{immersion}.
+    
+    To conclude the topics about vector bundles, let us present the following relation between the tangent and normal vector bundles of a 
+    smooth embedding between smooth manifolds\index{manifold!smooth}, whose proof can be found in 
+    (\cite{milnor_1}, Corollaries 3.4 and 3.5, pp. 30–31).
+    
+    \begin{teo}\label{dualidade_whitney_vet}
+        If $i:N^{n}\to M^{n+k}$ is a smooth embedding between smooth manifolds, then:
+        $$ \tau(N)\oplus\nu(i)\cong i^{*}(\tau(M)) $$
+    \end{teo}
+
+
+
+    \section{Fibration and Pair Fibration}\label{secao_fib_pares}
+
+    \
+
+    In this section, we will define the concept of pair fibration\index{fibration!of pairs}, also developed by Fadell in \cite{fadell_1}, 
+    which can be considered as a fibration\index{fibration} whose total space is a pair of topological spaces.
+
+    The definition of pair fibration will be necessary when we define generalized bundles\index{bundle!generalized} in the next section. We 
+    will use the properties developed in this section as an intermediate step in the proofs of results involving generalized bundles.
+    
+    Except for Example \ref{pf_fv}, all the results presented throughout this section can be found, with few details, in \cite{fadell_1} and 
+    \cite{brown}.
+    
+    \begin{defi}\label{PLH}
+        We say that a map $p:E\to B$ satisfies the homotopy lifting property\index{homotopy lifting property} (HLP) over a topological space 
+        $X$ if, for any maps $h:X\to E$ and $H:X\times I\to B$ such that $H(\_,0)=p\circ h$, there exists a continuous map 
+        $\wt{H}:X\times I\to E$ such that $\wt{H}(\_,0)=h$ and $p\circ\wt{H}=H$. In this case, we have the following commutative diagram: 
+        $$ \xymatrix @C=0.5cm {
+            X\times \{ 0 \} \ar[rrr]^-{h} \ar@{^(->}[dd] &&& E \ar[dd]^-{p} \\
+            &&& \\
+            X\times I \ar[rrr]^-{H} \ar[rrruu]^-{\wt{H}} &&& B
+        }$$
+    \end{defi}
+
+    \
+    
+    \begin{defi}
+        A onto map $p:E\to B$ is said to be a fibration\index{fibration} if $p$ satisfies the HLP over any topological space $X$.
+    
+        In this context, we call the triple $\mathcal{F}=(E,p,B)$ a fibration over a base space $B$, with total space $E$ and fiber 
+        $F=p^{-1}(b)$ over $b\in B$. We say that a map $s:B\to E$ is a section\index{section} of $\mathcal{F}$ if $p\circ s=1$.
+    \end{defi}
+    
+    \begin{defi}{\bf (Pair Fibration)}\label{defi_par-fib}
+        Let $p:E\to B$ be a onto map and $E_{0}\subset E$. We call $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,B)$ a pair 
+        fibration\index{fibration!of pairs} if, for any topological space $X$ and any maps $h:X\to E$ and $H:X\times I\to B$ such that 
+        $H(\_,0)=p\circ h$, there exists a continuous map $\wt{H}:X\times I\to E$ such that $\wt{H}(\_,0)=h$, $p\circ\wt{H}=H$, and if 
+        $x_{0}\in X$ is such that $h(x_{0})\in E_{0}$, then $\wt{H}(x_{0},\_)\in E_{0}$.
+    
+        In this context, we say that $(\mathcal{F},\mathcal{F}_{0})$ is a pair fibration over a base space $B$, with total space $(E,E_{0})$ 
+        and fiber $(F,F_{0})=(p^{-1}(b),p^{-1}(b)\cap E_{0})$ over $b\in B$.
+    
+        We also say that a map $s:B\to E$ is a section\index{section} of $(\mathcal{F},\mathcal{F}_{0})$ if $p\circ s=1$.
+    \end{defi}
+    
+    Note that Definition \ref{defi_par-fib} guarantees that $\mathcal{F}=(E,p,B)$ and $\mathcal{F}_{0}=(E_{0},p_{0}=p_{|E_{0}},B)$ are 
+    fibrations.
+    
+    Historically, the concept of fibration coincides with the concept of "fiber space\index{fiber space}" given by Hurewicz in 
+    (\cite{hurewicz}, Section 1, p. 956), as also shown in (\cite{hurewicz}, Section 2, p. 957). Thus, the concept of pair fibration 
+    coincides with the so-called "fibered pair\index{fibered pair}" given by Fadell in (\cite{fadell_1}, Definition 2.3, p. 489), as shown 
+    in (\cite{brown}, Lemma 1.4, p. 183).
+    
+    As the simplest example of a pair fibration, we have the expected one:
+
+    \begin{ex}\label{pf_trivial}
+        Considering $B$ an arbitrary topological space, we obtain a pair fibration 
+        $(\varepsilon_{B}^{n},\varepsilon_{B}^{n,0})=(B\times\R^{n},B\times(\R^{n}-\{ 0 \}),p_{1},B)$ with fiber homeomorphic to 
+        $(\R^{n},\R^{n}-\{ 0 \})$.
+    \end{ex}
+    \begin{proof}
+
+        \
+    
+        Initially, consider $X$ any topological space and maps $h:X\to B\times\R^{n}$ and $H:X\times I\to B$ such that the following 
+        commutative diagram is obtained:
+        $$\xymatrix @C=0.5cm {
+            X\times\{ 0 \} \ar[rrr]^-{h} \ar@{^(->}[dd] &&& B\times\R^{n} \ar[dd]^-{p_{1}} \\
+            &&& \\
+            X\times I \ar[rrr]^-{H} &&& B
+        }$$
+
+        \
+        
+        Since $h=(h_{1},h_{2})$, define $\wt{H}:X\times I\to B\times\R^{n}$ by $\wt{H}(x,t)=(H(x,t),h_{2}(x))$. Clearly, $\wt{H}$ is 
+        continuous, $p_{1}\circ\wt{H}=H$, and $\wt{H}(\_,0)=h$, since $H(\_,0)=h_{1}$. Furthermore, if $x_{0}\in X$ is such that 
+        $h(x_{0})\in B\times (\R^{n}-\{ 0 \})$, then $h_{2}(x_{0})\in \R^{n}-\{ 0 \}$, and thus, 
+        $\wt{H}(x_{0},\_)\in B\times(\R^{n}-\{ 0 \})$.
+        
+        Finally, given $(F,F_{0})$ the fiber of $(\mathcal{F},\mathcal{F}_{0})$ over any $b\in B$, we have:
+
+        \
+        
+        $\begin{array}{rl}
+            F \ = & p_{1}^{-1}(b) \\
+            = & \{ b \}\times\R^{n} \\
+            \approx & \R^{n}
+        \end{array}$
+        
+        \
+        
+        \
+        
+        $\begin{array}{rl}
+            F_{0} \ = & p_{1}^{-1}(b)\cap [B\times(\R^{n}-\{ 0 \})] \\
+            = & [\{ b \}\times\R^{n}]\cap [B\times(\R^{n}-\{ 0 \})] \\
+            = & \{ b \}\times(\R^{n}-\{ 0 \}) \\
+            \approx & \R^{n}-\{ 0 \}
+        \end{array}$ 
+
+        \
+        
+        Thus, $(\varepsilon_{B}^{n},\varepsilon_{B}^{n,0})$ is indeed a pair fibration.
+    
+    \end{proof}
+    
+    Note that Example \ref{pf_trivial} also remains valid if we replace $\R^{n}$ with any topological space $F$ and $\R^{n}-\{ 0 \}$ with 
+    any subspace $F_{0}\subset F$. However, in this case, the fiber would be homeomorphic to the pair $(F,F_{0})$.
+    
+    Next, we will present an alternative way of constructing pair fibrations, whose proof can be found in (\cite{allaud}, Theorem 2.5, p.241).
+    
+    \begin{teo}\label{teo_hurewicz}
+        Let $p:E\to B$ be a onto map with $B$ paracompact, and pairs $(F,F_{0})$ and $(E,E_{0})$. If there exists an open covering 
+        $\mathcal{U}$ of $B$ such that, for each $U\in\mathcal{U}$, there exists a homeomorphism 
+        $h_{U}:(U\times F,U\times F_{0})\to (p^{-1}(U),p^{-1}(U)\cap E_{0})$ such that $p\circ h_{U}=p_{1}$, then $(E,E_{0},p,B)$ is a pair 
+        fibration.
+    \end{teo}
+
+    Theorem \ref{teo_hurewicz} can be considered the version of the Hurewicz Uniformization Theorem\index{theorem!Hurewicz Uniformization 
+    Theorem}\footnote{For more details on the Hurewicz Uniformization Theorem, see \cite{hurewicz}.} for fibrations of pairs.
+
+    Thus, we can obtain the following:
+    
+    \begin{ex}\label{pf_fv}
+        Every $\R^{n}$-vector bundle\index{vector bundle}, over a paracompact base, can be associated with a pair 
+        fibration\index{fibration!of pairs}, whose fiber is homeomorphic to the pair $(\R^{n},\R^{n}-\{ 0 \})$.
+    \end{ex}
+    \begin{proof}
+    
+    \
+    
+    First, consider $\xi=(E,p,B)$ an $\R^{n}$-vector bundle over a paracompact $B$. By Definition \ref{fv_defi}, we know that there exists an 
+    open cover $\mathcal{U}$ of $B$ such that, for every $U\in\mathcal{U}$, there exists a homeomorphism $h_{U}:U\times\R^{n}\to p^{-1}(U)$ 
+    satisfying $p\circ h_{U}=p_{1}$.
+    
+    Denoting by $s:B\to E$ the zero section\index{zero section} of $\xi$ and $E_{0}=E-s(B)$, it is clear that we can consider 
+    $h_{U}:(U\times\R^{n},U\times(\R^{n}-\{ 0 \}))\to (p^{-1}(U),p^{-1}(U)\cap E_{0})$ as a homeomorphism of pairs.
+    
+    Therefore, it follows from Theorem \ref{teo_hurewicz} that $(\xi,\xi_{0})=(E,E_{0},p,B)$ is a pair fibration.
+    
+    \end{proof}
+    
+    Now, as the final part of this section, let us see how to construct some pair fibrations from others.
+    
+    \begin{lem}\label{pf_restricao}
+        Let $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,B)$ be a pair fibration and $U\subset B$ any subset. Then, 
+        $(\mathcal{F},\mathcal{F}_{0})_{|U}=(p^{-1}(U),p^{-1}(U)\cap E_{0},p_{|p^{-1}(U)},U)$ will be a pair 
+        fibration\index{fibration!of pairs} with fiber equal to the fiber of $(\mathcal{F},\mathcal{F}_{0})$.
+    \end{lem}
+    \begin{proof}
+    
+    \
+    
+    First, denote $q=p_{|p^{-1}(U)}$ and consider $X$ an arbitrary topological space and maps $h:X\to p^{-1}(U)$ and $H:X\times I\to U$ such 
+    that the following diagram commutes:
+    $$ \xymatrix @C=0.5cm {
+        X\times\{ 0 \} \ar[rrr]^-{h} \ar@{^(->}[dd] &&& p^{-1}(U) \ar[dd]^-{q} \\
+        &&& \\
+        X\times I \ar[rrr]^-{H} &&& U 
+    }$$
+    
+    Since $Im(H)\subset U\subset B$ and $(\mathcal{F},\mathcal{F}_{0})$ is a pair fibration, there exists a map $\wt{H}:X\times I\to E$ such 
+    that $p\circ\wt{H}=H$ and $\wt{H}(\_,0)=h$. On the other hand, $Im(p\circ\wt{H})=Im(H)\subset U$, and thus $Im(\wt{H})\subset p^{-1}(U)$.
+    
+    Moreover, if $x_{0}\in X$ is such that $h(x_{0})\in E_{0}$, then $\wt{H}(x_{0},\_)\in E_{0}$. That is, if 
+    $h(x_{0})\in p^{-1}(U)\cap E_{0}$, then $\wt{H}(x_{0},\_)\in p^{-1}(U)\cap E_{0}$.
+    
+    Finally, letting $(F',F'_{0})$ and $(F,F_{0})$ be the fibers of $(\mathcal{F},\mathcal{F}_{0})_{|U}$ and $(\mathcal{F},\mathcal{F}_{0})$, 
+    respectively, over the same $b\in U$, we have:
+
+    \
+    
+    $\begin{array}{rl}
+        F' \ = & q^{-1}(b) \\
+        = & p^{-1}(b)\cap p^{-1}(U) \\
+        = & p^{-1}(b) \\
+        = & F
+    \end{array}$
+
+    \
+
+    \
+
+    $\begin{array}{rl}
+        F'_{0} \ = & q^{-1}(b)\bigcap [p^{-1}(U)\cap E_{0}] \\
+        = & p^{-1}(b)\bigcap [p^{-1}(U)\cap E_{0}] \\
+        = & p^{-1}(b)\cap E_{0} \\
+        = & F_{0}
+    \end{array}$
+
+    \
+    
+    Therefore, $(\mathcal{F},\mathcal{F}_{0})_{|U}$ is a pair fibration.
+    
+    \end{proof}
+
+    \begin{lem}\label{pf_pullback}
+        Let $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,B)$ be a pair fibration and $f:B'\to B$ a map. Then, 
+        $f^{*}(\mathcal{F},\mathcal{F}_{0})=(f^{*}E,f^{*}E_{0},p_{1},B')$ is also a pair fibration\index{fibration!of pairs} with fiber 
+        homeomorphic to the fiber of $(\mathcal{F},\mathcal{F}_{0})$, where:
+        
+        \begin{enumerate}
+            \item $f^{*}E=\{ (b',e)\in B'\times E \ : \ f(b')=p(e) \}$
+            \item $f^{*}E_{0}=\{ (b',e)\in f^{*}E \ : \ e\in E_{0} \}$
+        \end{enumerate}
+    \end{lem}
+    
+    \begin{proof}
+    
+    \
+
+        At first, let $X$ be any topological space and $h:X\to f^{*}E$ and $H:X\times I\to B'$ maps such that the following diagram commutes:
+        $$\xymatrix @C=0.5cm {
+            X\times\{ 0 \} \ar[rrr]^-{h} \ar@{^(->}[dd] &&& f^{*}E \ar[rrr]^-{p_{2}} \ar[dd]^-{p_{1}} &&& E \ar[dd]^-{p} \\
+            &&& &&& \\
+            X\times I \ar[rrr]^-{H} &&& B' \ar[rrr]^-{f} &&& B
+        }$$
+
+        \
+        
+        Denoting $g=p_{2}\circ h:X\to E$ and $G=f\circ H:X\times I\to B$, since the diagram above commutes and 
+        $(\mathcal{F},\mathcal{F}_{0})$ is a pair fibration, there exists $\widetilde{G}:X\times I\to E$ such that 
+        $p\circ\widetilde{G}=G$, $\widetilde{G}(\_,0)=g$, and if $x_{0}\in X$ is such that $g(x_{0})\in E_{0}$, then 
+        $\widetilde{G}(x_{0},\_)\in E_{0}$.
+        
+        On the other hand, it is clear that $\widetilde{H}=(H,\widetilde{G}):X\times I\to f^{*}E$ is well-defined, since 
+        $f\circ H=G=p\circ\widetilde{G}$. Moreover, $p_{1}\circ\widetilde{H}=H$ and $\widetilde{H}(\_,0)=h$, since $H(\_,0)=p_{1}\circ h$ 
+        and $\widetilde{G}(\_,0)=p_{2}\circ h$.
+        
+        Thus, if $x_{0}\in X$ is such that $h(x_{0})\in f^{*}E_{0}$, then $g(x_{0})=p_{2}\circ h(x_{0})\in E_{0}$, and consequently, 
+        $\widetilde{G}(x_{0},\_)\in E_{0}$. Therefore, $\widetilde{H}(x_{0},\_)\in f^{*}E_{0}$.
+        
+        Finally, if $(F',F'_{0})$ and $(F,F_{0})$ are fibers of $f^{*}(\mathcal{F},\mathcal{F}_{0})$ and $(\mathcal{F},\mathcal{F}_{0})$ 
+        over $b'_{0}\in B'$ and $f(b'_{0})\in B$, respectively, then:
+
+        \
+        
+        $\begin{array}{rl}
+            F' = & p_{1}^{-1}(b'_{0}) \\
+            = & \{ (b',e)\in f^{*}E \ : \ b'=p_{1}(b',e)=b'_{0} \} \\
+            = & \{ (b'_{0},e)\in B'\times E \ : \ f(b'_{0})=p(e) \} \\
+            = & \{ (b'_{0},e)\in B'\times E \ : \ e\in p^{-1}(f(b'_{0})) \} \\
+            = & \{ b'_{0} \}\times p^{-1}(f(b'_{0})) \\
+            = & \{ b'_{0} \}\times F \\
+            \approx & F
+        \end{array}$
+        
+        \
+
+        \
+        
+        $\begin{array}{rl}
+            F'_{0} = & p_{1}^{-1}(b'_{0})\cap f^{*}E_{0} \\
+            = & (\{ b'_{0} \}\times F)\cap f^{*}E_{0} \\
+            = & \{ b'_{0} \}\times (F\cap E_{0}) \\
+            = & \{ b'_{0} \}\times F_{0} \\
+            \approx & F_{0}
+        \end{array}$
+        
+        \
+        
+        Therefore, $f^{*}(\mathcal{F},\mathcal{F}_{0})$ is indeed a pair fibration.
+    \end{proof}
+
+    \begin{lem}\label{pf_produto}
+        Let $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,B)$ and $(\mathcal{F'},\mathcal{F'}_{0})=(E',E'_{0},q,B')$ be two pair fibrations. 
+        Then, $(\mathcal{F},\mathcal{F}_{0})\times(\mathcal{F'},\mathcal{F'}_{0})=(E'',E''_{0},r,B'')$ will be a pair 
+        fibration\index{fibration!of pairs} with fiber equal to the product of the fibers of $(\mathcal{F},\mathcal{F}_{0})$ and 
+        $(\mathcal{F'},\mathcal{F'}_{0})$, where:
+        
+        \begin{enumerate}
+            \item $E''=E\times E'$
+            \item $E''_{0}=(E\times E'_{0})\cup (E_{0}\times E')$
+            \item $r=p\times q$
+        \end{enumerate}
+        
+    \end{lem}
+    
+    \begin{proof}
+    
+    \
+    
+        At first, let $X$ be any topological space and $h:X\to E''$ and $H:X\times I\to B''$ maps such that the following diagram commutes:
+        $$\xymatrix @C=0.5cm {
+            X\times\{ 0 \} \ar[rrr]^-{h} \ar@{^(->}[dd] &&& E'' \ar[dd]^-{r} \\
+            &&& &&& \\
+            X\times I \ar[rrr]^-{H} &&& B'' 
+        }$$
+
+        \
+        
+        Since $h=(h_{1},h_{2})$, $H=(H_{1},H_{2})$, and $H(\_,0)=r\circ h$, we have that $H_{1}(\_,0)=p\circ h_{1}$ and 
+        $H_{2}(\_,0)=q\circ h_{2}$. As $(\mathcal{F},\mathcal{F}_{0})$ and $(\mathcal{F'},\mathcal{F'}_{0})$ are pair fibrations, there 
+        exist maps $\wt{H_{1}}:X\times I\to E$ and $\wt{H_{2}}:X\times I\to E'$ such that $p\circ\wt{H_{1}}=H_{1}$, $q\circ\wt{H_{2}}=H_{2}$, 
+        $\wt{H_{1}}(\_,0)=h_{1}$, $\wt{H_{2}}(\_,0)=h_{2}$, and if $x_{0}\in X$ is such that $h_{1}(x_{0})\in E_{0}$, then 
+        $\wt{H_{1}}(x_{0},\_)\in E_{0}$. Moreover, if $x_{0}\in X$ is such that $h_{2}(x_{0})\in E'_{0}$, then 
+        $\wt{H_{2}}(x_{0},\_)\in E'_{0}$.
+        
+        Thus, defining $\wt{H}=(\wt{H_{1}},\wt{H_{2}}):X\times I\to E''$, it is clear that $\wt{H}(\_,0)=h$ and $r\circ\wt{H}=H$. 
+        Furthermore, if $x_{0}\in X$ is such that $h(x_{0})\in E''_{0}$, then $h_{1}(x_{0})\in E_{0}$ or $h_{2}(x_{0})\in E'_{0}$. 
+        Hence, $\wt{H_{1}}(x_{0},\_)\in E_{0}$ or $\wt{H_{2}}(x_{0},\_)\in E'_{0}$, that is, $\wt{H}(x_{0},\_)\in E''_{0}$.
+        
+        Finally, consider, respectively, $(F,F_{0})$, $(F',F'_{0})$, and $(F'',F''_{0})$ the fibers of 
+        $(\mathcal{F},\mathcal{F}_{0})$, $(\mathcal{F'},\mathcal{F'}_{0})$, and 
+        $(\mathcal{F},\mathcal{F}_{0})\times (\mathcal{F'},\mathcal{F'}_{0})$ over $b\in B$, $b'\in B'$, and $(b,b')\in B''$. Then:
+
+        \
+        
+        $\begin{array}{rl}
+            F'' \ = & r^{-1}(b,b') \\
+            = & p^{-1}(b)\times q^{-1}(b') \\
+            = & F\times F'
+        \end{array}$
+        
+        \
+
+        \
+
+        $\begin{array}{rl}
+            F''_{0} \ = & r^{-1}(b,b')\cap E''_{0} \\
+            = & (F\times F')\bigcap [(E\times E'_{0})\cup (E_{0}\times E')] \\
+            = & [(F\times F')\cap (E\times E'_{0})]\bigcup [(F\times F')\cap (E_{0}\times E')] \\
+            = & [F\times (F'\cap E'_{0})]\bigcup [(F\cap E_{0})\times F'] \\
+            = & (F\times F'_{0})\cup (F_{0}\times F')
+        \end{array}$
+        
+        \
+        
+        Therefore, $(\mathcal{F},\mathcal{F}_{0})\times (\mathcal{F'},\mathcal{F'}_{0})$ will be a pair fibration.
+        
+    \end{proof}
+
+    
+
+    \section{Generalized Bundle}\label{secao_fib_gener}
+
+    \
+
+    In this section, we will present the tool developed by Fadell in \cite{fadell_1} that allows us to generalize 
+    tangent\index{vector bundle!tangent} and normal\index{vector bundle!normal} vector bundles of smooth manifolds\index{manifold!smooth} to 
+    topological manifolds\index{manifold!topological}. This tool is called the generalized bundle.
+
+    Except for examples \ref{fht_sobre_ponto} and \ref{fht_fv}, lemmas \ref{iso_homot} and \ref{iso_homot_2}, and propositions 
+    \ref{iso_fv_fht}, \ref{iso_homeo}, \ref{fht_tang_cart}, and \ref{iso_merg_lf_2}, all other results were taken from \cite{fadell_1}. 
+    However, we will provide more detailed proofs of these results here.
+    
+    \begin{defi}{\bf (Generalized Bundle)}\label{defi_fib_gen}
+        A pair fibration\index{pair fibration} $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,B)$ is said to be an $\R^{n}$-generalized 
+        bundle\index{generalized bundle} if:
+    
+        \begin{enumerate}
+            \item There exists a section\index{section} $s:B\to E$ of $(\mathcal{F},\mathcal{F}_{0})$ such that $E_{0}$ is realized, i.e., 
+            $E_{0}=E-s(B)$.
+            \item Every fiber $(F,F_{0})$ of $(\mathcal{F},\mathcal{F}_{0})$ satisfies $(F,F_{0})\sim (\R^{n},\R^{n}-\{ 0 \})$.
+        \end{enumerate}
+    \end{defi}
+    
+    \begin{ex}\label{fht_trivial}
+        The pair fibration $(\varepsilon^{n}_{B},\varepsilon^{n,0}_{B})$ is an $\R^{n}-$generalized bundle.
+    \end{ex}
+    \begin{proof}
+        
+        \
+    
+        Since Example \ref{pf_trivial} already shows that $(\varepsilon^{n}_{B},\varepsilon^{n,0}_{B})$ is a pair fibration with a fiber 
+        homeomorphic to the pair $(\R^{n},\R^{n}-\{ 0 \})$, it is enough to define a section of $(\varepsilon^{n}_{B},\varepsilon^{n,0}_{B})$ 
+        that realizes $B\times(\R^{n}-\{ 0 \})$.
+    
+        Note that $s:B\to B\times\R^{n}$ defined by $s(b)=(b,0)$ is the required section.
+    
+        Therefore, $(\varepsilon^{n}_{B},\varepsilon^{n,0}_{B})$ is an $\R^{n}-$generalized bundle.
+    
+    \end{proof}
+    
+    \begin{lem}\label{fht_restricao}
+        If $(\mathcal{F},\mathcal{F}_{0})$ is an $\R^{n}-$generalized bundle\index{generalized bundle} over $B$, then 
+        $(\mathcal{F},\mathcal{F}_{0})_{|U}$ will also be an $\R^{n}-$generalized bundle for any $U\subset B$.
+    \end{lem}
+    \begin{proof}
+        
+        \
+    
+        From Lemma \ref{pf_restricao}, we already know that if $(\mathcal{F},\mathcal{F}_{0})$ is a pair fibration\index{pair fibration}, 
+        then for any arbitrary $U\subset B$, $(\mathcal{F},\mathcal{F}_{0})_{|U}$ will also be a pair fibration with fiber equal to the fiber 
+        of $(\mathcal{F},\mathcal{F}_{0})$.
+        
+        Thus, let $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,B)$ and 
+        $(\mathcal{F},\mathcal{F}_{0})_{|U}=(p^{-1}(U),p^{-1}(U)\cap E_{0},p_{|p^{-1}(U)},U)$. It is enough to find a 
+        section\index{section} of $(\mathcal{F},\mathcal{F}_{0})_{|U}$ that realizes $p^{-1}(U)\cap E_{0}$.
+    
+        Since $(\mathcal{F},\mathcal{F}_{0})$ is an $\R^{n}-$generalized bundle, there exists a section $s:B\to E$ of 
+        $(\mathcal{F},\mathcal{F}_{0})$ that realizes $E_{0}$.
+        
+        Now, define $s'=s_{|U}:U\to p^{-1}(U)$. Clearly, $Im(s')\subset p^{-1}(U)$ because $p\circ s(U)=U$. Furthermore, we have:
+
+        \
+    
+        $\begin{array}{rl}
+            p^{-1}(U)\cap E_{0} = & p^{-1}(U)\bigcap [E-s(B)] \\
+            = & [p^{-1}(U)\cap E]-[p^{-1}(U)\cap s(B)] \\
+            = & p^{-1}(U)-s(U) \\
+            = & p^{-1}(U)-s'(U)
+        \end{array}$
+
+        \
+    
+        Therefore, $(\mathcal{F},\mathcal{F}_{0})_{|U}$ will also be an $\R^{n}-$generalized bundle for all $U\subset B$.
+    
+    \end{proof}
+    
+    Following the notation of Lemma \ref{fht_restricao}, if $(\mathcal{F},\mathcal{F}_{0})$ is an $\R^{n}-$generalized bundle, we call 
+    $(\mathcal{F},\mathcal{F}_{0})_{|U}$ the restriction of the $\R^{n}-$generalized bundle\index{generalized bundle!restriction} of 
+    $(\mathcal{F},\mathcal{F}_{0})$ to $U\subset B$.
+    
+    \begin{defi}
+        Let $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,B)$ and $(\mathcal{F'},\mathcal{F'}_{0})=(E',E'_{0},q,B)$ be $\R^{n}$-generalized 
+        bundles over the same base. We call $\phi:(\mathcal{F},\mathcal{F}_{0})\to (\mathcal{F'},\mathcal{F'}_{0})$ a fiber 
+        map\index{fiber map} if $\phi:(E,E_{0})\to (E',E'_{0})$ is a map that preserves the fibers, i.e., $q\circ\phi=p$.
+    \end{defi}
+
+    \begin{defi}\label{defi_iso_homot}
+        We say that two $\R^{n}-$generalized bundles over the same base, $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,B)$ and 
+        $(\mathcal{F'},\mathcal{F'}_{0})=(E',E'_{0},q,B)$, are homotopically isomorphic if there exist fiber maps 
+        $\phi:(\mathcal{F},\mathcal{F}_{0})\rightleftarrows (\mathcal{F'},\mathcal{F'}_{0}):\psi$ and $H:(E,E_{0})\times I\to (E,E_{0})$ and 
+        $G:(E',E'_{0})\times I\to (E',E'_{0})$ homotopies such that:
+        
+        \
+
+        $\begin{array}{lcccl}
+            1. \ H(\_,0)=\psi\circ\phi            & & & & 4. \ G(\_,0)=\phi\circ\psi \\
+            2. \ H(\_,1)=1                        & & & & 5. \ G(\_,1)=1 \\
+            3. \ p\circ H(\_,t)=p, \forall t\in I & & & & 6. \ q\circ G(\_,t)=q, \forall t\in I
+        \end{array}$
+
+        \
+    
+        The homotopy isomorphism\index{isomorphism!homotopy}, defined above, will be denoted by 
+        $(\mathcal{F},\mathcal{F}_{0})\sim_{f} (\mathcal{F'},\mathcal{F'}_{0})$.
+    \end{defi}
+    
+        The notion of homotopy isomorphism, as given in the definition above, coincides with the concept of "fiber homotopy 
+        equivalence\index{fiber homotopy equivalence}" given by Fadell in (\cite{fadell_1}, Definition 2.4, p. 489).
+    
+    \begin{defi}
+        We call a $\R^{n}-$generalized bundle $(\mathcal{F},\mathcal{F}_{0})$, over $B$, locally trivial\index{locally trivial} if there 
+        exists an open cover $\mathcal{U}$ of $B$ such that 
+        $(\mathcal{F},\mathcal{F}_{0})_{|U}\sim_{f} (\varepsilon^{n}_{U},\varepsilon^{n,0}_{U})$, for every $U\in\mathcal{U}$. In particular, 
+        $(\mathcal{F},\mathcal{F}_{0})$ will be called a trivial $\R^{n}-$generalized bundle\index{fiber bundle!generalized!trivial} if 
+        $(\mathcal{F},\mathcal{F}_{0})\sim_{f} (\varepsilon^{n}_{B},\varepsilon^{n,0}_{B})$.
+    \end{defi}
+    
+    \begin{ex}\label{fht_sobre_ponto}
+        Every $\R^{n}-$generalized bundle over a point is trivial.
+    \end{ex}
+    \begin{proof}
+    
+        \
+    
+        Let us denote by $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,\{ * \})$ a $\R^{n}-$generalized bundle whose base space consists of only 
+        one point.
+    
+        Thus, it is clear that $(E,E_{0})=(p^{-1}(*),p^{-1}(*)\cap E_{0})\sim (\R^{n},\R^{n}-\{0 \})$, that is, there exist fiber maps 
+        $\phi:(E,E_{0})\rightleftarrows (\R^{n},\R^{n}-\{ 0 \}):\psi$ and homotopies $H:(E,E_{0})\times I\to (E,E_{0})$ and 
+        $G:(\R^{n},\R^{n}-\{0 \})\times I\to (\R^{n},\R^{n}-\{0 \})$ such that $H(\_,0)=\psi\circ\phi$, $H(\_,1)=1$, $G(\_,0)=\phi\circ\psi$ 
+        and $G(\_,1)=1$.
+    
+        Thus, the following fiber maps\index{fiber map} and homotopies are well-defined:
+    
+        \begin{enumerate}
+            \item $\overline{\phi}:(E,E_{0})\rightleftarrows (\{ * \}\times\R^{n},\{ * \}\times\R^{n}-\{0 \}):\overline{\psi}$ \\
+            $ \overline{\phi}(e)=(*,\phi(e)) $ \\
+            $ \overline{\psi}(*,x)=\psi(x) $
+            \item $\overline{H}:(E,E_{0})\times I\to (E,E_{0})$ \\
+            $ \overline{H}(e,t)=H(e,t) $
+            \item $\overline{G}:(\{ * \}\times\R^{n},\{ * \}\times\R^{n}-\{0 \})\times I \to (\{ * \}\times\R^{n},\{ * \}\times\R^{n}-\{0 \})$ \\
+            $ \overline{G}((*,x),t)=(*,G(x,t)) $
+        \end{enumerate}
+    
+        It is clear that $\overline{H}(\_,1)=1$, $\overline{G}(\_,1)=1$, $p\circ\overline{H}(\_,t)=p$ and $p_{1}\circ\overline{G}(\_,t)=p_{1}$ 
+        for any $t\in I$. Also:
+
+        \
+    
+        $\begin{array}{rl}
+            \forall e\in E, \ \overline{H}(e,0) \ = & H(e,0) \\
+            = & \psi\circ\phi(e) \\
+            = & \overline{\psi}(*,\phi(e)) \\
+            = & \overline{\psi}\circ\overline{\phi}(e)
+        \end{array}$
+
+        \
+
+        \
+
+        $\begin{array}{rl}
+            \forall x\in \R^{n}, \ \overline{G}((*,x),0) \ = & (*,G(x,0)) \\
+            = & (*,\phi\circ\psi(x)) \\
+            = & \overline{\phi}(\psi(x)) \\
+            = & \overline{\phi}\circ\overline{\psi}(*,x)
+        \end{array}$
+
+        \
+    
+        Therefore, $(\mathcal{F},\mathcal{F}_{0})\sim_{f}(\varepsilon^{n}_{\{ * \}},\varepsilon^{n,0}_{\{ * \}})$.
+    
+    \end{proof}
+
+    Regarding specific conditions, the homotopy isomorphism\index{isomorphism!homotopy} can be guaranteed more simply, as follows:
+
+    \begin{lem}\label{iso_homot}
+        Let $(\mathcal{F},\mathcal{F}_{0})$ and $(\mathcal{F'},\mathcal{F'}_{0})$ be two $\R^{n}-$generalized bundles, over the same base. 
+        If $\phi:(\mathcal{F},\mathcal{F}_{0})\to (\mathcal{F'},\mathcal{F'}_{0})$ is a fiber map\index{map!fiber} such that $\phi$ is a 
+        homeomorphism, then $(\mathcal{F},\mathcal{F}_{0})\sim_{f} (\mathcal{F'},\mathcal{F'}_{0})$.
+    \end{lem}
+    \begin{proof}
+    
+        \
+        
+        Initially, since $\phi$ is a homeomorphism and $q\circ\phi=p$, it follows that $p\circ\phi^{-1}=q$, that is, 
+        $\phi^{-1}:(\mathcal{F},\mathcal{F}_{0})\to (\mathcal{F'},\mathcal{F'}_{0})$ is also a fiber map.
+        
+        Thus, it is evident that $(\mathcal{F},\mathcal{F}_{0})\sim_{f} (\mathcal{F},\mathcal{F}_{0})$, since it is sufficient to define 
+        trivial homotopies for the conditions of homotopy isomorphism to be satisfied.
+        
+    \end{proof}
+    
+    In this way, using Lemma \ref{iso_homot} and the construction from Example \ref{pf_fv}, we obtain the following:
+    
+    \begin{ex}\label{fht_fv}
+        If $\xi$ is an $\R^{n}-$vector bundle\index{bundle!vector} over a paracompact base, then its associated pair 
+        fibration\index{fibration!pair} $(\xi,\xi_{0})$ will be a locally trivial $\R^{n}-$generalized bundle\index{bundle!generalized}.
+    \end{ex}
+    
+    Therefore, we can consider that the notion of generalized bundles generalizes the concept of vector bundles. Thus, it is expected 
+    that the isomorphism structure between vector bundles is preserved when passing to homotopy isomorphism\index{isomorphism!homotopy}, as 
+    in the following:
+    
+    \begin{prop}\label{iso_fv_fht}
+        Let $\xi$ and $\eta$ be two isomorphic $\R^{n}-$vector bundles\index{bundle!vector} over the same paracompact base. Then, their 
+        respective associated $\R^{n}-$generalized bundles $(\xi,\xi_{0})$ and $(\eta,\eta_{0})$ are homotopy isomorphic.
+    \end{prop}
+    \begin{proof}
+    
+        \
+
+        First, let $\xi=(E,p,B)\cong\eta=(E',q,B)$. Thus, by definition \ref{fv_iso}, there exists a homeomorphism $h:E\to E'$ such that 
+        $q\circ h=p$ and $h_{|F}:F\to F'$ is a vector isomorphism\index{isomorphism!vector}, for any fibers $F$ and $F'$ of $\xi$ and $\eta$, 
+        respectively, over the same $b\in B$.
+        
+        Let $s:B\to E$ and $s':B\to E'$ be the zero sections\index{section!zero} of $\xi$ and $\eta$, respectively, and consider 
+        $E_{0}=E-s(B)$ and $E'_{0}=E'-s'(B)$. If we show that $h(E_{0})\subset E'_{0}$, then $h:(E,E_{0})\to (E',E'_{0})$ will be a 
+        homeomorphism and a fiber map\index{map!fiber}, and thus, Lemma \ref{iso_homot} will guarantee that 
+        $(\xi,\xi_{0})\sim_{f} (\eta,\eta_{0})$.
+        
+        To this end, note that:
+
+        \
+        
+        $\begin{array}{rl}
+            e\in E_{0} \Longrightarrow & e\in F=p^{-1}(p(e))\cong\R^{n} \text{ and } e\neq 0 \\
+            \Longrightarrow & h(e)\in F'=q^{-1}(p(e))\cong\R^{n} \text{ and } h(e)\neq 0 \\
+            \Longrightarrow & h(e)\in E'_{0}
+        \end{array}$
+
+        \
+        
+        Therefore, we conclude that $(\xi,\xi_{0})\sim_{f} (\eta,\eta_{0})$.
+        
+    \end{proof}
+    
+    \begin{lem}\label{fht_pullback}
+        If $(\mathcal{F},\mathcal{F}_{0})$ is a $\R^{n}-$generalized bundle\index{bundle!generalized!trivial} over $B$ and $f:B'\to B$ is any 
+        map, then $f^{*}(\mathcal{F},\mathcal{F}_{0})$ will also be a $\R^{n}-$generalized bundle. In particular, if 
+        $(\mathcal{F},\mathcal{F}_{0})$ is trivial, then $f^{*}(\mathcal{F},\mathcal{F}_{0})$ will also be trivial.
+    \end{lem}
+
+    \begin{proof}
+
+        \
+
+        Due to lemma \ref{pf_pullback}, we already know that if $(\mathcal{F},\mathcal{F}_{0})$ is a pair fibration, then 
+        $f^{*}(\mathcal{F},\mathcal{F}_{0})$ will be a pair fibration with fiber homeomorphic to the fiber of $(\mathcal{F},\mathcal{F}_{0})$. 
+        Thus, denoting $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,B)$ and $f^{*}(\mathcal{F},\mathcal{F}_{0})=(f^{*}E,f^{*}E_{0},p_{1},B')$, 
+        it is enough to show that there exists a section of $f^{*}(\mathcal{F},\mathcal{F}_{0})$ that realizes $f^{*}E_{0}$.
+    
+        To this end, since $(\mathcal{F},\mathcal{F}_{0})$ is a $\R^{n}-$generalized bundle, there exists a section $s:B\to E$ of 
+        $(\mathcal{F},\mathcal{F}_{0})$ that realizes $E_{0}$. In this way, the section 
+        $s':B'\to f^{*}E$ of $f^{*}(\mathcal{F},\mathcal{F}_{0})$ is well-defined, given by $s'(b')=(b',s(f(b')))$. Finally:
+
+        \
+        
+        $\begin{array}{rl}
+            f^{*}E_{0} \ = & [B'\times E_{0}]\bigcap f^{*}E \\
+            = & [B'\times (E-s(B))]\bigcap f^{*}E \\
+            = & [(B'\times E)-(B'\times s(B))]\bigcap f^{*}E \\
+            = & [(B'\times E)\cap f^{*}E]-[(B'\times s(B))\cap f^{*}E] \\
+            = & f^{*}E - \{ (b',s(b))\in B'\times s(B) \ : \ f(b')=p(s(b))=b \} \\
+            = & f^{*}E - [B'\times s(f(B'))] \\
+            = & f^{*}E - s'(B')
+        \end{array}$
+        
+        \
+    
+        Therefore, $f^{*}(\mathcal{F},\mathcal{F}_{0})$ will be a $\R^{n}-$generalized bundle.
+    
+        Now, we need to show that if $(\mathcal{F},\mathcal{F}_{0})\sim_{f}(\varepsilon_{B}^{n},\varepsilon_{B}^{n,0})$, then 
+        $f^{*}(\mathcal{F},\mathcal{F}_{0})\sim_{f}(\varepsilon_{B'}^{n},\varepsilon_{B'}^{n,0})$. So, suppose there exist the following 
+        fiber maps and homotopies satisfying the relations below:
+    
+        \begin{enumerate}
+            \item $\phi:(E,E_{0})\rightleftarrows(B\times \R^{n},B\times (\R^{n}-\{ 0 \})):\psi$
+            \item $H:(E,E_{0})\times I\to (E,E_{0})$
+            \item $G:(B\times\R^{n},B\times(\R^{n}-\{ 0 \}))\times I\to (B\times\R^{n},B\times(\R^{n}-\{ 0 \}))$
+            \item $\phi$, $\psi$, $H$, and $G$ satisfy:
+            
+                $\begin{array}{lcccl}
+                    H(\_,0)=\psi\circ\phi            & & & & G(\_,0)=\phi\circ\psi \\
+                    H(\_,1)=1                        & & & & G(\_,1)=1 \\
+                    p\circ H(\_,t)=p, \forall t\in I & & & & p_{1}\circ G(\_,t)=p_{1}, \forall t\in I
+                \end{array}$
+        \end{enumerate}
+
+        \
+    
+        In this way, the following fiber maps and homotopies are well-defined:
+    
+        \begin{enumerate}
+            \item $\overline{\phi}:(f^{*}E,f^{*}E_{0})\rightleftarrows (B'\times \R^{n},B'\times (\R^{n}-\{ 0 \})):\overline{\psi}$ \\
+            $ \overline{\phi}(b',e)=(b',p_{2}\circ\phi(e)) $ \\
+            $ \overline{\psi}(b',x)=(b',\psi(f(b'),x)) $
+            \item $\overline{H}:(f^{*}E,f^{*}E_{0})\times I\to (f^{*}E,f^{*}E_{0})$ \\
+            $ \overline{H}((b',e),t)=(b',H(e,t)) $
+            \item $\overline{G}:(B'\times \R^{n},B'\times (\R^{n}-\{ 0 \}))\times I\to (B'\times \R^{n},B'\times (\R^{n}-\{ 0 \}))$ \\
+            $ \overline{G}((b',x),t)=(b',p_{2}\circ G((f(b'),x),t)) $
+        \end{enumerate}
+
+        \
+    
+        Let's show that $\overline{\phi}$, $\overline{\psi}$, $\overline{H}$, and $\overline{G}$ satisfy the conditions of definition 
+        \ref{defi_iso_homot}. Indeed:
+    
+        \begin{enumerate}
+            \item It is clear that $p_{1}\circ\overline{H}((\_,\_),t)=p_{1}$ and $p_{1}\circ\overline{G}((\_,\_),t)=p_{1}$ for all $t\in I$
+            \item It is also clear that $\overline{H}((\_,\_),1)=1$ and $\overline{G}((\_,\_),1)=1$
+            \item $\forall (b',e)\in f^{*}E$, \\
+                   
+                    $\begin{array}{rl}
+                        \overline{H}((b',e),0) \ = & (b',H(e,0)) \\
+                        = & (b',\psi\circ\phi(e)) \\
+                        = & (b',\psi(p_{1}\circ\phi(e),p_{2}\circ\phi(e))) \\
+                        = & (b',\psi(p(e),p_{2}\circ\phi(e))) \\
+                        = & (b',\psi(f(b'),p_{2}\circ\phi(e))) \\
+                        = & \overline{\psi}(b',p_{2}\circ\phi(e)) \\
+                        = & \overline{\psi}\circ\overline{\phi}(b',e)
+                    \end{array}$
+            \item $\forall (b',x)\in B'\times\R^{n}$, \\
+                    
+                    $\begin{array}{rl}
+                        \overline{G}((b',x),0) \ = & (b',p_{2}\circ G((f(b'),x),0)) \\
+                        = & (b',p_{2}\circ\phi\circ\psi(f(b'),x)) \\
+                        = & \overline{\phi}(b',\psi(f(b'),x)) \\
+                        = & \overline{\phi}\circ\overline{\psi}(b',x)
+                    \end{array}$
+        \end{enumerate}
+    
+        \par Therefore, $f^{*}(\mathcal{F},\mathcal{F}_{0})\sim_{f}(\varepsilon_{B'}^{n},\varepsilon_{B'}^{n,0})$.
+    
+    \end{proof}
+
+    Following the notation of Lemma \ref{fht_pullback}, given $(\mathcal{F},\mathcal{F}_{0})$ a $\R^{n}-$generalized bundle, we call 
+    $f^{*}(\mathcal{F},\mathcal{F}_{0})$ the $\R^{n}-$generalized bundle pullback\index{fibration!generalized!pullback} of 
+    $(\mathcal{F},\mathcal{F}_{0})$ by the map $f$.
+
+    Now, let's look at some examples involving generalized fibration pullbacks.
+    
+    \begin{ex}\label{fht_pullback_ex1}
+    Let $(\mathcal{F},\mathcal{F}_{0})$ and $(\mathcal{F'},\mathcal{F'}_{0})$ be two $\R^{n}-$generalized bundles, over the same base $B$, 
+    such that $(\mathcal{F},\mathcal{F}_{0})\sim_{f} (\mathcal{F'},\mathcal{F'}_{0})$. Then, let $1:B\to B$ be the identity map, and we have 
+    $(\mathcal{F},\mathcal{F}_{0})\sim_{f} 1^{*}(\mathcal{F'},\mathcal{F'}_{0})$.
+    \end{ex}
+    \begin{proof}
+
+        \
+
+        Initially, let us denote $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,B)$ and $(\mathcal{F'},\mathcal{F'}_{0})=(E',E'_{0},q,B)$. Since 
+        $(\mathcal{F},\mathcal{F}_{0})\sim_{f} (\mathcal{F'},\mathcal{F'}_{0})$, there exist the following fiber maps and homotopies 
+        satisfying the following relations:
+        
+        \begin{enumerate}
+            \item $\phi:(E,E_{0}) \rightleftarrows (E',E'_{0}):\psi$
+            \item $H:(E,E_{0}) \times I \to (E,E_{0})$
+            \item $G:(E',E'_{0}) \times I \to (E',E'_{0})$
+            \item $\phi$, $\psi$, $H$, and $G$ satisfy the following relations:
+            
+                $\begin{array}{lccl}
+                    H(\_, 0) = \psi \circ \phi & & & G(\_, 0) = \phi \circ \psi \\
+                    H(\_, 1) = 1 & & & G(\_, 1) = 1 \\
+                    p \circ H(\_, t) = p, \ \forall t \in I & & & q \circ G(\_, t) = q, \ \forall t \in I
+                \end{array}$
+        \end{enumerate}
+        
+        \
+        
+        Recall that the $\R^{n}-$generalized bundle pullback\index{fibration!generalized!pullback} 
+        $1^{*}(\mathcal{F'},\mathcal{F'}_{0})=(1^{*}E',1^{*}E'_{0},p_{1},B)$ is such that:
+        $$1^{*}E'=\{ (b,e')\in B\times E' : b=q(e') \}$$
+        $$1^{*}E'_{0}=\{ (b,e')\in 1^{*}E' : e'\in E'_{0} \}$$
+        
+        \
+
+        So, the following fiber maps\index{map!fibration} and homotopies are 
+        well-defined:
+        
+        \begin{enumerate}
+            \item $\overline{\phi}:(E,E_{0})\rightleftarrows (1^{*}E',1^{*}E'_{0}):\overline{\psi}$ \\
+            $\overline{\phi}(e)=(p(e),\phi(e))$ \\
+            $\overline{\psi}(b,e')=\psi(e')$
+            \item $\overline{H}:(E,E_{0})\times I\to (E,E_{0})$ \\
+            $\overline{H}(e,t)=H(e,t)$
+            \item $\overline{G}:(1^{*}E',1^{*}E'_{0})\times I\to (1^{*}E',1^{*}E'_{0})$ \\
+            $\overline{G}((b,e'),t)=(b,G(e',t))$
+        \end{enumerate}
+
+        \
+        
+        Thus, it is clear that $\overline{H}(e,1)=e$, for all $e\in E$, and $p\circ\overline{H}(\_,t)=p$, for all $t\in I$, since $H$ has 
+        these properties. Similarly, $\overline{G}((b,e'),1)=(b,e')$, for all $(b,e')\in 1^{*}E'$, and $p_{1}\circ\overline{G}(\_,t)=p_{1}$, 
+        for all $t\in I$. Additionally, we have that:
+
+        \
+        
+        $\begin{array}{rl}
+            \forall e\in E, \ \overline{H}(e,0) = & H(e,0) \\
+            = & \psi\circ\phi(e) \\
+            = & \overline{\psi}(p(e),\phi(e)) \\
+            = & \overline{\psi}\circ\overline{\phi}(e)
+        \end{array}$
+
+        \
+ 
+        \
+
+        $\begin{array}{rl}
+            \forall (b,e')\in 1^{*}E', \ \overline{G}((b,e'),0) = & (b,G(e',0)) \\
+            = & (b,\phi\circ\psi(e')) \\
+            = & (q(e'),\phi\circ\psi(e')) \\
+            = & (p\circ\psi(e'),\phi\circ\psi(e')) \\
+            = & \overline{\phi}(\psi(e')) \\
+            = & \overline{\phi}\circ\overline{\psi}(b,e')
+        \end{array}$
+
+        \
+        
+        Therefore, $(\mathcal{F},\mathcal{F}_{0})\sim_{f} 1^{*}(\mathcal{F'},\mathcal{F'}_{0})$.
+    
+    \end{proof}
+
+    \begin{ex}\label{fht_pullback_ex2}
+        Let $B$ be a topological space, $b_{0} \in B$ any point, and $c:B \to \{ b_{0} \}$ the constant map. Then, 
+        $(\varepsilon^{n}_{B}, \varepsilon^{n,0}_{B}) \sim_{f} c^{*}(\varepsilon^{n}_{\{ b_{0} \}}, \varepsilon^{n,0}_{\{ b_{0} \}})$.
+    \end{ex}
+    \begin{proof}
+
+        \
+        
+        Recall that 
+        $c^{*}(\varepsilon^{n}_{\{ b_{0} \}}, \varepsilon^{n,0}_{\{ b_{0} \}}) = (c^{*}(\{ b_{0} \} \times \R^{n}), c^{*}[\{ b_{0} \} \times (\R^{n} - \{ 0 \})], p_{1}, B)$ 
+        is the $\R^{n}$-generalized bundle pullback such that:
+
+        \
+        
+        $\begin{array}{rl}
+        c^{*}(\{ b_{0} \} \times \R^{n}) = & \{ (b, (b_{0}, x)) \in B \times (\{ b_{0} \} \times \R^{n}) : b_{0} = c(b) = p_{1}(b_{0}, x) = b_{0} \} \\
+        = & B \times \{ b_{0} \} \times \R^{n}
+        \end{array}$
+
+        \
+
+        \
+        
+        $c^{*}[\{ b_{0} \} \times (\R^{n} - \{ 0 \})] = B \times \{ b_{0} \} \times (\R^{n} - \{ 0 \})$
+
+        \
+        
+        Thus, $\phi:(B \times \R^{n}, B \times (\R^{n} - \{ 0 \})) \rightleftarrows (B \times \{ b_{0} \} \times \R^{n}, B \times \{ b_{0} \} \times (\R^{n} - \{ 0 \})) : \psi$, 
+        given by $\phi(b, x) = (b, b_{0}, x)$ and $\psi(b, b_{0}, x) = (b, x)$, respectively, are well-defined fiber maps, with $\phi$ being a 
+        homeomorphism with inverse $\psi$.
+        
+        Therefore, by lemma \ref{iso_homot}, we conclude that 
+        $(\varepsilon^{n}_{B}, \varepsilon^{n,0}_{B}) \sim_{f} c^{*}(\varepsilon^{n}_{\{ b_{0} \}}, \varepsilon^{n,0}_{\{ b_{0} \}})$.
+    \end{proof}
+        
+    The next result is a more general version of lemma \ref{iso_homot}, now involving generalized bundles over different bases.
+        
+    \begin{lem}\label{iso_homot_2}
+        Assume $(\mathcal{F}, \mathcal{F}_{0}) = (E, E_{0}, p, B)$ is an $\R^{n}$-generalized bundle. Given homeomorphisms $h: B' \to B$ 
+        and $H: (E', E'_{0}) \to (E, E_{0})$, the structure $(\mathcal{F'}, \mathcal{F'}_{0}) = (E', E'_{0}, h^{-1} \circ p \circ H, B')$ 
+        also forms an $\R^{n}$-generalized bundle. We also have to 
+        $(\mathcal{F'}, \mathcal{F'}_{0}) \sim_{f} h^{*}(\mathcal{F}, \mathcal{F}_{0})$.
+    \end{lem}
+
+    \begin{proof}
+
+        \
+
+        Denote $q = h^{-1} \circ p \circ H$. We begin by proving that $(\mathcal{F'}, \mathcal{F'}_{0})$ is a pair fibration. To this end, 
+        let $X$ be any topological space, and let $f: X \to E'$ and $F: X \times I \to B'$ be maps such that $F(\_,0) = q \circ f$.
+            
+        By defining the maps $g = H \circ f: X \to E$ and $G = h \circ F: X \times I \to B$, it is clear that:
+
+        \
+            
+            $\begin{array}{rl}
+            G(\_,0) = & h \circ F(\_,0) \\
+            = & h \circ q \circ f \\
+            = & p \circ H \circ f \\
+            = & p \circ g
+            \end{array}$
+        
+        \
+            
+        Thus, we obtain the following commutative diagram:
+            
+            $$
+            \xymatrix @C=0.5cm {
+            X \times \{ 0 \} \ar[rrr]^-{f} \ar@{^(->}[dd] \ar@/^0.6cm/[rrrrrr]^-{g} &&& E' \ar[rrr]^-{H} \ar[dd]^{q} &&& E \ar[dd]^-{p} \\
+            &&& &&& \\
+            X \times I \ar[rrr]^-{F} \ar@/_0.6cm/[rrrrrr]_-{G} &&& B' \ar[rrr]^-{h} &&& B
+            }
+            $$
+        
+        \
+            
+        Since $(\mathcal{F}, \mathcal{F}_{0})$ is a pair fibration, we know there exists a map $\wt{G}: X \times I \to E$ such that 
+        $\wt{G}(\_,0) = g$, $p \circ \wt{G} = G$, and if $g(x) \in E_{0}$, then $\wt{G}(x,\_) \in E_{0}$. Thus, defining the map 
+        $\wt{F} = H^{-1} \circ \wt{G}: X \times I \to E'$, we have:
+
+        \
+            
+            $\begin{array}{rl}
+                \wt{F}(\_,0) = & H^{-1} \circ \wt{G}(\_,0) \\
+                = & H^{-1} \circ g \\
+                = & H^{-1} \circ H \circ f \\
+                = & f
+            \end{array}$
+        
+        \
+
+        \
+            
+            $\begin{array}{rl}
+                q \circ \wt{F} = & h^{-1} \circ p \circ H \circ H^{-1} \circ \wt{G} \\
+                = & h^{-1} \circ p \circ \wt{G} \\
+                = & h^{-1} \circ G \\
+                = & h^{-1} \circ h \circ F \\
+                = & F
+            \end{array}$
+            
+        \    
+ 
+        \
+
+            $\begin{array}{rl}
+                f(x) \in E'_{0} \Longrightarrow & g(x) = H \circ f(x) \in E_{0} \\
+                \Longrightarrow & \wt{G}(x,\_) \in E_{0} \\
+                \Longrightarrow & \wt{F}(x,\_) = H^{-1} \circ \wt{G}(x,\_) \in E'_{0}
+            \end{array}$
+        
+        \
+            
+        Thus, we conclude that $(\mathcal{F'}, \mathcal{F'}_{0})$ is indeed a pair fibration.
+
+        \
+            
+        Now, we prove that $(\mathcal{F'}, \mathcal{F'}_{0})$ is an $\mathbb{R}^n-$generalized bundle. Since there exists a section 
+        $s: B \to E$ of $(\mathcal{F}, \mathcal{F}_{0})$ that realizes $E_{0}$, we define $s': H^{-1} \circ s \circ h: B' \to E'$. We have:
+
+        \
+        
+            $\begin{array}{rl}
+                q \circ s' = & h^{-1} \circ p \circ H \circ H^{-1} \circ s \circ h \\
+                = & h^{-1} \circ p \circ s \circ h \\
+                = & h^{-1} \circ h \\
+                = & 1
+            \end{array}$
+            
+        \
+
+        \
+            
+            $\begin{array}{rl}
+                E' - s'(B') = & H^{-1}(E) - H^{-1}(s(h(B'))) \\
+                = & H^{-1}(E - s(B)) \\
+                = & H^{-1}(E_{0}) \\
+                = & E'_{0}
+            \end{array}$
+            
+        \
+            
+        Thus, $s'$ is a section of $(\mathcal{F'}, \mathcal{F'}_{0})$ that realizes $E'_{0}$. Moreover, since every fiber of 
+        $(\mathcal{F}, \mathcal{F}_{0})$ has the same type of homotopy as $(\mathbb{R}^n, \mathbb{R}^n - \{ 0 \})$, for every 
+        $b' \in B'$, we have:
+
+        \
+            
+            
+            $\begin{array}{rl}
+                q^{-1}(b') = & H^{-1}(p^{-1}(h(b'))) \\
+                \approx & p^{-1}(h(b')) \\
+                \sim & \mathbb{R}^n
+            \end{array}$
+        
+        \
+
+        \
+            
+            $\begin{array}{rl}
+                q^{-1}(b') \cap E'_{0} = & H^{-1}(p^{-1}(h(b'))) \cap H^{-1}(E_{0}) \\
+                = & H^{-1}(p^{-1}(h(b')) \cap E_{0}) \\
+                \approx & p^{-1}(h(b')) \cap E_{0} \\
+                \sim & \mathbb{R}^n - \{ 0 \}
+            \end{array}$
+        
+        \
+            
+        Thus, $(\mathcal{F'}, \mathcal{F'}_{0})$ will be an $\mathbb{R}^n-$generalized bundle.
+
+        \
+            
+        Finally, we show that $(\mathcal{F'}, \mathcal{F'}_{0}) \sim_{f} h^{*}(\mathcal{F}, \mathcal{F}_{0})$. To this end, recall that 
+        $h^{*}(\mathcal{F}, \mathcal{F}_{0}) = (h^{*}E, h^{*}E_{0}, p_{1}, B')$, where:
+            $$h^{*}E = \{ (b', e) \in B' \times E : h(b') = p(e) \}$$
+            $$h^{*}E_{0} = \{ (b', e) \in h^{*}E : e \in E_{0} \}$$
+            
+        \
+
+        Considering $\phi: (E', E'_{0}) \rightleftarrows (h^{*}E, h^{*}E_{0}): \psi$ given by $\phi(e') = (q(e'), H(e'))$ and 
+        $\psi(b', e) = H^{-1}(e)$, we conclude that $\phi$ and $\psi$ are well-defined pair fibrations, with $\phi$ being a homeomorphism 
+        with inverse $\psi$.
+            
+        Therefore, by Lemma \ref{iso_homot}, we have $(\mathcal{F'}, \mathcal{F'}_{0}) \sim_{f} h^{*}(\mathcal{F}, \mathcal{F}_{0})$.
+            
+    \end{proof}
+
+    \begin{lem}\label{fht_produto}
+        Assuming that $(\mathcal{F},\mathcal{F}_{0})$ is an $\R^{n}-$generalized bundle and $(\mathcal{F'},\mathcal{F'}_{0})$ is an 
+        $\R^{m}-$generalized bundle, then $(\mathcal{F},\mathcal{F}_{0})\times(\mathcal{F'},\mathcal{F'}_{0})$ will be an 
+        $\R^{n+m}-$generalized bundle. In particular, if $(\mathcal{F},\mathcal{F}_{0})$ and $(\mathcal{F'},\mathcal{F'}_{0})$ are trivial, 
+        then $(\mathcal{F},\mathcal{F}_{0})\times (\mathcal{F'},\mathcal{F'}_{0})$ will also be trivial\index{fibration!generalized!trivial}.
+    \end{lem}
+    \begin{proof}
+
+        \
+        
+        First, let us denote $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,B)$ and $(\mathcal{F'},\mathcal{F'}_{0})=(E',E'_{0},q,B')$, and 
+        consider $(\mathcal{F},\mathcal{F}_{0})\times(\mathcal{F'},\mathcal{F'}_{0})=(E'',E''_{0},r,B'')$, where:
+
+            \begin{enumerate}
+                \item $E''=E\times E'$
+                \item $E''_{0}=(E\times E'_{0})\cup (E_{0}\times E')$
+                \item $r=p\times q$
+                \item $B''=B\times B'$
+            \end{enumerate}
+        
+        Since Lemma \ref{pf_produto} states that if $(\mathcal{F},\mathcal{F}_{0})$ and $(\mathcal{F'},\mathcal{F'}_{0})$ are pair 
+        fibrations\index{fibration!pair}, then $(\mathcal{F},\mathcal{F}_{0})\times(\mathcal{F'},\mathcal{F'}_{0})$ will be a pair 
+        fibration with fiber equal to the product of the fibers of $(\mathcal{F},\mathcal{F}_{0})$ and $(\mathcal{F'},\mathcal{F'}_{0})$. 
+        Therefore, it remains to show that there is a section\index{section} of 
+        $(\mathcal{F},\mathcal{F}_{0})\times(\mathcal{F'},\mathcal{F'}_{0})$ that realizes $E''_{0}$.
+        
+        To do this, since $(\mathcal{F},\mathcal{F}_{0})$ and $(\mathcal{F'},\mathcal{F'}_{0})$ are generalized bundles, there exist 
+        sections $s:B\to E$ and $s':B'\to E'$ of $(\mathcal{F},\mathcal{F}_{0})$ and $(\mathcal{F'},\mathcal{F'}_{0})$ that realize 
+        $E_{0}$ and $E'_{0}$, respectively. Therefore, we have that $s'':B''\to E''$, defined by $s''(b,b')=(s(b),s'(b'))$, is a section 
+        of $(\mathcal{F},\mathcal{F}_{0})\times(\mathcal{F'},\mathcal{F'}_{0})$ such that:
+        
+        \
+
+        $\begin{array}{rl}
+            E''_{0} \ = & (E\times E'_{0})\bigcup (E_{0}\times E') \\
+            = & [E\times (E'-s'(B'))]\bigcup [(E-s(B))\times E'] \\
+            = & [(E\times E')-(E\times s'(B'))] \bigcup [(E\times E')-(s(B)\times E')] \\
+            = & (E\times E')-[(E\times s'(B'))\bigcap (s(B)\times E')] \\
+            = & E''-(s(B)\times s'(B')) \\
+            = & E''-s''(B'')
+        \end{array}$
+        
+        \
+        
+        Thus, $(\mathcal{F},\mathcal{F}_{0})\times(\mathcal{F'},\mathcal{F'}_{0})$ will be an $\R^{n+m}$-generalized 
+        bundle\index{fibration!generalized}.
+
+        \
+        
+        Now, we must show that if $(\mathcal{F},\mathcal{F}_{0})\sim_{f}(\varepsilon^{n}_{B},\varepsilon^{n,0}_{B})$ and 
+        $(\mathcal{F'},\mathcal{F'}_{0})\sim_{f}(\varepsilon^{m}_{B'},\varepsilon^{m,0}_{B'})$, then 
+        $(\mathcal{F},\mathcal{F}_{0})\times(\mathcal{F'},\mathcal{F'}_{0})\sim_{f}(\varepsilon^{n+m}_{B''},\varepsilon^{n+m,0}_{B''})$. 
+        To do so, suppose that there exist the following fiber maps\index{application!fiberwise} and homotopies satisfying the relations below:
+        
+        \begin{enumerate}
+            \item $\phi:(E,E_{0})\rightleftarrows(B\times \R^{n},B\times (\R^{n}-\{ 0 \})):\psi$
+            \item $H:(E,E_{0})\times I\to (E,E_{0})$
+            \item $G:(B\times\R^{n},B\times(\R^{n}-\{ 0 \}))\times I\to (B\times\R^{n},B\times(\R^{n}-\{ 0 \}))$
+            \item $\phi$, $\psi$, $H$, and $G$ are such that:
+            
+                $\begin{array}{lcccl}
+                    H(\_,0)=\psi\circ\phi            & & & & G(\_,0)=\phi\circ\psi \\
+                    H(\_,1)=1                        & & & & G(\_,1)=1 \\
+                    p\circ H(\_,t)=p, \forall t\in I & & & & p_{1}\circ G(\_,t)=p_{1}, \forall t\in I
+                \end{array}$
+        \end{enumerate}
+
+        \
+        
+        Also, suppose that there exist the following fiber maps and homotopies satisfying the relations below:
+        
+        \begin{enumerate}
+            \item $\phi':(E',E'_{0})\rightleftarrows(B'\times \R^{m},B'\times (\R^{m}-\{ 0 \})):\psi'$
+            \item $H':(E',E'_{0})\times I\to (E',E'_{0})$
+            \item $G':(B'\times\R^{m},B'\times(\R^{m}-\{ 0 \}))\times I\to (B'\times\R^{m},B'\times(\R^{m}-\{ 0 \}))$
+            \item $\phi'$, $\psi'$, $H'$, and $G'$ are such that:
+            
+                $\begin{array}{lcccl}
+                    H'(\_,0)=\psi'\circ\phi'            & & & & G'(\_,0)=\phi'\circ\psi' \\
+                    H'(\_,1)=1                          & & & & G'(\_,1)=1 \\
+                    q\circ H'(\_,t)=q, \forall t\in I   & & & & p_{1}\circ G'(\_,t)=p_{1}, \forall t\in I
+                \end{array}$
+        \end{enumerate}
+
+        \
+        
+        With this, the following fiber maps and homotopies are well-defined:
+        
+        \begin{enumerate}
+            \item $\phi'':(E'',E''_{0})\rightleftarrows (B''\times \R^{n+m},B''\times (\R^{n+m}-\{ 0 \})):\psi''$ \\
+            $ \phi''(e,e')=((p(e),q(e')),(p_{2}\circ\phi(e),p_{2}\circ\phi'(e'))) $ \\
+            $ \psi''((b,b'),(x,x'))=(\psi(b,x),\psi'(b',x')) $
+            \item $H'':(E'',E''_{0})\times I\to (E'',E''_{0})$ \\
+            $ H''((e,e'),t)=(H(e,t),H'(e',t)) $
+            \item $G'':(B''\times \R^{n+m},B''\times (\R^{n+m}-\{ 0 \}))\times I\to (B''\times \R^{n+m},B''\times (\R^{n+m}-\{ 0 \}))$ \\
+            $ G''(((b,b'),(x,x')),t)=((b,b'),(p_{2}\circ G((b,x),t),p_{2}\circ G'((b',x'),t))) $
+        \end{enumerate}
+
+        \
+        
+        Let's show that $\phi''$, $\psi''$, $H''$, and $G''$ satisfy the conditions of definition \ref{defi_iso_homot}. Indeed:
+        
+        \begin{enumerate}
+            \item It is clear that $r\circ H''((\_,\_),t)=r$ and $p_{1}\circ G''((\_,\_),t)=p_{1}$.
+            \item It is clear that $H''(\_,1)=\text{Id}_{(E'',E''_{0})}$ and $G''(\_,1)=\text{Id}_{(B''\times \R^{n+m},B''\times (\R^{n+m}-\{ 0 \}))}$.
+            \item $\forall (e,e')\in E''$,
+                
+                    $\begin{array}{rl}
+                        H''((e,e'),0) \ = & (H(e,0),H'(e',0)) \\
+                        = & (\psi\circ\phi(e),\psi'\circ\phi'(e')) \\
+                        = & (\psi(p_{1}\circ\phi(e),p_{2}\circ\phi(e)),\psi'(p_{1}\circ\phi'(e'),p_{2}\circ\phi'(e'))) \\
+                        = & (\psi(p(e),p_{2}\circ\phi(e)),\psi'(q(e'),p_{2}\circ\phi'(e'))) \\
+                        = & \psi''((p(e),q(e')),(p_{2}\circ\phi(e),p_{2}\circ\phi'(e'))) \\
+                        = & \psi''\circ\phi''(e,e')
+                    \end{array}$
+            \item $\forall ((b,b'),(x,x'))\in B''\times\R^{n+m}$,
+            
+                    $\begin{array}{rl}
+                        G''(((b,b'),(x,x')),0) \ = & ((b,b'),(p_{2}\circ G((b,x),0),p_{2}\circ G'((b',x'),0))) \\
+                        = & ((b,b'),(p_{2}\circ\phi\circ\psi(b,x),p_{2}\circ\phi'\circ\psi'(b',x'))) \\
+                        = & \phi''(\psi(b,x),\psi'(b',x')) \\
+                        = & \phi''\circ\psi''((b,b'),(x,x'))
+                    \end{array}$
+        \end{enumerate}
+
+        \
+        
+        Thus, 
+        $(\mathcal{F},\mathcal{F}_{0})\times (\mathcal{F'},\mathcal{F'}_{0}) \sim_{f} (\varepsilon^{n+m}_{B''},\varepsilon^{n+m,0}_{B''})$.
+    \end{proof}
+
+    Following the notations of Lemma \ref{fht_produto}, given $(\mathcal{F},\mathcal{F}_{0})$ as an $\R^{n}$-generalized bundle and 
+    $(\mathcal{F'},\mathcal{F'}_{0})$ as an $\R^{m}$-generalized bundle, we define 
+    $(\mathcal{F},\mathcal{F}_{0})\times(\mathcal{F'},\mathcal{F'}_{0})$ as the $\R^{n+m}$-generalized bundle 
+    product\index{fibration!generalized!product} of $(\mathcal{F},\mathcal{F}_{0})$ and $(\mathcal{F'},\mathcal{F'}_{0})$.
+
+    \begin{defi}{\bf (Whitney Sum)}
+        Consider $(\mathcal{F},\mathcal{F}_{0})$ be an $\R^{n}$-generalized bundle and $(\mathcal{F'},\mathcal{F'}_{0})$ be an 
+        $\R^{m}$-generalized bundle, both defined over the same base $B$. Let $d:B \to B \times B$ denote the diagonal map\index{map!diagonal}. The 
+        Whitney sum\index{fibration!generalized!Whitney sum} of $(\mathcal{F},\mathcal{F}_{0})$ and 
+        $(\mathcal{F'},\mathcal{F'}_{0})$ is defined as the following $\R^{n+m}$-generalized bundle:
+        $$ (\mathcal{F},\mathcal{F}_{0}) \oplus (\mathcal{F'},\mathcal{F'}_{0}) = d^{*}[(\mathcal{F},\mathcal{F}_{0}) \times (\mathcal{F'},\mathcal{F'}_{0})] $$
+    \end{defi}
+
+
+
+    \subsection{Generalized Tangent Bundle of a Topological Manifold}\label{secao_fht_tang}
+
+    \
+
+    In this subsection, we will show that the concept of generalized bundle allows us to extend the notion of tangent vector 
+    bundle\index{bundle!vector!tangent} of smooth manifolds\index{manifold!smooth} to topological manifolds\index{manifold!topological}.
+
+    To this end, let \( M^{m} \) be a topological manifold and define:
+        \begin{itemize}
+            \item \( T_{0}M = \{ \omega \in M^{I} \ : \ \omega(t) = \omega(0) \Leftrightarrow t = 0 \} \)
+            \item \( TM = T_{0}M \cup \{ \omega \in M^{I} \ : \ \omega(t) = \omega(0), \ \forall t \in I \} \)
+            \item \( p: TM \to M \), given by \( p(\omega) = \omega(0) \)
+        \end{itemize}
+    
+    \
+    
+    Thus, we obtain the following:
+    
+    \begin{prop}\label{fgt}
+        Let \( M^{m} \) be a topological manifold. Then, the pair \( (\tau M, \tau_{0}M) = (TM, T_{0}M, p, M) \) is a locally 
+        trivial\index{locally trivial} \(\mathbb{R}^{m}\)-generalized bundle\index{bundle!generalized}.
+    \end{prop}
+    
+    The proof of the proposition above can be found in (\cite{fadell_1}, Proposition 3.8, p. 493).
+    
+    \begin{obs}\label{obs_varied_bordo}
+        It is worth noting that the construction carried out by Fadell in \cite{fadell_1} to prove Proposition \ref{fgt} is only valid for 
+        topological manifolds without boundary.
+        
+        Therefore, all topological manifolds mentioned throughout this work will be assumed to have no boundary.
+    \end{obs}
+
+    \
+    
+    \begin{defi}
+        Given a topological manifold \( M^{m} \), we call the pair \( (\tau M, \tau_{0}M) \) the \(\mathbb{R}^{m}\)-generalized tangent 
+        bundle\index{bundle!generalized!tangent} of \( M \).
+    \end{defi}
+    
+    On the other hand, let \( M^{m} \) be a smooth manifold and \( \xi \) its \(\mathbb{R}^{m}\)-tangent vector 
+    bundle\index{bundle!vector!tangent}, as in Definition \ref{defi_fvt}, and consider its associated \(\mathbb{R}^{m}\)-generalized bundle 
+    \( (\xi, \xi_{0}) \). Then, we obtain the following relationship between the tangent vector bundle and the generalized tangent bundle of 
+    a smooth manifold:
+    
+    \begin{prop}\label{fht_tang}
+        \( (\xi, \xi_{0}) \sim_{f} (\tau M, \tau_{0}M) \)
+    \end{prop}
+    
+    \textit{Sketch of the proof:}
+    
+    The proof essentially consists in showing that the fibers of these generalized bundles, over the same point, are homotopically equivalent.
+    
+    Due to the importance of this result, we provide here only a brief intuition of how this is done. The full proof can be found in 
+    (\cite{fadell_1}, Proposition 3.17, p. 495) and \cite{nash}.
+    
+    Fixing \( b \in M \), we know that the fiber of \( \xi \) over \( b \) consists of all tangent vectors to \( M \) at \( b \). Moreover, 
+    nonzero tangent vectors can be seen as the derivatives at zero of geodesics\index{geodesic} \( \gamma: ]-\delta, \delta[ \to M \) 
+    such that \( \gamma(0) = b \).
+    
+    Considering  \( M \) as a smooth manifold\index{manifold!smooth} without boundary, the nonzero tangent vectors of \( T_{b}M \) 
+    can be identified with derivatives at zero of geodesics \( \gamma: [0,1] \to M \) that are arc-length\index{arc-length reparametrization} 
+    reparametrized and have unit length, satisfying  \( \gamma(0) = b \).
+    
+    Now, due to Whitney’s embedding theorem\index{theorem!Whitney embedding theorem}\footnote{For more details on Whitney’s embedding 
+    theorem, see (\cite{lee_s}, Theorem 6.15, p. 134).}, we know that \( M \) can be embedded in a Euclidean space. Thus, we have enough 
+    ambient space to ensure the homotopy equivalence between \( T_{b}M \) and the following space:
+
+    $$\begin{array}{rl}
+    E \ = & \{ \gamma\in M^{I} \ : \ \gamma \text{ is a geodesic reparametrized by arc length with} \\
+    & \text{length equal to 1 and } \gamma(0)=b \} \bigcup \{ \gamma\in M^{I} \text{ constant at } b \}
+    \end{array}$$
+
+    \
+
+    On the other hand, Nash states in \cite{nash} that the space $E$ defined above is homotopy equivalent to the fiber of 
+    $(\tau M,\tau_{0}M)$ over $b$, that is, the following set:
+    $$\{ \omega\in M^{I} \ : \ \omega(t)=b \Leftrightarrow t=0 \} \bigcup \{ \omega\in M^{I} \text{ constant at } b \}$$
+    
+    \
+
+    Thus, we intuitively conclude that the fibers of $(\xi,\xi_{0})$ and $(\tau M,\tau_{0}M)$ over the same point are homotopy equivalent.
+
+    \begin{flushright}
+    $\square$
+    \end{flushright}
+
+    \begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.3]{fibrado_tang.pdf}
+    \caption{Homotopy equivalence between a geodesic $\gamma\in M^{I}$ and its tangent vector at $\gamma(0)$.}
+    \end{figure}
+
+    Thus, Proposition \ref{fht_tang} allows us to state that the notion of tangent bundle can be extended from the concept of smooth 
+    manifolds to topological manifolds.
+
+    \begin{prop}\label{iso_homeo}
+    If $h:M\to N$ is a homeomorphism between topological manifolds, then $(\tau M,\tau_{0}M)\sim_{f}h^{*}(\tau N,\tau_{0}N)$.
+    \end{prop}
+
+    \begin{proof}
+        
+    \
+
+    Since $h$ is a homeomorphism, the map $H:(TM,T_{0}M)\to (TN,T_{0}N)$ given by $H(\omega)=h\circ\omega$ is one ass well, with inverse 
+    $H^{-1}(\omega)=h^{-1}\circ\omega$.
+
+    If we denote by $p:TM\to M$ and $q:TN\to N$ the projections of $(\tau M,\tau_{0}M)$ and $(\tau N,\tau_{0}N)$, respectively, then the 
+    map $h^{-1}\circ q\circ H:TM\to M$ satisfies $h^{-1}\circ q\circ H(\omega)=p(\omega)$.
+
+    Thus, Lemma \ref{iso_homot_2} guarantees that $(\tau M,\tau_{0}M)\sim_{f}h^{*}(\tau N,\tau_{0}N)$.
+
+    \end{proof}
+
+    Let us now see that the notion of generalized tangent bundle is natural with respect to the Cartesian product of topological manifolds, 
+    in the following sense:
+
+    \begin{prop}\label{fht_tang_cart}
+        Let $M$ and $S$ be two arbitrary topological manifolds. Then:
+        
+        $$ (\tau (M\times S),\tau_{0}(M\times S))\sim_{f} (\tau M,\tau_{0}M)\times (\tau S,\tau_{0}S) $$
+    \end{prop}
+    \begin{proof}
+
+    \
+
+    Initially, consider $(\tau M,\tau_{0}M)=(TM,T_{0}M,p,M)$, $(\tau S,\tau_{0}S)=(TS,T_{0}S,q,S)$, and 
+    $(\tau (M\times S),\tau_{0}(M\times S))=(T(M\times S),T_{0}(M\times S),r,M\times S)$. Denote the product 
+    $(\tau M,\tau_{0}M)\times (\tau S,\tau_{0}S)=(E,E_{0},p\times q,M\times S)$, where:
+    $$ E=(TM)\times(TS) $$
+    $$ E_{0}=[(TM)\times (T_{0}S)]\bigcup [(T_{0}M)\times (TS)] $$
+
+    \
+
+    Consequently, the map $\phi:(T(M\times S),T_{0}(M\times S))\to (E,E_{0})$ defined by $\phi(\omega)=(p_{1}\circ\omega,p_{2}\circ\omega)$ 
+    is well defined, because if $\omega\in T_{0}(M\times S)$, then $\omega(t)\neq \omega(0)$ for all $0<t\leq 1$. That is, $p_{i}\circ\omega(t)\neq p_{i}\circ\omega(0)$ for all $0<t\leq 1$ and $i=1$ or $2$, and thus, $p_{i}\circ\omega\in E_{0}$ for $i=1$ or $2$.
+
+    On the other hand, observe that $\phi$ is a homeomorphism whose inverse map $\phi^{-1}:(E,E_{0})\to (T(M\times S),T_{0}(M\times S))$ is 
+    naturally given by $\phi^{-1}(\omega_{1},\omega_{2})=(\omega_{1},\omega_{2})$. Moreover, it is clear that $(p\times q)\circ\phi=r$.
+
+    Thus, it follows from Lemma \ref{iso_homot} that:
+    $$(\tau (M\times S),\tau_{0}(M\times S))\sim_{f} (\tau M,\tau_{0}M)\times (\tau S,\tau_{0}S)$$
+
+    \end{proof}
+
+
+
+    \subsection{Generalized Normal Bundle of a Local-Flat Embedding}\label{secao_fht_normal}
+
+    \
+
+    In this subsection, we will show that the concept of generalized bundle\index{bundle!generalized} also allows the generalization of the 
+    notion of normal vector bundle\index{bundle!vector!normal} from smooth manifolds\index{manifold!smooth} to topological 
+    manifolds\index{manifold!topological}.
+
+    Before moving forward, we recall\footnote{For more details, see (\cite{lee_s}, Proposition 5.16, p. 106).} that if \( M^{m} \) and 
+    \( S^{m+k} \) are smooth manifolds and if \( i:M\hookrightarrow S \) is a smooth embedding\index{embedding!smooth}, then \( i(M) \) 
+    constitutes a smooth submanifold of \( S \) such that, for every \( b\in M \), there exists an open neighborhood \( U\subset S \) of 
+    \( i(b) \) with \( (U,U\cap i(M))\approx (\mathbb{R}^{m+k},\mathbb{R}^{m}) \).
+    
+    This feature leads us to the following:
+    
+    \begin{defi}
+        A topological embedding\index{embedding!topological} \( i:M^{m}\hookrightarrow S^{m+k} \), between topological manifolds, is said to 
+        be locally-flat, or simply local-flat\index{embedding!local-flat}, if for every \( b\in M \), there exists an open neighborhood 
+        \( U\subset S \) of \( i(b) \) such that \( (U,U\cap i(M))\approx (\mathbb{R}^{m+k},\mathbb{R}^{m}) \).
+    \end{defi}
+    
+    In the notation of the definition above, since \( M\approx i(M) \), we can rewrite \( M^{m}\subset S^{m+k} \) as a local-flat embedding 
+    such that \( (U,U\cap M)\approx (\mathbb{R}^{m+k},\mathbb{R}^{m}) \). The notation used to describe a local-flat embedding will depend 
+    on the problem at hand.
+
+    \
+    
+    For the next result, consider:
+    \begin{itemize}
+        \item $M^{m}\subset S^{m+k}$ a local-flat embedding
+        \item $N_{0}=\{ \omega\in S^{I} \ : \ \omega(t)\in M \Leftrightarrow t=0 \}$
+        \item $N=N_{0}\bigcup \{ \omega\in S^{I} \ : \ \omega(t)=\omega(0)\in M, \ \forall t\in I \}$
+        \item $q:N\to M$ given by $q(\omega)=\omega(0)$
+    \end{itemize}
+
+    \
+    
+    Thus:
+    
+    \begin{prop}
+        Let $M^{m}\subset S^{m+k}$ be a local-flat embedding\index{embedding!local-flat}. Then, the pair 
+        $(\mathcal{N},\mathcal{N}_{0})=(N,N_{0},q,M)$ is a locally trivial\index{locally trivial} $\R^{k}-$generalized bundle.
+    \end{prop}
+    
+    The proof of the proposition above can be found in (\cite{fadell_1}, Proposition 4.1, p. 496).
+    
+    \begin{defi}
+        We call $(\mathcal{N},\mathcal{N}_{0})$ the $\R^{k}-$generalized normal bundle\index{bundle!generalized!normal} of the local-flat 
+        embedding $M^{m}\subset S^{m+k}$.
+    \end{defi}
+    
+    On the other hand, consider $M^{m}\subset\R^{m+k}$ a smooth embedding\index{embedding!smooth} of a smooth manifold\index{manifold!smooth} 
+    into Euclidean space, and let $\eta$ be the normal $\R^{k}$-vector bundle\index{bundle!vector!normal} of this embedding, as in 
+    Definition \ref{defi_fvn}. Thus, we have the following relation between the normal vector bundle and the generalized normal bundle of the 
+    local-flat embedding $M\subset \R^{m+k}$:
+    
+    \begin{prop}
+        $(\eta,\eta_{0})\sim_{f} (\mathcal{N},\mathcal{N}_{0})$
+    \end{prop}
+    
+    The proof of the proposition above can be found in (\cite{fadell_1}, Corollary 4.9, p. 498).
+    
+    In (\cite{fadell_1}, Theorem 4.11, p. 498), Fadell shows that Theorem \ref{dualidade_whitney_vet} is valid in the context of local-flat 
+    embeddings, as follows:
+    
+    \begin{teo}\label{iso_merg_lf_1}
+        If $M^{m}\subset S^{m+k}$ is a local-flat embedding with $\R^{k}-$generalized normal bundle $(\mathcal{N},\mathcal{N}_{0})$, then:
+        $$ (\tau M,\tau_{0}M)\oplus (\mathcal{N},\mathcal{N}_{0})\sim_{f} (\tau S,\tau_{0}S)_{|M} $$
+    \end{teo}
+    
+    Furthermore, we can obtain the following:
+
+    \begin{prop}\label{iso_merg_lf_2}
+        If $i:M^{m}\hookrightarrow S^{m+k}$ is a local-flat embedding\index{embedding!local-flat}, then:
+        $$ (\tau S,\tau_{0}S)_{|M}\sim_{f} i^{*}(\tau S,\tau_{0}S) $$
+    \end{prop}
+    \begin{proof}
+
+        \
+        
+        First, let us fix the following notations:
+        
+        \begin{enumerate}
+            \item $(\tau S,\tau_{0}S)=(T,T_{0},p,S)$, where:
+            \begin{itemize}
+                \item $T_{0}=\{ \omega\in S^{I} \ : \ \omega(t)=\omega(0) \Leftrightarrow t=0 \}$
+                \item $T=T_{0}\bigcup \{ \omega\in S^{I} \ : \ \omega(t)=\omega(0), \ \forall t\in I \}$
+                \item $p:T\to S$ given by $p(\omega)=\omega(0)$
+            \end{itemize}
+            \item $(\tau S,\tau_{0}S)_{|M}=(p^{-1}(M),p^{-1}(M)\cap T_{0},q,M)$, where:
+            \begin{itemize}
+                \item $p^{-1}(M)=\{ \omega\in T \ : \ \omega(0)\in M \}$
+                \item $p^{-1}(M)\cap T_{0}=\{ \omega\in T_{0} \ : \ \omega(0)\in M \}$
+                \item $q=p_{|p^{-1}(M)}:p^{-1}(M)\to M$ given by $q(\omega)=\omega(0)$
+            \end{itemize}
+            \item $i^{*}(\tau S,\tau_{0}S)=(i^{*}T,i^{*}T_{0},p_{1},M)$, where:
+            \begin{itemize}
+                \item $i^{*}T=\{ (b,\omega)\in M\times T \ : \ i(b)=\omega(0) \}$
+                \item $i^{*}T_{0}=\{ (b,\omega)\in i^{*}T \ : \ \omega\in T_{0} \}$
+                \item $p_{1}:i^{*}T\to M$ given by $p_{1}(b,\omega)=b$
+            \end{itemize}
+        \end{enumerate}
+        
+        Thus, the fiber map $\phi:(p^{-1}(M),p^{-1}(M)\cap T_{0})\to (i^{*}T,i^{*}T_{0})$ given by $\phi(\omega)=(\omega(0),\omega)$ is 
+        well-defined.
+
+        On the other hand, note that the map $\psi:(i^{*}T,i^{*}T_{0})\to (p^{-1}(M),p^{-1}(M)\cap T_{0})$ given by $\psi(b,\omega)=\omega$ is 
+        also well-defined.
+        
+        Furthermore, it is clear that $\phi$ is a homeomorphism with inverse $\psi$. Thus, Lemma \ref{iso_homot} guarantees that 
+        $(\tau S,\tau_{0}S)_{|M}\sim_{f} i^{*}(\tau S,\tau_{0}S)$.
+        
+    \end{proof}
+
+    \
+    
+    With this, we conclude in this chapter the study of generalized bundles\index{bundle!generalized}, a concept developed by Fadell in \cite{fadell_1} to generalize the notions of tangent\index{bundle!vector!tangent} and normal\index{bundle!vector!normal} vector bundles from the context of smooth manifolds\index{manifold!smooth} to topological manifolds\index{manifold!topological}, where we presented here only the intuitive proof, based on Nash's ideas in \cite{nash}, of how the generalization of the tangent vector bundle occurs.
+    
+    In order to not only present a modern reinterpretation of the first half of the results presented by Fadell in \cite{fadell_1}, but also to complement \cite{fadell_1}, we have carefully shown in detail how the generalized bundles indeed generalize vector bundles\index{bundle!vector}, as well as how the notion of vector bundle isomorphism is preserved when extended to the category of generalized bundles.
+    
+    It is worth noting that we also developed in this chapter the concept of pullback generalized bundle\index{bundle!generalized!pullback}, as well as some consequences of such a bundle, a concept that was not mentioned by Fadell in \cite{fadell_1}.
+    
+    In any case, the results about generalized bundles carefully developed in this chapter suggest that we view this concept as a theory in itself and not just as a tool to construct characteristic classes, as we will present in the following chapter.
+    
+
+
     \chapter{Characteristic Classes of Topological Manifolds}\label{cap_clas_carac}
     \thispagestyle{empty}
+    
+    \
+    
+    In this chapter, we will construct the Thom\index{class!Thom} classes, Stiefel-Whitney\index{class!Stiefel-Whitney} classes, and 
+    Euler\index{class!Euler} classes of generalized bundles\index{bundle!generalized}, and present some consequences of such objects. 
+    In particular, we will examine the behavior of these classes for the generalized tangent bundles\index{bundle!generalized!tangent} of 
+    topological manifolds\index{manifold!topological}.
+    
+    To that end, in Section \ref{secao_thom}, we will introduce the concept of orientability of generalized bundles, which was originally 
+    proposed by Fadell in \cite{fadell_1}, in order to guarantee the existence of the Thom class and Thom isomorphism for such bundles. 
+    We will also discuss how the Thom class behaves in specific generalized bundles.
+    
+    In Section \ref{secao_SW}, we will define the Stiefel-Whitney classes of generalized bundles in a manner identical to the definition of 
+    the Stiefel-Whitney classes of vector bundles\index{bundle!vector} presented in \cite{milnor_1}. Furthermore, we will see how the notion 
+    of pullback generalized bundle introduced in the previous chapter will be relevant to deduce some consequences concerning the 
+    Stiefel-Whitney classes, since Fadell did not address this concept in \cite{fadell_1}.
+    
+    Concluding the chapter, in Section \ref{secao_euler}, we will define the Euler class of generalized bundles, a topic that was scarcely 
+    addressed by Fadell in \cite{fadell_1}. In this section, we will present several well-known results about Euler classes of vector 
+    bundles and smooth manifolds, but in their versions for generalized bundles and topological manifolds.
+    
+    As explained in Remark \ref{obs_varied_bordo}, we emphasize that every topological manifold mentioned in this chapter will be a 
+    manifold without boundary.
+    
+
+
+    \section{Orientability and Thom Class}\label{secao_thom}
+
+    \
+
+    A
+
+
+
+
 
 
 
@@ -1429,8 +2911,8 @@ footskip=10mm}
  
     
 
-    %\printbibliography
-    %\printindex
+    \printbibliography
+    \printindex
 
 
 
