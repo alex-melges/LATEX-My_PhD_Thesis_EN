@@ -2178,7 +2178,390 @@ footskip=10mm}
 
     \
 
-    A
+    Before constructing the Stiefel–Whitney\index{class!Stiefel–Whitney} and Euler\index{class!Euler} classes of generalized 
+    bundles\index{bundle!generalized}, we need to introduce the concept of orientability of these bundles. This concept will be fundamental 
+    to ensure the existence of the Thom class\index{class!Thom} and the Thom isomorphism\index{isomorphism!Thom}, as will be seen later.
+
+    The concept of orientability of generalized bundles was proposed by Fadell in \cite{fadell_1}. However, Fadell did not delve deeply into 
+    this matter, since the main topic developed in \cite{fadell_1} concerned the Stiefel–Whitney classes, for which there is no need to 
+    address orientability.
+
+    In this section, we will explore in more detail the notion of orientability of generalized bundles and present some technical results 
+    about the Thom class—more specifically, the behavior of the Thom class in pullback\index{bundle!generalized!pullback} and 
+    product\index{bundle!generalized!product} generalized bundles, what happens when we reverse the orientation of a generalized bundle, and 
+    the relationship between the dimension of a topological manifold and the Thom class of its tangent generalized 
+    bundle\index{bundle!generalized!tangent}.
+
+    With the exception of Lemmas \ref{lema_thom_2}, \ref{lema_thom_3}, \ref{lema_thom_4}, and \ref{lema_thom_5}, the results presented in 
+    this section were taken from \cite{fadell_1}.
+
+    Thus, let us first consider $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,B)$ to be a $\R^{n}-$ generalized bundle\index{bundle!generalized}, 
+    and the following set:
+    $$ \Omega_{p}=\{ (e,\omega)\in E\times B^{I} \ : \ p(e)=\omega(0) \} $$
+
+    \
+
+    In particular, since $(\mathcal{F},\mathcal{F}_{0})$ is a pair fibration\index{fibration!pair}, then by defining the maps 
+    $h:\Omega_{p}\to E$ and $H:\Omega_{p}\times I\to B$ by $h(e,\omega)=e$ and $H((e,\omega),t)=\omega(t)$, respectively, there exists a 
+    map $\wt{H}:\Omega_{p}\times I\to E$ such that the following diagram commutes:
+
+    $$ \xymatrix @C=0.5cm {
+    	\Omega_{p}\times \{0\}\ar[rrrrr]^-{h} \ar@{^(->}[ddd] &&&&& E \ar[ddd]^-{p} \\
+    	&&&&& \\		 
+    	&&&&& \\				 
+    	\Omega_{p}\times I \ar[rrrrr]^-{H} \ar[rrrrruuu]^-{\wt{H}} &&&&& B
+    } $$
+
+    \
+
+    Moreover, if $(e,\omega)\in \Omega_{p}$ is such that $h(e,\omega)\in E_{0}$, then $\wt{H}((e,\omega),\_) \in E_{0}$. 
+    In this way, we can define the map $\lambda:\Omega_{p}\to E^{I}$ by $\left[ \lambda(e,\omega) \right](t)=\wt{H}((e,\omega),t)$.
+
+    Thus, fixing the fiber $(F,F_{0})$ of $(\mathcal{F},\mathcal{F}_{0})$ over $b_{0}\in B$, the following map is well-defined:
+    $$ \Omega(B,b_{0})\times (F,F_{0}) \to (F,F_{0}) $$
+    $$ (\omega,e)\longmapsto \omega\cdot e=\left[ \lambda(e,\omega) \right](1)  $$
+
+    \
+
+    Note that, fixing $\omega\in \Omega(B,b_{0})$, it is evident that the map $(F,F_{0})\to (F,F_{0})$, which sends $e\mapsto \omega\cdot e$, 
+    induces an action of $\Omega(B,b_{0})$ on $H_{n}(F,F_{0};R)$ for any commutative unital ring $R$.
+
+    With this, we have the following:
+
+    \begin{defi}{\bf (Orientability)}\label{defi_orient}
+    	A $\R^{n}-$ generalized bundle $(\mathcal{F},\mathcal{F}_{0})$ over $B$ is said to be 
+        $R-$orientable\index{bundle!generalized!orientable} if, for every $b_{0}\in B$, the action of $\Omega(B,b_{0})$ on $H_{n}(F,F_{0};R)$ 
+        defined above is trivial, where $(F,F_{0})$ denotes the fiber of $(\mathcal{F},\mathcal{F}_{0})$ over $b_{0}\in B$.
+    \end{defi}
+
+    Naturally, the orientation of a topological manifold\index{manifold!topological} is directly related to the orientation of its tangent 
+    generalized bundle\index{bundle!generalized!tangent}, as we state in the next result, whose proof can be found in 
+    (\cite{fadell_1}, Proposition 3.16, p. 495).
+
+    \begin{prop}\label{propriedade_orient_var}
+    	A topological manifold $M$ is $R-$orientable if and only if its generalized tangent bundle $(\tau M,\tau_{0}M)$ is $R$-orientable.
+    \end{prop}
+
+    \begin{obs}
+    	Every generalized bundle is $\Z_{2}-$orientable, as guaranteed in (\cite{allaud}, Corollary 2.8, p. 243).
+    \end{obs}
+
+    With the aim of defining the Stiefel–Whitney\index{class!Stiefel–Whitney} classes of any generalized bundle and the 
+    Euler\index{class!Euler} class of a $\Z-$orientable generalized bundle, we need to ensure the existence of the Thom class and Thom 
+    isomorphism, just as it is done for vector bundles\index{bundle!vector}, as in (\cite{milnor_1}, Chapters 8, 9, and 10).
+
+    \begin{teo}\label{teo_iso_thom_fht}
+    	Let $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,B)$ be an $R-$orientable $\R^{n}-$ generalized bundle. Then, there exists a unique class 
+        $\tau\in H^{n}(E,E_{0};R)$ such that the homomorphism $\phi:H^{k}(B;R)\to H^{n+k}(E,E_{0};R)$, given by $\phi(x)=p^{*}(x)\ccup \tau$, 
+        is an isomorphism for every integer $k\geq 0$. Moreover, letting $i:(F,F_{0})\hookrightarrow (E,E_{0})$ be the inclusion of a fiber 
+        $(F,F_{0})$ of $(\mathcal{F},\mathcal{F}_{0})$ into its total space, and $(u)=H^{n}(F,F_{0};R)\cong R$, the class $\tau$ is uniquely 
+        determined by $i^{*}(\tau)=u$.
+    \end{teo}
+
+    The proof of the theorem above can be found in (\cite{fadell_1}, Theorem 5.2, p. 502).
+
+    \begin{obs}\label{obs_proj_iso}
+    	In the course of the proof of Theorem \ref{teo_iso_thom_fht}, it is shown that the induced maps 
+        $i^{*}:H^{n}(E,E_{0};R)\to H^{n}(F,F_{0};R)$ and $p^{*}:H^{k}(B;R)\to H^{k}(E;R)$ are isomorphisms for all $k\geq 0$.
+    \end{obs}
+
+    \begin{defi}{\bf (Thom Class and Thom Isomorphism)}\label{defi_thom}
+    	Given an $R-$orientable $\R^{n}-$ generalized bundle $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,B)$, the generator 
+        $(\tau)=H^{n}(E,E_{0};R)\cong R$ is called the Thom class\index{class!Thom}, and the isomorphism 
+        $\phi:H^{k}(B;R)\to H^{n+k}(E,E_{0};R)$ from Theorem \ref{teo_iso_thom_fht} is referred to as the Thom 
+        isomorphism\index{isomorphism!Thom} of $(\mathcal{F},\mathcal{F}_{0})$.
+    \end{defi}
+
+    Now, let us examine some consequences involving orientability and the Thom classes of generalized bundles. Since we will be working with 
+    Stiefel–Whitney\index{class!Stiefel–Whitney} and Euler\index{class!Euler} classes throughout this chapter, the final lemmas of this 
+    section will be stated for $R=\Z_{2}$ and $R=\Z$.
+
+    %\begin{lem}\label{lema_thom_1}
+    %Let $(\mathcal{F},\mathcal{F}_{0})$ and $(\mathcal{F'},\mathcal{F'}_{0})$ be two generalized $\R^{n}$-bundles over the same base such that $(\mathcal{F},\mathcal{F}_{0})\sim_{f}(\mathcal{F'},\mathcal{F'}_{0})$. Then:
+    %	\begin{enumerate}
+    %		\item $(\mathcal{F},\mathcal{F}_{0})$ is $R$-orientable if and only if $(\mathcal{F'},\mathcal{F'}_{0})$ is $R$-orientable;
+    %		\item if $(\mathcal{F},\mathcal{F}_{0})$ is $R$-orientable\index{bundle!generalized!orientable} and we denote by $\tau$ and $\tau'$ the Thom classes\index{class!Thom} of $(\mathcal{F},\mathcal{F}_{0})$ and $(\mathcal{F'},\mathcal{F'}_{0})$, respectively, then the fiber map $f:(\mathcal{F},\mathcal{F}_{0})\to (\mathcal{F'},\mathcal{F'}_{0})$ guaranteed by Definition \ref{defi_iso_homot} is such that $f^{*}(\tau')=\tau$.
+    %	\end{enumerate}
+    %\end{lem}
+    %\begin{proof}
+    %
+    %\
+    %
+    %\ A
+    %
+    %\end{proof}
+
+    \begin{lem}\label{lema_thom_2}
+    	Let $(\mathcal{F},\mathcal{F}_{0})$ be an $R-$orientable\index{bundle!generalized!orientable} $\R^{n}-$ generalized bundle over a 
+        base $B$, let $f:B'\to B$ be any map, and let $\tau$ be the Thom class\index{class!Thom} of $(\mathcal{F},\mathcal{F}_{0})$. Then:
+    	\begin{enumerate}
+    		\item $f^{*}(\mathcal{F},\mathcal{F}_{0})$ is an $R-$orientable $\R^{n}-$ generalized bundle.
+    		\item If $\tau^{*}$ is the Thom class of $f^{*}(\mathcal{F},\mathcal{F}_{0})$, then $\tau^{*}=1\times \tau$.
+    	\end{enumerate}
+    \end{lem}
+    \begin{proof}
+
+        \
+
+        First, denoting $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,B)$, we already know from Lemma \ref{fht_pullback} that 
+        $f^{*}(\mathcal{F},\mathcal{F}_{0})=(f^{*}E,f^{*}E_{0},p_{1},B')$ is a generalized $\R^{n}-$bundle, where:
+        $$f^{*}E=\{ (b',e)\in B'\times E \ : \ f(b')=p(e) \}$$
+        $$f^{*}E_{0}=\{ (b',e)\in f^{*}E \ : \ e\in E_{0} \}$$
+
+        \
+
+        Now, fixing $b'_{0}\in B'$ and $f(b'_{0})\in B$, let $(F^{*},F^{*}_{0})$ and $(F,F_{0})$ be the fibers of 
+        $f^{*}(\mathcal{F},\mathcal{F}_{0})$ and $(\mathcal{F},\mathcal{F}_{0})$ over $b'_{0}\in B'$ and $f(b'_{0})\in B$, respectively. 
+        Due to Lemma \ref{pf_pullback}, we also know that $(F^{*},F^{*}_{0})=\{ b'_{0} \}\times (F,F_{0})$.
+
+        Thus, the action defined in Definition \ref{defi_orient} of $\Omega(B',b'_{0})$ on $H_{n}(F^{*},F^{*}_{0};R)$ reduces to the 
+        action of $\Omega(B,f(b'_{0}))$ on $H_{n}(F,F_{0};R)$.
+
+        Since $(\mathcal{F},\mathcal{F}_{0})$ is an $R-$orientable generalized bundle, the action of $\Omega(B,f(b'_{0}))$ on 
+        $H_{n}(F,F_{0};R)$ is trivial. Therefore, the action of $\Omega(B',b'_{0})$ on $H_{n}(F^{*},F^{*}_{0};R)$ is also trivial, and 
+        consequently, $f^{*}(\mathcal{F},\mathcal{F}_{0})$ is an $R-$orientable generalized bundle.
+
+        \
+
+        Finally, denoting the Thom classes\index{Thom!class} of $(\mathcal{F},\mathcal{F}_{0})$ and $f^{*}(\mathcal{F},\mathcal{F}_{0})$ 
+        respectively by the generators $(\tau)=H^{n}(E,E_{0};R)$ and $(\tau^{*})=H^{n}(f^{*}E,f^{*}E_{0};R)$, we will prove that 
+        $\tau^{*}=1\times\tau$.
+
+        To do so, consider $i:(F,F_{0})\hookrightarrow (E,E_{0})$ and $j:(F^{*},F^{*}_{0})\hookrightarrow (f^{*}E,f^{*}E_{0})$ the canonical 
+        inclusions. Since $(F^{*},F^{*}_{0})=\{ b'_{0} \}\times (F,F_{0})$, it follows that $j=1\times i$.
+
+        Now, fixing the generators $(u)=H^{n}(F,F_{0};R)$ and 
+        $(1\times u)=H^{n}(F^{*},F^{*}_{0};R)$\footnote{The Künneth formula\index{Künneth!formula} allows us to assert that 
+        $1\times u$ is a generator of $H^{n}(F^{*},F^{*}_{0};R)$.}, recall that the Thom classes $\tau$ and $\tau^{*}$ are uniquely 
+        determined so that $i^{*}(\tau)=u$ and $j^{*}(\tau^{*})=1\times u$.
+
+        However, note that:
+
+        \
+
+        $\begin{array}{rl}
+        	j^{*}(1\times \tau) \ = & (1\times i)^{*}(1\times \tau) \\
+        	= & 1\times i^{*}(\tau) \\
+        	= & 1\times u
+        \end{array}$
+
+        \
+
+        Therefore, by uniqueness, we conclude that $\tau^{*}=1\times \tau$.
+
+    \end{proof}
+
+    \begin{lem}\label{lema_thom_3}
+	    Let $(\mathcal{F},\mathcal{F}_{0})$ be an $\R^{n}-$generalized bundle\index{generalized bundle!orientable}, 
+        $(\mathcal{F'},\mathcal{F'}_{0})$ an $\R^{m}-$generalized bundle, both $R-$orientable. Denoting by $\tau$ and $\tau'$ 
+        the Thom classes\index{Thom class} of $(\mathcal{F},\mathcal{F}_{0})$ and $(\mathcal{F'},\mathcal{F'}_{0})$, respectively, then:
+	\begin{enumerate}
+		\item $(\mathcal{F},\mathcal{F}_{0})\times (\mathcal{F'},\mathcal{F'}_{0})$ is an $\R^{n+m}-$generalized $R-$orientable bundle.
+		\item If $\tau''$ is the Thom class of $(\mathcal{F},\mathcal{F}_{0})\times (\mathcal{F'},\mathcal{F'}_{0})$, 
+        then $\tau''=\tau\times\tau'$.
+	\end{enumerate}
+    \end{lem}
+
+    \begin{proof}
+
+        \
+
+    	Recalling Lemma \ref{fht_produto}, we know that $(\mathcal{F},\mathcal{F}_{0})\times (\mathcal{F'},\mathcal{F'}_{0})$ is an 
+        $\R^{n+m}-$generalized bundle. Furthermore, we denote $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,B)$, 
+        $(\mathcal{F'},\mathcal{F'}_{0})=(E',E'_{0},q,B')$, and 
+        $(\mathcal{F},\mathcal{F}_{0})\times (\mathcal{F'},\mathcal{F'}_{0})=(E'',E''_{0},r,B'')$, where:
+
+        \
+
+    	$E''=E\times E'$
+
+    	$E''_{0}=\left( E\times E'_{0} \right)\cup \left( E_{0}\times E' \right)$
+        
+    	$r=p\times q$
+
+    	$B''=B\times B'$
+
+        \
+
+    	Let $b_{0}\in B$, $b'_{0}\in B'$, and $(b_{0},b'_{0})\in B''$. Consider $(F,F_{0})$, $(F',F'_{0})$, and $(F'',F''_{0})$ as the fibers 
+        of $(\mathcal{F},\mathcal{F}_{0})$, $(\mathcal{F'},\mathcal{F'}_{0})$, and 
+        $(\mathcal{F},\mathcal{F}_{0})\times (\mathcal{F'},\mathcal{F'}_{0})$ over $b_{0}\in B$, $b'_{0}\in B'$, and $(b_{0},b'_{0})\in B''$, 
+        respectively.
+
+    	Since $(F'',F''_{0})=(F,F_{0})\times (F',F'_{0})$, the Künneth formula\index{Künneth formula} guarantees us that:
+    	$$ H_{n+m}(F'',F''_{0};R)\cong H_{n}(F,F_{0};R)\tensor H_{m}(F',F'_{0};R) $$
+
+    	Moreover, we also have the following homeomorphism:
+    	$$ \Omega(B'',(b_{0},b'_{0}))\approx \Omega(B,b_{0})\times\Omega(B',b'_{0}) $$
+
+        \
+
+    	Therefore, the action given in Definition \ref{defi_orient} of $\Omega(B'',(b_{0},b'_{0}))$ on $H_{n+m}(F'',F''_{0};R)$ reduces to the 
+        actions of $\Omega(B,b_{0})$ and $\Omega(B',b'_{0})$ on $H_{n}(F,F_{0};R)$ and $H_{m}(F',F'_{0};R)$, respectively.
+
+    	Since $(\mathcal{F},\mathcal{F}_{0})$ and $(\mathcal{F'},\mathcal{F'}_{0})$ are $R-$orientable generalized bundles, the actions of 
+        $\Omega(B,b_{0})$ and $\Omega(B',b'_{0})$ on $H_{n}(F,F_{0};R)$ and $H_{m}(F',F'_{0};R)$, respectively, are trivial. Thus, the action 
+        of $\Omega(B'',(b_{0},b'_{0}))$ on $H_{n+m}(F'',F''_{0};R)$ is trivial and, consequently, 
+        $(\mathcal{F},\mathcal{F}_{0})\times (\mathcal{F'},\mathcal{F'}_{0})$ is an $R-$orientable generalized bundle.
+
+        \
+
+    	Finally, let $(\tau)=H^{n}(E,E_{0};R)$, $(\tau')=H^{m}(E',E'_{0};R)$, and $(\tau'')=H^{n+m}(E'',E''_{0};R)$ be the Thom classes of 
+        $(\mathcal{F},\mathcal{F}_{0})$, $(\mathcal{F'},\mathcal{F'}_{0})$, and 
+        $(\mathcal{F},\mathcal{F}_{0})\times (\mathcal{F'},\mathcal{F'}_{0})$, respectively. We now prove that $\tau''=\tau\times\tau'$.
+
+    	Consider the canonical inclusions $i:(F,F_{0})\hookrightarrow (E,E_{0})$, $i':(F',F'_{0})\hookrightarrow (E',E'_{0})$, and 
+        $i'':(F'',F''_{0})\hookrightarrow (E'',E''_{0})$. Since $(F'',F''_{0})=(F,F_{0})\times (F',F'_{0})$ and 
+        $(E'',E''_{0})=(E,E_{0})\times (E',E'_{0})$, then $i''=i\times i'$.
+
+    	Fix the generators $(u)=H^{n}(F,F_{0};R)$, $(u')=H^{m}(F',F'_{0};R)$, and 
+        $(u\times u')=H^{n+m}(F'',F''_{0};R)$\footnote{The Künneth formula\index{Künneth formula} guarantees that $u\times u'$ is a generator 
+        of $H^{n+m}(F'',F''_{0};R)$.} and recall that the Thom classes $\tau$, $\tau'$, and $\tau''$ are uniquely characterized by the 
+        equalities $i^{*}(\tau)=u$, $i'^{*}(\tau')=u'$, and $i''^{*}(\tau'')=u\times u'$, respectively.
+
+    	However, note that:
+
+        \
+    	
+    	$\begin{array}{rl}
+    		i''^{*}(\tau\times\tau') \ = & (i\times i')^{*}(\tau\times\tau') \\
+    		= & i^{*}(\tau)\times i'^{*}(\tau') \\
+    		= & u\times u'
+    	\end{array}$
+
+        \
+
+    	Hence, by uniqueness, we conclude that $\tau''=\tau\times\tau'$.
+
+    \end{proof}
+
+    \begin{lem}\label{lema_thom_4}
+    Let $(\mathcal{F},\mathcal{F}_{0})$ be a $\R^{n}-$generalized bundle\index{bundle!generalized!orientable} that is $\Z-$orientable, and 
+    let $\tau$ be its Thom class\index{class!Thom}. Denoting by $-(\mathcal{F},\mathcal{F}_{0})$ the same $\R^{n}-$generalized bundle with 
+    the orientation reversed, and by $\tau'$ its Thom class, then $\tau'=-\tau$.
+    \end{lem}
+
+    \begin{proof}
+
+        \
+
+        Let us denote by $(E,E_{0})$ the total space of $(\mathcal{F},\mathcal{F}_{0})$ and by $(F,F_{0})$ an arbitrary fiber of $(\mathcal{F},\mathcal{F}_{0})$.
+
+        The result follows directly from Theorem \ref{teo_iso_thom_fht} and Definition \ref{defi_thom}, since the Thom class of $(\mathcal{F},\mathcal{F}_{0})$ is the generator $(\tau)=H^{n}(E,E_{0};\Z)\cong\Z$, which is directly related to the generator $(u)=H^{n}(F,F_{0};\Z)\cong\Z$, and consequently, the Thom class of $-(\mathcal{F},\mathcal{F}_{0})$ is the generator $(-\tau)=H^{n}(E,E_{0};\Z)\cong\Z$, directly related to the generator $(-u)=H^{n}(F,F_{0};\Z)\cong\Z$.
+
+    \end{proof}
+
+    \begin{lem}\label{lema_thom_5}
+        Let $M^{m}$ be a closed topological manifold\index{manifold!topological} that is $\Z-$orientable and of odd dimension, and let 
+        $(\tau M,\tau_{0}M)$ be its $\R^{m}-$generalized tangent bundle\index{bundle!generalized!tangent}. Then the Thom 
+        class\index{class!Thom} $\tau$ of $(\tau M,\tau_{0}M)$ satisfies $\tau\ccup\tau=0$.
+    \end{lem}
+
+    \begin{proof}
+
+        \
+
+        First, since $M^{m}$ is a $\Z-$orientable topological manifold, Proposition \ref{propriedade_orient_var} ensures that the 
+        $\R^{m}-$generalized tangent bundle $(\tau M,\tau_{0}M)$ of $M$ is also $\Z-$orientable.
+
+        On the other hand, denoting by $(TM,T_{0}M)$ the total space of $(\tau M,\tau_{0}M)$ and recalling that $M$ is compact, the Thom 
+        isomorphism for $(\tau M,\tau_{0}M)$ gives:
+        $$ H^{2m}(TM,T_{0}M;\Z)\cong H^{m}(M;\Z)\cong\Z $$
+
+        \
+
+        Therefore, denoting the generator $(\tau)=H^{m}(TM,T_{0}M;\Z)$ as the Thom class of $(\tau M,\tau_{0}M)$, and since item 5 of 
+        Lemma \ref{propriedades_produtos} states that $\tau\ccup\tau =(-1)^{m^{2}}(\tau\ccup\tau)$ and $m$ is odd, it follows that 
+        $\tau\ccup\tau=-(\tau\ccup\tau)$, i.e., $2(\tau\ccup\tau)=0$.
+
+        Since $2(\tau\ccup\tau)\in H^{2m}(TM,T_{0}M;\Z)\cong\Z$, we conclude that $\tau\ccup\tau=0$.
+
+    \end{proof}
+
+
+
+    \section{Stiefel-Whitney Classes}\label{secao_SW}
+
+    \
+
+    The construction of the Stiefel–Whitney classes for generalized bundles\index{bundle!generalized} will follow, due to Theorem 
+    \ref{teo_iso_thom_fht}, in exactly the same way as the construction given in (\cite{milnor_1}, Chapter 8) for vector 
+    bundles\index{bundle!vector}. Note that, since every generalized bundle is $\Z_{2}-$orientable and the Stiefel–Whitney classes are 
+    defined in the context of singular cohomology $\Z_{2}-$modules, we do not need to impose any orientability condition on the generalized 
+    bundles throughout this section.
+
+    With the exception of Propositions \ref{res_SW_fht_8} and \ref{res_SW_fht_9}, the results in this section were taken from 
+    \cite{fadell_1} and \cite{fadell_4}. Furthermore, it is worth noting that Theorems \ref{res_SW_fht_2} and \ref{res_SW_fht_10}, and 
+    Corollary \ref{res_SW_fht_6}, can be found in (\cite{fadell_4}, Lemma 2.11, p. 39), (\cite{fadell_4}, Theorem 5.2, p. 52), and 
+    (\cite{fadell_1}, Theorem 6.11, p. 504), respectively. In these references, Fadell presents more technical proofs without using pullback 
+    generalized bundles. In contrast, the proofs provided here highlight the importance of the pullback generalized 
+    bundle\index{bundle!generalized!pullback}.
+
+    Thus, let $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,B)$ be an $\R^{n}-$generalized bundle and $\phi$ its Thom isomorphism. Then, for 
+    every $k\geq 0$, the following composition makes sense:\footnote{$Sq^{k}$ denotes the Steenrod square operation\index{Steenrod square}, 
+    some of whose properties can be found in Section \ref{ap_steenrod}.}
+    $$ \xymatrix @C=0.5cm {
+    	H^{n}(E,E_{0};\Z_{2}) \ar[rrr]^-{Sq^{k}} &&& H^{n+k}(E,E_{0};\Z_{2}) \ar[rrr]^-{\phi^{-1}} &&& H^{k}(B;\Z_{2})
+    } $$
+
+    \
+
+    \begin{defi}{\bf (Stiefel–Whitney Classes)}
+    	Let $(\mathcal{F},\mathcal{F}_{0})$ be an $\R^{n}-$generalized bundle over a base $B$, and let $\phi$ and $\tau$ denote its Thom 
+        isomorphism and Thom class, respectively. For each $k\geq 0$, the $k$th Stiefel–Whitney class\index{class!Stiefel–Whitney} of 
+        $(\mathcal{F},\mathcal{F}_{0})$ is defined as:
+    	$$ w_{k}(\mathcal{F},\mathcal{F}_{0}) = \phi^{-1} \circ Sq^{k}(u) \in H^{k}(B;\Z_{2}) $$
+
+        \
+    
+    	We also define the element $W(\mathcal{F},\mathcal{F}_{0}) = \ds\sum_{k\geq 0} w_{k}(\mathcal{F},\mathcal{F}_{0}) \in H^{*}(B;\Z_{2})$ 
+        as the total Stiefel–Whitney class\index{class!total Stiefel–Whitney} of $(\mathcal{F},\mathcal{F}_{0})$.
+    \end{defi}
+
+    Now, let us examine some consequences of the Stiefel–Whitney classes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+    \section{Euler Class}\label{secao_euler}
+
+    \
+
+    We conclude this chapter by defining the Euler class of a generalized bundle, for which we now need to impose the condition of 
+    $\Z-$orientability.
+
+    We will show how the Euler class relates to the Stiefel–Whitney classes\index{class!Stiefel–Whitney}, and how this condition induces some 
+    results analogous to those in the context of Stiefel–Whitney classes, but now for the Euler class. Furthermore, we will see under which 
+    conditions the Euler class vanishes.
+
+    In this section, only Proposition \ref{euler_2} was taken from \cite{fadell_1}.
+
+    \begin{defi}{\bf (Euler Class)}
+    	Let $(\mathcal{F},\mathcal{F}_{0})$ be a $\Z-$orientable $\R^{n}$-generalized bundle\index{bundle!generalized!orientable} over a base 
+        $B$, and let $\phi$ and $\tau$ denote its Thom isomorphism\index{isomorphism!Thom} and Thom class\index{class!Thom}, respectively. 
+        The Euler class\index{class!Euler} of $(\mathcal{F},\mathcal{F}_{0})$ is defined as the following class:
+    	$$ e(\mathcal{F},\mathcal{F}_{0}) = \phi^{-1}(\tau \ccup \tau) \in H^{n}(B;\Z) $$
+
+        \
+
+    	In particular, we denote the Euler class of a topological manifold\index{manifold!topological} $M$ by:
+    	$$ e(M) = e(\tau M, \tau_{0} M) $$
+    \end{defi}
+
+
+
+
+
+
 
 
 
@@ -2912,8 +3295,7 @@ footskip=10mm}
     
 
     \printbibliography
-    \printindex
-
+    \addcontentsline{toc}{chapter}{Bibliography}
 
 
     \newpage
