@@ -303,6 +303,8 @@ footskip=10mm}
 
 
 
+
+
     \chapter{Introduction}
     \thispagestyle{empty}
 
@@ -672,6 +674,8 @@ footskip=10mm}
     \end{center}
 
     
+
+
 
     \chapter{Bundles}\label{cap_fib}
     \thispagestyle{empty}
@@ -2146,6 +2150,8 @@ footskip=10mm}
     
 
 
+
+
     \chapter{Characteristic Classes of Topological Manifolds}\label{cap_clas_carac}
     \thispagestyle{empty}
     
@@ -3214,31 +3220,1199 @@ footskip=10mm}
 
 
 
+
+
     \chapter{Applications in Closed Topological Manifolds}\label{cap_aplic}
     \thispagestyle{empty}
 
     \
 
-    In this chapter, we present some applications concerning the Stiefel–Whitney\index{Stiefel–Whitney class}, Euler\index{Euler class}, and Wu\index{Wu class} classes of closed topological manifolds\index{topological manifold}.
+    In this chapter, we present some applications concerning the Stiefel–Whitney\index{Stiefel–Whitney class}, Euler\index{Euler class}, 
+    and Wu\index{Wu class} classes of closed topological manifolds\index{topological manifold}.
 
-    To begin with, in Section \ref{sec_form_wu}, we provide an alternative proof of the topological version of Wu's formula\index{Wu formula}, which was first presented by Fadell in \cite{fadell_1}. We also explore some consequences of this result.
+    To begin with, in Section \ref{sec_form_wu}, we provide an alternative proof of the topological version of Wu's formula\index{Wu formula}, 
+    which was first presented by Fadell in \cite{fadell_1}. We also explore some consequences of this result.
 
-    Using the preliminary lemmas of Wu's formula, we show in Section \ref{sec_poincare} how the Euler class and the Euler characteristic\index{Euler characteristic} of a topological manifold are related, and how this allowed us to generalize one of the consequences of the Poincaré–Hopf theorem\index{Poincaré–Hopf theorem} from the smooth manifold\index{smooth manifold} setting to the topological one.
+    Using the preliminary lemmas of Wu's formula, we show in Section \ref{sec_poincare} how the Euler class and the Euler 
+    characteristic\index{Euler characteristic} of a topological manifold are related, and how this allowed us to generalize one of the 
+    consequences of the Poincaré–Hopf theorem\index{Poincaré–Hopf theorem} from the smooth manifold\index{smooth manifold} setting to the 
+    topological one.
 
-    To conclude the chapter, in Section \ref{sec_tubular}, we show how the theory of generalized bundles\index{generalized bundle} enabled us to extend, once again from the smooth to the topological context, one of the results presented by de Stong in \cite{stong}, involving Wu classes, whose proof relies heavily on the existence of tubular neighborhoods\index{tubular neighborhood} for smooth embeddings\index{smooth embedding}.
+    To conclude the chapter, in Section \ref{sec_tubular}, we show how the theory of generalized bundles\index{generalized bundle} enabled us 
+    to extend, once again from the smooth to the topological context, one of the results presented by de Stong in \cite{stong}, involving Wu 
+    classes, whose proof relies heavily on the existence of tubular neighborhoods\index{tubular neighborhood} for smooth 
+    embeddings\index{smooth embedding}.
 
 
 
+    \section{Topological Version of Wu's Formula}\label{sec_form_wu}
+
+    \
+
+    In (\cite{milnor_2}, Chapter 9) and (\cite{milnor_1}, Chapter 11), Milnor presents two proofs of the Wu formula\index{formula!Wu} for 
+    smooth manifolds\index{manifold!smooth}, which are very similar to each other, differing only in some technical details.
+
+    In \cite{fadell_1}, Fadell uses generalized bundles\index{bundle!generalized} to provide a first proof of the Wu formula for topological 
+    manifolds\index{manifold!topological}, based on \cite{milnor_2}. It is worth noting that the preliminary results developed by Fadell 
+    in \cite{fadell_1} to prove the Wu formula are all within the framework of singular (co)homology\index{singular (co)homology} with 
+    $\Z_{2}-$modules.
+
+    In this section, we will also use generalized bundles to provide a second proof of the Wu formula for topological manifolds, this time 
+    based on \cite{milnor_1}. However, the preliminary results developed here for the Wu formula will be within the framework of singular 
+    (co)homology with $R-$modules, where $R=\Z$ or $R=\Z_{2}$, since the versions of these results for $R=\Z$ will be extremely valuable for 
+    establishing, in the next section, the applications concerning the Euler class\index{class!Euler}.
+
+    To this end, throughout this section we will fix the following objects:
+
+    \begin{itemize}
+    	\item $M^{m}$ a closed, connected, and $R$-orientable topological manifold, with $R=\Z$ or $R=\Z_{2}$.
+    	\item Given a basis $\{b_{i}\}_{i=1}^{r}$ for $H^{*}(M;R)$, let $\{b_{i}^{\#}\}_{i=1}^{r}$ be its dual basis\index{dual basis}.
+    	\item $(\tau M,\tau_{0}M)=(TM,T_{0}M,p,M)$ the $\R^{m}-$generalized tangent bundle\index{bundle!generalized!tangent} of $M$.
+    	\item $(\tau)=H^{m}(TM,T_{0}M;R)\cong R$ the Thom class\index{class!Thom} of $(\tau M,\tau_{0}M)$.
+    	\item $\phi:H^{k}(M;R)\to H^{m+k}(TM,T_{0}M;R)$ the Thom isomorphism\index{isomorphism!Thom} of $(\tau M,\tau_{0}M)$ defined by 
+        $\phi(x)=p^{*}(x)\ccup \tau$.
+    \end{itemize}
+
+    Let $d:M\to M\times M$ be the diagonal map\index{map!diagonal} and $\Delta=d(M)$. It follows from 
+    (\cite{fadell_1}, Proposition 6.14, p. 505) that the map $\psi:(TM,T_{0}M)\to (M\times M,M\times M-\Delta)$ defined by 
+    $\psi(\omega)=(\omega(0),\omega(1))$ induces an isomorphism in the context of singular cohomology with $R-$modules. Thus, we may denote 
+    $(\tau')=H^{m}(M\times M,M\times M-\Delta;R)\cong R$ such that $\psi^{*}(\tau')=\tau$.
+
+    \
+
+    Before stating the first technical result for the proof of the Wu formula, let us consider an arbitrary point $b\in M$ and 
+    $j_{b}:(M,M-\{b\})\hookrightarrow (M\times M,M\times M-\Delta)$ the canonical inclusion given by $j_{b}(x)=(b,x)$. Then the induced map 
+    $j_{b}^{*}$ relates the class $\tau'$ to the local $R-$orientation 
+    class\footnote{For more details on orientation classes, see Section \ref{ap_orient}.} of $M$ at $b\in M$ as follows:
+
+    \begin{lem}\label{lema_tec_wu}
+    	For any $b\in M$, we have:
+    	$$ <j_{b}^{*}(\tau'),[M]_{b}>=1\in R $$
+    \end{lem}
+
+    \begin{proof}
+
+        \
+
+        First, fix $b\in M$ and let $(F,F_{0})$ be the fiber of $(\tau M,\tau_{0}M)$ over $b\in M$.
+        
+        Consider the canonical inclusion $f_{b}:(F,F_{0})\hookrightarrow (TM,T_{0}M)$ and define the map 
+        $\psi_{0}:(F,F_{0})\to (M,M-\{b\})$ by $\psi_{0}(\omega)=\omega(1)$. Then the following diagram commutes:
+        $$ \xymatrix @C=0.5cm {
+            (F,F_{0}) \ar[rrrrr]^-{\psi_{0}} \ar@{^(->}[dd]^-{f_{b}} &&&&& (M,M-\{b\}) \ar@{^(->}[dd]^-{j_{b}} \\
+            &&&&& \\		 		
+            (TM,T_{0}M) \ar[rrrrr]^-{\psi} &&&&& (M\times M,M\times M-\Delta)
+        } $$
+
+        \
+
+        On the other hand, recalling that the local $R-$orientation class\index{class!local orientation} of $M$ at $b\in M$ is the generator 
+        $([M]_{b})=H_{m}(M;R)\cong R$, Proposition \ref{prop_alg_comut} ensures that there exists a unique element $x_{b}\in H^{m}(M;R)$ such 
+        that $x_{b}\neq 0$ and $<x_{b},[M]_{b}>=1$.
+
+        \
+
+        Now, since $(F,F_{0})\sim (\R^{m},\R^{m}-\{0\})$ and, according to (\cite{fadell_1}, Proposition 3.12, p. 494), $\psi_{0}$ induces an 
+        isomorphism in singular (co)homology with $R-$modules\index{singular (co)homology}, we may choose a generator 
+        $([F]_{0})=H_{m}(F,F_{0};R)$ such that $(\psi_{0})_{*}([F]_{0})=[M]_{b}$.
+
+        Furthermore, since Proposition \ref{prop_alg_comut} again ensures that there exists a unique element $x_{F}\in H^{m}(F,F_{0};R)$ such 
+        that $x_{F}\neq 0$ and $<x_{F},[F]_{0}>=1$, it follows that $\psi_{0}^{*}(x_{b})=x_{F}$, because:
+
+        \
+        
+        $\begin{array}{rl}
+            <\psi_{0}^{*}(x_{b}),[F]_{0}> \ = & <x_{b},(\psi_{0})_{*}([F]_{0})> \\
+            = & <x_{b},[M]_{b}> \\
+            = & 1
+        \end{array}$
+
+        \
+
+        Finally, since the Thom class $\tau$ of $(\tau M,\tau_{0}M)$ is uniquely determined such that $f_{b}^{*}(\tau)=x_{F}$, we conclude that:
+
+        \
+        
+        $\begin{array}{rl}
+            <j_{b}^{*}(\tau'),[M]_{b}> \ = & <j_{b}^{*}\circ (\psi^{*})^{-1}(\tau),[M]_{b}> \\
+            = & <(\psi_{0}^{*})^{-1}\circ f_{b}^{*}(\tau),[M]_{b}> \\
+            = & <(\psi_{0}^{*})^{-1}(x_{F}),[M]_{b}> \\
+            = & <x_{b},[M]_{b}> \\
+            = & 1
+        \end{array}$
+
+    \end{proof}
+
+    Note that the version of Lemma \ref{lema_tec_wu} for $R=\Z_{2}$ follows directly from the commutativity of the diagram presented in its 
+    proof, since $j_{b}^{*}$ is an isomorphism and the only nonzero elements of $H^{m}(M\times M,M\times M-\Delta;\Z_{2})$ and 
+    $H_{m}(M,M-\{b\};\Z_{2})$ are, respectively, $\tau'$ and $[M]_{b}$.
+
+    With this, we want to highlight that our contribution to the proof of Lemma \ref{lema_tec_wu} concerns the case $R=\Z$, which is essential 
+    for the versions of Lemma \ref{lema_tec_wu_2} and Proposition \ref{lema_para_euler} for $R=\Z$, and consequently, for the maps that will 
+    be presented in Section \ref{sec_poincare} on the Euler class\index{class!Euler}.
+
+    \
+
+    We also emphasize that the proof of Lemma \ref{lema_tec_wu}, in its version for smooth manifolds\index{manifold!smooth}, can be found in 
+    (\cite{milnor_1}, Lemma 11.7, p. 123). That proof uses the Riemannian structure\index{structure!Riemannian} of the manifold as well as the 
+    existence of the exponential map\index{map!exponential}, whereas our proof was obtained entirely by algebraic means, allowing us to 
+    generalize to the context of topological manifolds\index{manifold!topological}.
+
+    \
+
+    Now, returning to the preliminary results regarding the proof of the topological version of Wu's formula\index{formula!Wu's}, let us 
+    consider $j:M\times M\hookrightarrow (M\times M,M\times M-\Delta)$ the canonical inclusion and define 
+    $U=j^{*}(\tau')\in H^{m}(M\times M;R)$. Then, the slant product\index{product!slant} relates $U$ and the global $R-$orientation 
+    class\index{class!global orientation} of $M$ as follows:
+
+    \begin{lem}\label{lema_tec_wu_2}
+    	$U/[M]=1\in H^{0}(M;R)\cong R$
+    \end{lem}
+
+    \begin{proof}
+
+        \
+
+        Let $b\in M$ be arbitrary and denote by $k_{b}:\{b\}\hookrightarrow M$ the canonical inclusion. The following diagram is commutative:
+        $$ \xymatrix @C=0.5cm {
+        	H^{m}(M\times M;R) \ar[rrrrr]^-{/[M]} \ar[dd]^-{k_{b}^{*}\times 1} &&&&& H^{0}(M;R) \ar[dd]^-{k_{b}^{*}} \\
+        	&&&&& \\
+        	H^{m}(\{b\}\times M;R) \ar[rrrrr]^-{/[M]} &&&&& H^{0}(\{b\};R)
+        }$$
+
+        \
+        
+        Indeed, for any $x\tensor y\in H^{0}(M;R)\tensor H^{m}(M;R)$, we have:
+        
+        \
+
+        $\begin{array}{rl}
+        	k_{b}^{*}\left( (x\times y)/[M] \right) \ = & k_{b}^{*}\left( <y,[M]>x \right) \\
+        	= & <y,[M]>k_{b}^{*}(x) \\
+        	= & \left( k_{b}^{*}(x)\times y \right) /[M] \\
+        	= & \left( (k_{b}^{*}\times 1)(x\times y) \right) /[M]
+        \end{array}$
+
+        \
+
+        \
+
+        Now, recall that the global and local orientation classes\index{class!global orientation}\index{class!local orientation} of $M$ are 
+        related by the inclusion $\rho_{b}:M\hookrightarrow (M,M-\{b\})$ via $(\rho_{b})_{*}([M])=[M]_{b}$. Also, denoting by 
+        $i_{b}:M\hookrightarrow M\times M$ the inclusion defined by $i_{b}(x)=(b,x)$, it is clear that the following diagrams commute:
+        $$ \xymatrix @C=0.5cm {
+        	M \ar@{^(->}[rrrrr]^-{\rho_{b}} \ar@{^(->}[dd]^-{i_{b}} &&&&& (M,M-\{b\}) \ar@{^(->}[dd]^-{j_{b}} \\
+        	&&&&& \\
+        	M\times M \ar@{^(->}[rrrrr]^-{j} &&&&& (M\times M,M\times M-\Delta)
+        } $$
+
+        \
+
+        $$ \xymatrix @C=0.5cm {
+        	\{b\}\times M \ar@{^(->}[rrrrr]^-{1\times i_{b}} \ar@{^(->}[dd]^-{k_{b}\times 1} &&&&& \{b\}\times (M\times M) \ar[llllldd]^-{p_{2}} \\
+        	&&&&& \\
+        	M\times M
+        }$$
+
+        \
+
+        \
+
+        Thus, we obtain:
+        
+        \
+
+        $\begin{array}{rl}
+        	k_{b}^{*}(U/[M]) \ = & \left( (k_{b}^{*}\times 1)(U) \right)/[M] \\
+        	= & \left( (1\times i_{b}^{*})\circ p_{2}^{*}(U) \right)/[M] \\
+        	= & \left( (1\times i_{b}^{*})(1\times U) \right)/[M] \\
+        	= & \left( 1\times i_{b}^{*}(U) \right)/[M] \\
+        	= & <i_{b}^{*}(U),[M]>1 \\
+        	= & <i_{b}^{*}\circ j^{*}(\tau'),[M]>1 \\
+        	= & <\rho_{b}^{*}\circ j_{b}^{*}(\tau'),[M]>1 \\
+        	= & <j_{b}^{*}(\tau'),(\rho_{b})_{*}([M])>1 \\
+        	= & <j_{b}^{*}(\tau'),[M]_{b}>1 \\
+        	= & 1
+        \end{array}$
+
+        \
+
+        \
+
+        Hence, since $k_{b}^{*}(U/[M])=1\in H^{0}(\{b\};R)\cong R$ for any $b\in M$, we conclude that $U/[M]=1\in H^{0}(M;R)\cong R$.
+
+    \end{proof}
+
+    \
+
+    \begin{lem}
+	$(x\times 1)\ccup U=(1\times x)\ccup U, \ \forall x\in H^{*}(M;R)$
+    \end{lem}
+
+    \begin{proof}
+
+        \
+
+        First, recall that the canonical projections $p_{1}, p_{2}: M\times M \to M$ satisfy $(p_{1})_{|\Delta} = (p_{2})_{|\Delta}$. Moreover, 
+        since $M$ is a topological manifold, it is an ENR\index{ENR}.
+        
+        Therefore, it follows from (\cite{dold}, Proposition 8.6, p. 81) that there exists an open neighborhood 
+        $\Delta_{\epsilon} \subset M\times M$ of $\Delta$ such that $(p_{1})_{|\Delta_{\epsilon}} \sim (p_{2})_{|\Delta_{\epsilon}}$. 
+        In other words, if $e': \Delta_{\epsilon} \hookrightarrow M\times M$ denotes the canonical inclusion, then 
+        $e'^{*} \circ p_{1}^{*} = e'^{*} \circ p_{2}^{*}$.
+
+        \
+        
+        On the other hand, consider the inclusion 
+        $e: (\Delta_{\epsilon}, \Delta_{\epsilon} - \Delta) \hookrightarrow (M\times M, M\times M - \Delta)$ as the pair version of $e'$. It 
+        is clear that $e$ is an excision\index{excision}, and therefore its induced map in the context of singular cohomology with 
+        coefficients in $R-$modules is an isomorphism.
+        
+        Thus, for every $x \in H^{*}(M;R)$, we have:
+
+        \
+
+        $\begin{array}{rl}
+        	e'^{*} \circ p_{1}^{*}(x) = e'^{*} \circ p_{2}^{*}(x) \ \Longrightarrow & e'^{*} \circ p_{1}^{*}(x) \ccup e^{*}(\tau') = e'^{*} \circ p_{2}^{*}(x) \ccup e^{*}(\tau') \\
+        	\Longrightarrow & e^{*}(p_{1}^{*}(x) \ccup \tau') = e^{*}(p_{2}^{*}(x) \ccup \tau') \\
+        	\Longrightarrow & p_{1}^{*}(x) \ccup \tau' = p_{2}^{*}(x) \ccup \tau' \\
+        	\Longrightarrow & j^{*}(p_{1}^{*}(x) \ccup \tau') = j^{*}(p_{2}^{*}(x) \ccup \tau') \\
+        	\Longrightarrow & p_{1}^{*}(x) \ccup j^{*}(\tau') = p_{2}^{*}(x) \ccup j^{*}(\tau') \\
+        	\Longrightarrow & p_{1}^{*}(x) \ccup U = p_{2}^{*}(x) \ccup U
+        \end{array}$
+        
+        \
+
+        \
+
+        Hence, we conclude that $(x \times 1) \ccup U = (1 \times x) \ccup U$ for all $x \in H^{*}(M;R)$.
+
+    \end{proof}
+
+    \begin{prop}\label{lema_para_euler}
+    	$U = \ds\sum_{i=1}^{r} (-1)^{|b_{i}|} \left( b_{i} \times b_{i}^{\#} \right)$
+    \end{prop}
+
+    \begin{proof}
+
+        \
+
+        Recall that $U \in H^{m}(M \times M; R) \cong \ds\bigoplus_{i+j=m} H^{i}(M; R) \tensor H^{j}(M; R)$, so there exist 
+        $c_{1}, \cdots, c_{r} \in H^{*}(M; R)$ such that:
+        
+        \begin{itemize}
+            \item $|b_{i}| + |c_{i}| = m$
+            \item $U = \ds\sum_{i=1}^{r} \left( b_{i} \times c_{i} \right)$
+        \end{itemize}
+
+        \        
+        
+        Note that, for each $b_{j} \in \{b_{i}\}_{i=1}^{r}$, we have:
+
+        \
+
+        $\begin{array}{rl}
+        	\left[ (b_{j} \times 1) \ccup U \right]/[M] \ = & b_{j} \ccup (U/[M]) \\
+        	= & b_{j} \ccup 1 \\
+        	= & b_{j}
+        \end{array}$
+
+        \
+
+        \
+
+        On the other hand, the previous lemma ensures that:
+
+        \
+ 
+        $\begin{array}{rl}
+        	\left[ (b_{j} \times 1) \ccup U \right]/[M] \ = & \left[ (1 \times b_{j}) \ccup U \right]/[M] \\
+        	= & \left[ (1 \times b_{j}) \ccup \left( \ds\sum_{i=1}^{r} \left( b_{i} \times c_{i} \right) \right) \right]/[M] \\
+        	= & \ds\sum_{i=1}^{r} \left[ \left( (1 \times b_{j}) \ccup (b_{i} \times c_{i}) \right)/[M] \right] \\
+        	= & \ds\sum_{i=1}^{r} (-1)^{|b_{j}| \cdot |b_{i}|} \left[ \left( (1 \ccup b_{i}) \times (b_{j} \ccup c_{i}) \right)/[M] \right] \\
+        	= & \ds\sum_{i=1}^{r} (-1)^{|b_{j}| \cdot |b_{i}|} \langle b_{j} \ccup c_{i}, [M] \rangle b_{i}
+        \end{array}$
+
+        \
+
+        \
+
+        Thus, since $b_{j} = \ds\sum_{i=1}^{r} (-1)^{|b_{j}| \cdot |b_{i}|} b_{i} \langle b_{j} \ccup c_{i}, [M] \rangle$, we conclude that:
+        
+        \[
+        (-1)^{|b_{j}| \cdot |b_{i}|} \langle b_{j} \ccup c_{i}, [M] \rangle =
+        \begin{cases}
+        	1, & \text{if } i = j \\
+        	0, & \text{if } i \neq j
+        \end{cases}
+        \]
+
+        \
+
+        Finally, note that for $i = j$, we have $(-1)^{|b_{i}| \cdot |b_{i}|} = (-1)^{|b_{i}|}$, while for 
+        $i \neq j$, $\langle b_{j} \ccup c_{i}, [M] \rangle = 0$ regardless of the sign $(-1)^{|b_{j}| \cdot |b_{i}|}$. Therefore, we may 
+        rewrite the above equality as:
+        \[
+        \langle b_{j} \ccup (-1)^{|b_{i}|} c_{i}, [M] \rangle =
+        \begin{cases}
+        	1, & \text{if } i = j \\
+        	0, & \text{if } i \neq j
+        \end{cases}
+        \]
+
+        \
+
+        By the uniqueness of the dual basis\index{dual basis}, as in Theorem \ref{base_dual_2}, it follows that 
+        $b_{i}^{\#} = (-1)^{|b_{i}|} c_{i}$, that is, $c_{i} = (-1)^{|b_{i}|} b_{i}^{\#}$. Hence,
+        \[
+        U = \ds\sum_{i=1}^{r} (-1)^{|b_{i}|} \left( b_{i} \times b_{i}^{\#} \right).
+        \]
+
+    \end{proof}
+
+    \begin{lem}\label{lema_tecnico_wu}
+	For any $k \geq 0$, we have:
+	$$ w_{k}(M) = Sq^{k}(U)/[M] $$
+    \end{lem}
+
+    \begin{proof}
+
+        \
+
+        Recalling that $w_{k}(M) = \phi^{-1} \circ Sq^{k}(\tau)$, then:
+        $$ Sq^{k}(\tau) = \phi(w_{k}(M)) = p^{*}(w_{k}(M)) \ccup \tau $$
+
+        \
+        
+        Defining the homomorphisms $\phi' : H^{k}(M;\Z_{2}) \to H^{k+m}(M \times M, M \times M - \Delta; \Z_{2})$ and 
+        $\phi'' : H^{k}(M;\Z_{2}) \to H^{k+m}(M \times M; \Z_{2})$, respectively, by $\phi'(x) = p_{1}^{*}(x) \ccup \tau'$ and 
+        $\phi''(x) = p_{1}^{*}(x) \ccup U$, we have that the following diagram commutes:
+        $$
+        \xymatrix @C=0.5cm {
+        	H^{k+m}(T, T_{0}; \Z_{2}) && H^{k+m}(M \times M, M \times M - \Delta; \Z_{2}) \ar[ll]^-{\psi^{*}} \ar[rr]^-{j^{*}} && H^{k+m}(M \times M; \Z_{2}) \\
+        	&& && \\
+        	&& H^{k}(M; \Z_{2}) \ar[lluu]^-{\phi} \ar[uu]^-{\phi'} \ar[rruu]^-{\phi''} &&
+        }
+        $$
+        
+        Indeed, for any $x \in H^{k}(M; \Z_{2})$, we have:
+        
+        $$
+        \begin{array}{rl}
+        	\psi^{*} \circ \phi'(x) \ = & \psi^{*}(p_{1}^{*}(x) \ccup \tau') \\
+        	= & p^{*}(x) \ccup \psi^{*}(\tau') \\
+        	= & p^{*}(x) \ccup \tau \\
+        	= & \phi(x)
+        \end{array}
+        $$
+
+        $$
+        \begin{array}{rl}
+        	j^{*} \circ \phi'(x) \ = & j^{*}(p_{1}^{*}(x) \ccup \tau') \\
+        	= & p_{1}^{*}(x) \ccup j^{*}(\tau') \\
+        	= & p_{1}^{*}(x) \ccup U \\
+        	= & \phi''(x)
+        \end{array}
+        $$
+
+        \
+
+        Note that since $\phi$ and $\psi^{*}$ are isomorphisms such that $\phi = \psi^{*} \circ \phi'$, then $\phi'$ is also an isomorphism. 
+        Thus:
+
+        $$
+        \begin{array}{rl}
+        	\phi'^{-1} \circ Sq^{k}(\tau') \ = & \phi'^{-1} \circ Sq^{k} \circ (\psi^{*})^{-1}(\tau) \\
+        	= & \phi'^{-1} \circ (\psi^{*})^{-1} \circ Sq^{k}(\tau) \\
+        	= & \phi^{-1} \circ Sq^{k}(\tau) \\
+        	= & w_{k}(M)
+        \end{array}
+        $$
+
+        \
+
+        Hence, we get that $Sq^{k}(\tau') = \phi'(w_{k}(M))$ and:
+
+        $$
+        \begin{array}{rl}
+        	Sq^{k}(U) \ = & Sq^{k} \circ j^{*}(\tau') \\
+        	= & j^{*} \circ Sq^{k}(\tau') \\
+        	= & j^{*} \circ \phi'(w_{k}(M)) \\
+        	= & \phi''(w_{k}(M)) \\
+        	= & p_{1}^{*}(w_{k}(M)) \ccup U \\
+        	= & (w_{k}(M) \times 1) \ccup U
+        \end{array}
+        $$
+
+        \
+
+        Therefore, we conclude that:
+
+        $$
+        \begin{array}{rl}
+        	Sq^{k}(U)/[M] \ = & \left[ (w_{k}(M) \times 1) \ccup U \right]/[M] \\
+        	= & w_{k}(M) \ccup \left( U / [M] \right) \\
+        	= & w_{k}(M) \ccup 1 \\
+        	= & w_{k}(M)
+        \end{array}
+        $$
+
+    \end{proof}
+
+    Finally, we can state and prove the main result of this section, the Wu formula:
+
+    \begin{teo}{\bf (Wu's Formula)\index{formula!Wu's formula}}
+    	For any $k \geq 0$, we have:
+    	$$ w_{k}(M) = \ds\sum_{i+j=k} Sq^{i}(v_{j}(M)) $$
+    \end{teo}
+
+    \begin{proof}
+
+        \
+
+        By Corollary \ref{base_dual_3} and the very definition of the Wu classes\index{class!Wu class}, we have:
+
+        \
+        
+        $ \begin{array}{rl}
+        	v_{j}(M) \ = & \ds\sum_{l=1}^{r} \langle v_{j}(M) \ccup b_{l}^{\#}, [M] \rangle b_{l} \\
+        	= & \ds\sum_{l=1}^{r} \langle Sq^{j}(b_{l}^{\#}), [M] \rangle b_{l}
+        \end{array} $
+
+        \
+
+        Therefore, we conclude that:
+
+        \
+
+        $ \begin{array}{rl}
+        	\ds\sum_{i+j=k} Sq^{i}(v_{j}(M)) \ = & \ds\sum_{i+j=k} \ds\sum_{l=1}^{r} \langle Sq^{j}(b_{l}^{\#}), [M] \rangle Sq^{i}(b_{l}) \\
+        	= & \ds\sum_{i+j=k} \ds\sum_{l=1}^{r} \left[ \left( Sq^{i}(b_{l}) \times Sq^{j}(b_{l}^{\#}) \right) / [M] \right] \\
+        	= & \ds\sum_{l=1}^{r} \left[ \left( \ds\sum_{i+j=k} \left( Sq^{i}(b_{l}) \times Sq^{j}(b_{l}^{\#}) \right) \right) / [M] \right] \\
+        	= & \ds\sum_{l=1}^{r} \left[ Sq^{k}(b_{l} \times b_{l}^{\#}) / [M] \right] \\
+        	= & Sq^{k} \left( \ds\sum_{l=1}^{r} (b_{l} \times b_{l}^{\#}) \right) / [M] \\
+        	= & Sq^{k}(U) / [M] \\
+        	= & w_{k}(M)
+        \end{array} $
+
+    \end{proof}
+
+    Now, let us look at some consequences of Wu's formula\index{formula!Wu's formula}.
+
+    \begin{cor}\label{ap_wu_1}
+    	If $f: M^{m} \to S^{m}$ is a map between closed, connected topological manifolds\index{manifold!topological}, which induces an 
+        isomorphism on the singular (co)homology\index{singular (co)homology} groups with $\Z_{2}-$coefficients, then $f^{*}(W(S)) = W(M)$. In 
+        particular, the same holds if $f$ is a homotopy equivalence.
+    \end{cor}
+
+    \begin{proof}
+
+        \
+
+        It is enough to show that, under these conditions, the Wu classes\index{class!Wu class} of $M$ and $S$ satisfy $f^{*}(v(S)) = v(M)$, 
+        since then Wu’s formula ensures that:
+
+        \
+
+        $ \begin{array}{rl}
+        	f^{*}(W(S)) \ = & f^{*}(Sq(v(S))) \\
+        	= & Sq(f^{*}(v(S))) \\
+        	= & Sq(v(M)) \\
+        	= & W(M)
+        \end{array} $
+
+        \
+
+        Due to the uniqueness of the Wu classes, it suffices to show that for all $0 \leq i \leq m$:
+        $$ \langle f^{*}(v_{i}(S)) \ccup x, [M] \rangle = \langle Sq^{i}(x), [M] \rangle, \quad \forall x \in H^{m-i}(M; \Z_{2}) $$
+
+        First, since $f_{*}$ and $f^{*}$ are isomorphisms, we have $f_{*}([M]) = [S]$ and, for each $0 \leq i \leq m$ and any 
+        $x \in H^{m-i}(M; \Z_{2})$, there exists a unique $y \in H^{m-i}(S; \Z_{2})$ such that $f^{*}(y) = x$. Thus:
+
+        $ \begin{array}{rl}
+        	\langle f^{*}(v_{i}(S)) \ccup x, [M] \rangle \ = & \langle f^{*}(v_{i}(S)) \ccup f^{*}(y), [M] \rangle \\
+        	= & \langle f^{*}(v_{i}(S) \ccup y), [M] \rangle \\
+        	= & \langle v_{i}(S) \ccup y, f_{*}([M]) \rangle \\
+        	= & \langle v_{i}(S) \ccup y, [S] \rangle \\
+        	= & \langle Sq^{i}(y), [S] \rangle \\
+        	= & \langle Sq^{i}(y), f_{*}([M]) \rangle \\
+        	= & \langle f^{*}(Sq^{i}(y)), [M] \rangle \\
+        	= & \langle Sq^{i}(f^{*}(y)), [M] \rangle \\
+        	= & \langle Sq^{i}(x), [M] \rangle
+        \end{array} $
+
+        Hence, $f^{*}(v(S)) = v(M)$ and, consequently, $f^{*}(W(S)) = W(M)$.
+
+    \end{proof}
+
+    \begin{cor}\label{ap_wu_2}
+	Let $M^{m}$ be a closed and connected topological manifold\index{topological manifold} such that $w_{1}(M)=\cdots=w_{r}(M)=0$ for some 
+    integer $0\leq r\leq m$. Then, the Wu classes\index{Wu class} of $M$ satisfy $v_{1}(M)=\cdots=v_{r}(M)=0$ and $v_{r+1}(M)=w_{r+1}(M)$.
+    \end{cor}
+
+    \begin{proof}
+
+        \
+
+    	Using directly Wu's formula\index{Wu formula} and the properties of Steenrod squares\index{Steenrod square}, we obtain recursively:
+    
+    	$ \begin{array}{rl}
+    		0 \ = & w_{1}(M) \\
+    		= & Sq^{0}(v_{1}(M))+Sq^{1}(v_{0}(M)) \\
+    		= & Sq^{0}(v_{1}(M)) \\
+    		= & v_{1}(M) \\
+    		& \\
+    		0 \ = & w_{2}(M) \\
+    		= & Sq^{0}(v_{2}(M))+Sq^{1}(v_{1}(M))+Sq^{2}(v_{0}(M)) \\
+    		= & Sq^{0}(v_{2}(M)) \\
+    		= & v_{2}(M) \\
+    		\vdots & \\
+    		0 \ = & w_{r}(M) \\
+    		= & \ds\sum_{i=0}^{r}Sq^{i}(v_{r-i}(M)) \\
+    		= & Sq^{0}(v_{r}(M))+\ds\sum_{i=1}^{r}Sq^{i}(v_{r-i}(M)) \\
+    		= & Sq^{0}(v_{r}(M)) \\
+    		= & v_{r}(M) \\
+    		& \\
+    		w_{r+1}(M) \ = & \ds\sum_{i=0}^{r+1}Sq^{i}(v_{r+1-i}(M)) \\
+    		= & Sq^{0}(v_{r+1}(M))+\ds\sum_{i=1}^{r+1}Sq^{i}(v_{r+1-i}(M)) \\
+    		= & Sq^{0}(v_{r+1}(M)) \\
+    		= & v_{r+1}(M)
+    	\end{array} $
+
+    \end{proof}
+
+    \begin{cor}\label{ap_wu_3}
+    	Let $M^{m}$ be a closed and connected topological manifold\index{topological manifold}. Then, for every integer $0< i< m$ such that 
+        $2i>m$, we have $v_{i}(M)=0$.
+    \end{cor}
+
+    \begin{proof}
+
+        \
+
+    	Recall that the Wu class\index{Wu class} $v_{i}(M)\in H^{i}(M;\Z_{2})$ is uniquely determined by the following relation:
+    	$$ <v_{i}(M)\ccup x,[M]>=<Sq^{i}(x),[M]>, \ \forall x\in H^{m-i}(M;\Z_{2}) $$
+
+        \
+
+    	Now, since $2i>m$, that is, $i>m-i$, then for any $x\in H^{m-i}(M;\Z_{2})$, we have $Sq^{i}(x)=0$ and, consequently, 
+        $<Sq^{i}(x),[M]>=0$. Thus, $<v_{i}(M)\ccup x,[M]>=0$, which implies $v_{i}(M)\ccup x=0$.
+
+    	If $H^{m-i}(M;\Z_{2})=0$, then by Poincaré duality\index{Poincaré duality} and the Universal Coefficient 
+        Theorem\index{Universal Coefficient Theorem}, we have $H^{i}(M;\Z_{2})=0$. Hence, $v_{i}(M)=0$.
+
+    	On the other hand, if $H^{m-i}(M;\Z_{2})\neq 0$, then $v_{i}(M)\ccup x=0$, in particular for $x\neq 0$, and thus $v_{i}(M)=0$.
+
+    	In any case, we obtain $v_{i}(M)=0$ whenever $2i>m$.
+
+    \end{proof}
+
+    \begin{cor}\label{ap_wu_4}
+	Let $M^{m}$ be a closed and connected topological manifold with $m=2r$ or $m=2r+1$ for some integer $r\geq 0$. If 
+    $w_{1}(M)=\cdots=w_{r}(M)=0$, then $W(M)=1$.
+    \end{cor}
+
+    \begin{proof}
+
+        \
+
+    	It follows from Corollary \ref{ap_wu_2} that $v_{1}(M)=\cdots=v_{r}(M)=0$.
+
+    	On the other hand, if $i\geq r+1$, then $2i\geq 2r+2>m$, and thus, from Corollary \ref{ap_wu_3}, we have that $v_{i}(M)=0$ for 
+        $i\geq r+1$.
+
+    	Hence, $v(M)=1$ and, by the Wu formula, we conclude that $W(M)=1$.
+
+    \end{proof}
+
+    \begin{cor}\label{ap_wu_5}
+    	Let $M^{m}$ be a closed and connected topological manifold such that $W(M)\neq 1$. If $i>0$ is the smallest integer for which 
+        $w_{i}(M)\neq 0$, then $i$ must be a power of two.
+    \end{cor}
+
+    \begin{proof}
+
+        \
+
+    	Suppose $i>0$ is the smallest integer such that $w_{i}(M)\neq 0$, then:
+        $$w_{1}(M)=\cdots=w_{i-1}(M)=0$$
+
+        \
+        
+        By Corollary \ref{ap_wu_2}, it follows that $v_{1}(M)=\cdots=v_{i-1}(M)=0$ and $v_{i}(M)=w_{i}(M)\neq 0$.
+
+    	Since $<Sq^{k}(x),[M]>=<v_{k}(M)\ccup x,[M]>=0$ for every $k=1,\cdots,i-1$ and $x\in H^{m-k}(M;\Z_{2})$, we have that $Sq^{k}$ is the 
+        zero homomorphism for all $k=1,\cdots,i-1$.
+
+    	Now, if $H^{m-i}(M;\Z_{2})=0$, then Poincaré duality and the Universal Coefficient Theorem ensure that $H^{i}(M;\Z_{2})=0$, and 
+        consequently, $w_{i}(M)=0$, which contradicts the hypothesis. Therefore, since there exists $x\neq 0$ in $H^{m-i}(M;\Z_{2})$, we get 
+        $v_{i}(M)\ccup x\neq 0$. Thus, $<Sq^{i}(x),[M]>=<v_{i}(M)\ccup x,[M]>\neq 0$, so $Sq^{i}(x)\neq 0$, i.e., $Sq^{i}$ is not the zero 
+        homomorphism.
+
+    	As a result, it is not possible to decompose $Sq^{i}$ as a sum of compositions of $Sq^{k}$ with $1\leq k\leq i-1$.
+
+    	From this, by (\cite{bredon}, Theorem 15.8, p. 407)\footnote{\textit{"If an integer $i>0$ is not a power of two, then $Sq^{i}$ 
+        decomposes as a sum of compositions of $Sq^{k}$, with $0<k<i$".}}, we conclude that $i$ must be a power of two.
+
+    \end{proof}
+
+    As a final application of the Wu formula\index{Wu!formula}, let us see how this formula allows us to compute the total Stiefel–Whitney 
+    class\index{Stiefel–Whitney!total class} of real projective spaces\index{real projective space!finite} without relying on results about 
+    generalized bundles\index{generalized!bundle}, as in Theorem \ref{SW_var_suave}, and without relying on their smooth structure, as done 
+    in (\cite{milnor_1}, Theorem 4.5, p. 45).
+
+    In other words, the topological version of the Wu formula allows us to compute the total Stiefel–Whitney class of $\RP^{n}$ depending 
+    only on its cellular structure\index{cellular!structure} and no longer on its differential structure\index{differential!structure}.
+
+    \begin{cor}\label{ap_wu_7}
+    	Let $(a)=H^{1}(\RP^{n};\Z_{2})$, then $W(\RP^{n})=(1+a)^{n+1}$.
+    \end{cor}
+
+    \begin{proof}
+
+        \
+
+        Initially, recall that the canonical inclusion $i:\RP^{n}\hookrightarrow\RP^{\infty}$ induces, by Lemma \ref{iso_proj}, an 
+        isomorphism $i^{*}:H^{1}(\RP^{\infty};\Z_{2})\to H^{1}(\RP^{n};\Z_{2})$. Thus, denoting by $(b)=H^{1}(\RP^{\infty};\Z_{2})$, we have 
+        $i^{*}(b)=a$.
+
+        Fixing now the Newton binomial\index{Newton binomial} $\binom{i}{k}=0$ when $i<k$ or $k<0$, define for every integer $m\geq 0$ the 
+        following element:
+        $$ \wt{v}(m)=\sum_{k=0}^{m}\binom{m-k}{k}b^{k}\in H^{*}(\RP^{\infty};\Z_{2}) $$
+
+        \
+
+        Note that $\wt{v}(0)=1=\wt{v}(1)$. On the other hand, for $m>1$, we have:
+
+        \
+
+        $ \begin{array}{rl}
+        	\wt{v}(m+1) \ = & \sum_{k=0}^{m+1}\binom{m+1-k}{k}b^{k} \\
+        	= & \sum_{k=0}^{m+1}\left[ \binom{m-k}{k}+\binom{m-k}{k-1} \right]b^{k} \\
+        	= & \sum_{k=0}^{m+1}\binom{m-k}{k}b^{k}+\sum_{k=0}^{m+1}\binom{m-k}{k-1}b^{k} \\
+        	= & \sum_{k=0}^{m}\binom{m-k}{k}b^{k}+\sum_{k=1}^{m}\binom{m-k}{k-1}b^{k} \\
+        	= & \wt{v}(m)+\sum_{k=0}^{m-1}\binom{m-1-k}{k}b^{k+1} \\
+        	= & \wt{v}(m)+b\ccup \wt{v}(m-1)
+        \end{array} $
+
+        \
+
+        On the other hand, define, for every integer $m\geq 0$, the element:
+        $$ \beta(m)=Sq(\wt{v}(m))\in H^{*}(\RP^{\infty};\Z_{2}) $$
+
+        \
+
+        Again, note that $\beta(0)=1=\beta(1)$. Also, for $m>1$, we have:
+
+        \
+
+        $ \begin{array}{rl}
+        	\beta(m+1) \ = & Sq(\wt{v}(m+1)) \\
+        	= & Sq(\wt{v}(m)+b\ccup\wt{v}(m-1)) \\
+        	= & Sq(\wt{v}(m))+\left[ Sq(b)\ccup Sq(\wt{v}(m-1)) \right] \\
+        	= & \beta(m)+\left[ (b+b^{2})\ccup\beta(m-1) \right]
+        \end{array} $
+
+        \
+
+        Now, we prove by induction on $m\geq 0$ that $\beta(m)=(1+b)^{m+1}-b^{m+1}$. First, it is clear that $\beta(0)=1=(1+b)-b$. Assuming 
+        valid $\beta(k)=(1+b)^{k+1}-b^{k+1}$ for every $0\leq k\leq m$, note that:
+
+        \
+
+        $ \begin{array}{rl}
+        	\beta(m+1) \ = & \beta(m)+\left[ (b+b^{2})\ccup\beta(m-1) \right] \\
+        	= & \left[ (1+b)^{m+1}-b^{m+1} \right]+\left[ (b+b^{2})\ccup \left[ (1+b)^{m}-b^{m} \right] \right] \\
+        	= & (1+b)^{m+1}-b^{m+1}+\left[ (b+b^{2})\ccup (1+b)^{m} \right]-\left[ (b+b^{2})\ccup b^{m} \right] \\
+        	= & (1+b)^{m+1}-b^{m+1}+\left[ b\ccup (1+b)^{m+1} \right]-b^{m+1}-b^{m+2} \\
+        	= & \left[ (1+b)^{m+1}\ccup (1+b) \right]-b^{m+2} \\
+        	= & (1+b)^{m+2}-b^{m+2}
+        \end{array} $
+
+        \
+
+        Remembering that Example \ref{wu_rpn} guarantees that $v(\RP^{n})=\sum_{k=0}^{n}\binom{n-k}{k}a^{k}$, we have:
+
+        \
+
+        $ \begin{array}{rl}
+        	Sq(v(\RP^{n})) \ = & Sq\left( \sum_{k=0}^{n}\binom{n-k}{k}a^{k} \right) \\
+        	= & Sq\left( \sum_{k=0}^{n}\binom{n-k}{k}(i^{*}(b))^{k} \right) \\
+        	= & i^{*}\left[ Sq \left( \sum_{k=0}^{n}\binom{n-k}{k}b^{k} \right) \right] \\
+        	= & i^{*}(\beta(n)) \\
+        	= & i^{*}\left[ (1+b)^{n+1}-b^{n+1} \right] \\
+        	= & (1+i^{*}(b))^{n+1}-(i^{*}(b))^{n+1} \\
+        	= & (1+a)^{n+1}
+        \end{array} $
+
+        \
+
+        Therefore, Wu's formula\index{Wu's formula} guarantees that $W(\RP^{n})=(1+a)^{n+1}$.
+
+    \end{proof}
 
 
+
+    \section{Topological Version of Poincaré-Hopf Theorem}\label{sec_poincare}
+
+    \
+
+    In this section, we will present some applications of the Euler class\index{class!Euler class} of a topological 
+    manifold\index{manifold!topological}, whose proofs were only made possible due to the preliminary results used in the derivation of Wu's 
+    formula\index{formula!Wu's formula} also being developed in the context of singular cohomology $\Z-$modules.
+
+    First, we will examine the relationship between the Euler class and the Euler characteristic of a topological manifold. Then, we will show 
+    how to generalize the notion of vector field\index{vector field} from the smooth manifold\index{manifold!smooth} setting to the 
+    topological one, and how to combine these results to state the topological version of the Poincaré-Hopf 
+    theorem\index{theorem!Poincaré-Hopf}.
+
+    Let us begin with the following relationship between the global $\Z-$orientation class\index{class!global orientation class}, the Euler 
+    class and the Euler characteristic\index{Euler characteristic} of a topological manifold:
+
+    \begin{teo}\label{ap_euler_1}
+    	If $M$ is a closed, connected, and $\Z-$orientable topological manifold, then:
+    	$$ <e(M),[M]> = \chi(M) $$
+    \end{teo}
+
+    \begin{proof}
+
+        \
+
+        Let $dim(M) = m$, and $(\tau M,\tau_{0}M) = (TM,T_{0}M,p,M)$ denote the $\R^{m}$-generalized tangent 
+        bundle\index{generalized bundle!tangent} of $M$, with $(\tau) = H^{m}(TM,T_{0}M;\Z)$ representing the Thom 
+        class\index{class!Thom class} of $(\tau M,\tau_{0}M)$.
+        
+        Let $d:M \to M \times M$ be the diagonal map\index{map!diagonal map}, and let $i_{TM}: TM \hookrightarrow (TM,T_{0}M)$ and 
+        $j: M \times M \hookrightarrow (M \times M, M \times M - \Delta)$ be the canonical inclusions, where $\Delta = d(M)$.
+
+        Now, let $s: M \to TM$ be the section\index{section} of $(\tau M,\tau_{0}M)$ that assigns to each $b \in M$ the constant path at $b$ 
+        in $M$. Proposition \ref{euler_2} ensures that $e(M) = s^{*} \circ i_{TM}^{*}(\tau)$.
+
+        \
+
+        On the other hand, if we define the map $\psi: (TM,T_{0}M) \to (M \times M, M \times M - \Delta)$ by 
+        $\psi(\omega) = (\omega(0), \omega(1))$, it is clear that the following diagram commutes:
+        $$ \xymatrix @C=0.5cm {
+        	(TM,T_{0}M) \ar[rrrr]^-{\psi} &&&& (M\times M,M\times M-\Delta) \\
+        	&&&& \\	
+        	TM \ar@{^(->}[uu]^-{i_{TM}} && M \ar[ll]^-{s} \ar[rr]^-{d} && M\times M \ar@{^(->}[uu]^-{j} \\
+        } $$
+
+        \
+
+        Since we already know that $\psi$ induces an isomorphism in the context of singular cohomology $\Z$-modules, defining 
+        $\tau' = (\psi^{*})^{-1}(\tau) \in H^{m}(M \times M, M \times M - \Delta; \Z)$ and $U = j^{*}(\tau') \in H^{m}(M \times M; \Z)$, we 
+        obtain:
+
+        \
+
+        $ \begin{array}{rl}
+        	e(M) \ = & s^{*} \circ i_{TM}^{*}(\tau) \\
+        	= & s^{*} \circ i_{TM}^{*} \circ \psi^{*}(\tau') \\
+        	= & d^{*} \circ j^{*}(\tau') \\
+        	= & d^{*}(U)
+        \end{array} $
+
+        \
+
+        Finally, let $\{b_{i}\}_{i=1}^{r}$ be a basis for $H^{*}(M;\Z)$ and $\{b_{i}^{\#}\}_{i=1}^{r}$ its dual basis\index{dual basis}. 
+        Since $e(M) = d^{*}(U)$, Proposition \ref{lema_para_euler} ensures that:
+
+        \
+
+        $ \begin{array}{rl}
+        	<e(M),[M]> \ = & <d^{*}(U),[M]> \\
+        	= & <d^{*}\left( \ds\sum_{i=1}^{r} (-1)^{|b_{i}|}( b_{i} \times b_{i}^{\#} ) \right),[M]> \\
+        	= & \ds\sum_{i=1}^{r}(-1)^{|b_{i}|}<d^{*}(b_{i} \times b_{i}^{\#}),[M]> \\
+        	= & \ds\sum_{i=1}^{r}(-1)^{|b_{i}|}<b_{i} \ccup b_{i}^{\#},[M]> \\
+        	= & \ds\sum_{i=1}^{r}(-1)^{|b_{i}|} \\
+        	= & \ds\sum_{k=0}^{m}(-1)^{k} \operatorname{rank}(H_{k}(M;\Z)) \\
+        	= & \chi(M)
+        \end{array} $
+
+    \end{proof}
+
+    Naturally, due to Theorem \ref{euler_sw}, if we drop the $\Z-$orientability condition in the corollary above, we can rewrite it as follows:
+
+    \begin{cor}\label{ap_euler_3}
+    	If $M$ is a closed and connected topological manifold, then:
+    	$$ <w_{n}(M),[M]>\equiv\chi(M) \ (\text{mod } 2) $$
+    \end{cor}
+
+    The next result is a direct combination of Proposition \ref{prop_nulidade_euler} with Theorem \ref{ap_euler_1}.
+
+    \begin{cor}
+    	If $M$ is a closed, connected, and $\Z-$orientable topological manifold of odd dimension, then $\chi(M)=0$.
+    \end{cor}
+
+    The next definition generalizes the concept of vector field\index{vector field} from smooth manifolds\index{smooth manifold} to the 
+    context of topological manifolds, aiming to state the topological version of one of the consequences of the Poincaré-Hopf 
+    Theorem\index{Poincaré-Hopf Theorem} for smooth manifolds.
+
+    \begin{defi}{\bf (Path Field)}
+    	A \emph{path field}\index{path field} on a topological manifold $M$ is any section of its tangent $\R^{n}$-generalized 
+        bundle\index{generalized bundle!tangent} $(\tau M,\tau_{0}M)=(TM,T_{0}M,p,M)$. Furthermore, a 
+        \emph{non-singular path field}\index{path field!non-singular} on $M$ is a section\index{section} $s:M\to TM$ of $(\tau M,\tau_{0}M)$ 
+        such that $s(M)\subset T_{0}M$.
+    \end{defi}
+
+    From the definition of path field and Proposition \ref{fht_tang}, it is clear that a smooth manifold admits a nowhere vanishing vector 
+    field\index{vector field!nowhere vanishing} if and only if it admits a non-singular path field.
+
+    That said, let us recall the statement of one of the consequences of the Poincaré-Hopf Theorem:
+
+    \
+
+    \begin{center}
+    	\begin{minipage}{10cm}
+    		\textbf{(Poincaré-Hopf Corollary\index{Poincaré-Hopf Theorem})} \textit{"A closed, connected, and $\Z-$orientable smooth manifold 
+            $M$ admits a nowhere vanishing vector field if and only if $\chi(M)=0$."}
+    	\end{minipage}
+    \end{center}
+
+    \
+
+    In \cite{brown}, Brown presented for the first time the topological version of the above result, replacing the notion of nowhere vanishing 
+    vector field\index{vector field!nowhere vanishing} with non-singular path field, stated as follows:
+
+    \
+
+    \begin{center}
+    	\begin{minipage}{10cm}
+    		\textit{"A closed, connected, and $\Z-$orientable topological manifold $M$ admits a non-singular path field if and only if 
+            $\chi(M)=0$."}
+    	\end{minipage}
+    \end{center}
+
+    \
+
+    Later, in \cite{brown_2}, Brown and Fadell showed that this result can be extended to topological manifolds with boundary and 
+    non-orientable ones as follows:
+
+    \
+
+    \begin{center}
+    	\begin{minipage}{10cm}
+    		\textit{"A compact, connected, topological manifold $M$, with or without boundary and not necessarily $\Z-$orientable, admits a 
+            non-singular path field if and only if $\chi(M)=0$."}
+    	\end{minipage}
+    \end{center}
+
+    \
+
+    In both \cite{brown} and \cite{brown_2}, techniques involving generalized bundles\index{generalized bundle} and the Lefschetz 
+    number\index{Lefschetz number} were used, but the notion of Euler class was not employed in the proofs.
+
+    The Euler class\index{Euler class} allows for a more concise proof of the result presented in \cite{brown}, though only in one direction, 
+    as follows:
+
+    \begin{teo}{\bf (Poincaré-Hopf\index{Poincaré-Hopf Theorem})}\label{ap_euler_2}
+    	Let $M$ be a closed, connected, and $\Z-$orientable topological manifold\index{topological manifold}. If $M$ admits a non-singular 
+        path field\index{path field!non-singular}, then $\chi(M)=0$.
+    \end{teo}
+
+    \begin{proof}
+
+        \
+
+    	Since $M$ is a compact, $\Z-$orientable topological manifold that admits a non-singular path field, i.e., there exists a 
+        section\index{section} $s:M\to TM$ of the $\R^{n}-$generalized tangent bundle\index{generalized bundle!tangent} 
+        $(\tau M,\tau_{0}M)=(TM,T_{0}M,p,M)$ such that $s(M)\subset T_{0}M$, it follows from Proposition \ref{poincare-hopf} that $e(M)=0$.
+
+    	Therefore, Corollary \ref{ap_euler_1} ensures that $\chi(M)=0$.
+
+    \end{proof}
+
+
+
+    \section{A Tubular Neighborhood Problem}\label{sec_tubular}
+
+    \
+
+    We conclude this chapter by presenting the only map that does not involve Stiefel-Whitney classes\index{Stiefel-Whitney class} or Euler 
+    classes\index{Euler class}, but only Wu classes\index{Wu class} and some technical results about generalized 
+    bundles\index{generalized bundle}.
+
+    To better understand the significance of this result, let us make a few observations. First, recall that by combining Theorem 
+    \ref{res_SW_fht_10} with Corollary \ref{res_SW_fht_4}, we obtain:
+
+    \
+
+    \begin{center}
+    	\begin{minipage}{10cm}
+    		\textit{"If $i:M^{m}\hookrightarrow S^{m+k}$ is a local-flat embedding\index{local-flat embedding} with trivial generalized normal 
+            bundle\index{trivial!normal!generalized bundle}, then $W(M)=i^{*}(W(S))$"}
+    	\end{minipage}
+    \end{center}
+
+    \
+
+    Our goal is to prove the same result for the total Wu class\index{total!Wu class}, that is:
+
+    \
+
+    \begin{center}
+    	\begin{minipage}{10cm}
+    		\textit{"If $i:M^{m}\hookrightarrow S^{m+k}$ is a local-flat embedding\index{local-flat embedding} with trivial generalized normal 
+            bundle, then $v(M)=i^{*}(v(S))$"}
+    	\end{minipage}
+    \end{center}
+
+    \
+
+    In (\cite{stong}, Lemma 7, p. 274), Stong proves the same result in the smooth setting, as follows:
+
+    \
+
+    \begin{center}
+    	\begin{minipage}{10cm}
+    		\textit{"If $i:M^{m}\hookrightarrow S^{m+k}$ is a smooth embedding\index{smooth embedding} with trivial vector normal 
+            bundle\index{trivial!normal!vector bundle}, then $v(M)=i^{*}(v(S))$"}
+    	\end{minipage}
+    \end{center}
+
+    \
+
+    A more detailed proof of the result above can be found in (\cite{joao}, Lemma 7, p. 33). In that proof, the direct use of the existence 
+    of a tubular neighborhood\index{tubular neighborhood} for smooth embeddings\index{smooth embedding} becomes evident.
+
+    \newpage
+
+    To illustrate how such a generalization was made and to motivate the proof of the final result of this chapter, let 
+    $M^{m}\subset S^{m+k}$ be a smooth embedding with trivial vector normal bundle and $V$ the tubular neighborhood of $M$ in $S$, as in the 
+    following figure:
+
+    \begin{figure}[h]
+    	\centering
+    	\includegraphics[scale=0.25]{viz_tub.pdf}
+    	\caption{Tubular neighborhood of a smooth embedding.}
+    \end{figure}
+
+    With that, the proof by Stong in (\cite{stong}, Lemma 7, p. 274) essentially consists of finding a commutative diagram under the following 
+    conditions:
+
+    $$ \xymatrix @C=0.5cm {
+    	H^{*}(S;\Z_{2})\tensor H^{*}(S;\Z_{2}) \ar[rr] & & H^{*}(S;\Z_{2}) \\
+    	& & \\		 
+    	H^{*}(S;\Z_{2})\tensor H^{*}(S,S-V;\Z_{2}) \ar[uu] \ar[rr] \ar[dd] & & H^{*}(S,S-V;\Z_{2}) \ar[uu] \ar@/^1.5cm/[lldddd] \ar[dddd] \\
+    	& & \\				
+    	H^{*}(V;\Z_{2})\tensor H^{*}(V,\partial V;\Z_{2}) \ar[dd] & & \\
+    	& & \\	
+    	H^{*}(V,\partial V;\Z_{2}) \ar[rr] & & H^{*}(S;\Z_{2})
+    } $$
+
+    \
+
+    Since there is no tubular neighborhood\index{tubular neighborhood} in the topological setting, we circumvent this issue using only 
+    results about generalized bundles, in order to construct a similar commutative diagram and thus show that the existence of a tubular 
+    neighborhood is not essential to this result, but rather certain algebraic consequences of a local-flat 
+    embedding\index{local-flat embedding}.
+
+    Finally, we have the following:
+
+    \begin{teo}\label{ap_wu_8}
+	If $i:M^{m}\hookrightarrow S^{m+k}$ is a local-flat\index{embedding!local-flat} embedding between closed and connected topological 
+    manifolds\index{manifold!topological}, with trivial $\R^{k}-$generalized normal 
+    bundle\index{bundle!generalized!normal}\index{bundle!generalized!trivial}, then $v(M)=i^{*}(v(S))$.
+    \end{teo}
+
+    \begin{proof}
+
+        \
+
+        First, let $(\mathcal{N},\mathcal{N}_{0})=(N,N_{0},q,M)$ be the $\R^{k}-$generalized normal bundle\index{bundle!generalized!normal} of 
+        the local-flat embedding\index{embedding!local-flat} $i$, and let 
+        $f:(N,N_{0})\rightleftarrows (M\times\R^{k},M\times (\R^{k}-\{0\})):g$ be the homotopy equivalences given by the triviality of 
+        $(\mathcal{N},\mathcal{N}_{0})$. Also recall that $f$ and $g$ are fiber maps\index{map!fiber}, that is, $p_{1}\circ f=q$ and 
+        $q\circ g=p_{1}$.
+        
+        Let $c:S\hookrightarrow (S,S-M)$ be the canonical inclusion and $\xi:(N,N_{0})\to (S,S-M)$ the map given by $\xi(\omega)=\omega(1)$, 
+        which, according to (\cite{fadell_1}, Theorem 7.5, p. 509), induces an isomorphism in the context of singular 
+        (co)homology\index{(co)homology!singular} with coefficients in $\Z_{2}$.
+        
+        Thus, for any integer $t\geq 0$, the homomorphisms are well defined:
+        $$ B=f_{*}\circ (\xi_{*})^{-1}\circ c_{*}:H_{t}(S;\Z_{2})\to H_{t}(M\times (\R^{k},\R^{k}-\{0\});\Z_{2}) $$
+        $$ A=c^{*}\circ (\xi^{*})^{-1}\circ f^{*}:H^{t}(M\times (\R^{k},\R^{k}-\{0\});\Z_{2})\to H^{t}(S;\Z_{2}) $$
+
+        \
+        
+        Note that the homomorphism $A$ is the cohomological dual of the homomorphism $B$.
+        
+        Furthermore, we also know that the Künneth formula\index{Künneth formula} ensures that:
+        $$ H^{t+k}(M\times (\R^{k},\R^{k}-\{0\});\Z_{2})\cong H^{t}(M;\Z_{2})\tensor H^{k}(\R^{k},\R^{k}-\{0\};\Z_{2}) $$
+
+        \
+        
+        Then, by letting $(\varphi)=H^{k}(\R^{k},\R^{k}-\{0\};\Z_{2})$, we define the homomorphism 
+        $\overline{i}:H^{t}(M;\Z_{2})\to H^{t+k}(S;\Z_{2})$ by $\overline{i}(x)=A(x\times \varphi)$.
+
+        \
+        
+        With the above notations fixed, let us begin the proof.
+        
+        If we denote $(\sigma)=H_{k}(\R^{k},\R^{k}-\{0\};\Z_{2})$, then $B([S])=[M]\times\sigma$. Indeed, observe that:
+        $$ B([S])\in H_{m+k}(M\times (\R^{k},\R^{k}-\{0\});\Z_{2})\cong H_{m}(M;\Z_{2})\tensor H_{k}(\R^{k},\R^{k}-\{0\};\Z_{2})\cong \Z_{2} $$
+        
+        \
+        
+        Since $H_{m}(M;\Z_{2})$ and $H_{k}(\R^{k},\R^{k}-\{0\};\Z_{2})$ are generated by $[M]$ and $\sigma$, respectively, then 
+        $H_{m}(M;\Z_{2})\tensor H_{k}(\R^{k},\R^{k}-\{0\};\Z_{2})$ is generated by $[M]\tensor\sigma$. That is, the only nonzero class of 
+        $H_{m+k}(M\times (\R^{k},\R^{k}-\{0\});\Z_{2})$ is $[M]\times\sigma$.
+        
+        Therefore, in order to ensure $B([S])=[M]\times\sigma$, it is enough to prove that $B([S])\neq 0$. On the other hand, since 
+        $B=f_{*}\circ (\xi_{*})^{-1}\circ c_{*}$ and both $f_{*}$ and $\xi_{*}$ are isomorphisms, we have $B([S])\neq 0$ if and only if 
+        $c_{*}([S])\neq 0$.
+
+        \
+        
+        Now, for an arbitrary point $b\in M\subset S$, the inclusion $j_{b}:S\hookrightarrow (S,S-\{b\})$ can be decomposed as the following 
+        inclusions:
+        $$ \xymatrix @C=0.5cm {
+        	S \ar@{^(->}[rr]^-{c} && (S,S-M) \ar@{^(->}[rr] && (S,S-\{b\})
+        } $$
+
+        \
+        
+        Since $(j_{b})_{*}$ is an isomorphism\footnote{See Proposition \ref{orient_local}.}, $c_{*}$ is a monomorphism and hence 
+        $c_{*}([S])\neq 0$ since $[S]\neq 0$.
+        
+        Therefore, $B([S])=[M]\times\sigma$.
+        
+        Let us now show that, by defining $e=\xi\circ g:M\times (\R^{k},\R^{k}-\{0\})\to (S,S-M)$, the following diagram commutes for all 
+        $t\geq 0$:
+        $$ \xymatrix @C=0.5cm {
+        	H^{m-t}(S;\Z_{2})\tensor H^{t+k}(S;\Z_{2}) \ar[r]^-{\ccup} & H^{m+k}(S;\Z_{2}) \\
+        	& \\		 
+        	H^{m-t}(S;\Z_{2})\tensor H^{t+k}(S,S-M;\Z_{2}) \ar[uu]^-{1\times c^{*}} \ar[r]^-{\ccup} \ar[dd]^-{i^{*}\times e^{*}} & H^{m+k}(S,S-M;\Z_{2}) \ar[uu]^-{c^{*}} \ar@/^2cm/[ldddd]^-{e^{*}} \ar[dddd]^-{c^{*}} \\
+        	& \\				
+        	H^{m-t}(M\times\R^{k};\Z_{2})\tensor H^{t+k}(M\times (\R^{k},\R^{k}-\{0\});\Z_{2}) \ar[dd]^-{\ccup} & \\
+        	& \\	
+        	H^{m+k}(M\times (\R^{k},\R^{k}-\{0\});\Z_{2}) \ar[r]^-{A} & H^{m+k}(S;\Z_{2})
+        } $$
+
+        \
+
+        Let us prove this commutativity step by step. Initially, due to the very definitions of the homomorphisms $A$ and $e^{*}$, it is clear 
+        that $A\circ e^{*}=c^{*}$.
+
+        On the other hand, Lemma \ref{propriedades_produtos_2} ensures that the inclusion $c:S\hookrightarrow (S,S-M)$ satisfies the property 
+        that $c^{*}(x\ccup y)=x\ccup c^{*}(y)$ for any $x\in H^{m-t}(S;\Z_{2})$ and $y\in H^{t+k}(S,S-M;\Z_{2})$.
+
+        Now, we can assume, without loss of generality, that the embedding $i:M\hookrightarrow S$ induces 
+        $i^{*}:H^{t}(S;\Z_{2})\to H^{t}(M\times\R^{k};\Z_{2})$, since $\R^{k}$ is a contractible topological space. Moreover, we can take this 
+        contraction as $M\to M\times \R^{k}$ that maps $b\mapsto (b,0)$.
+
+        Thus, in order to restrict the image of $e:M\times(\R^{k},\R^{k}-\{0\})\to (S,S-M)$ to $S$, it is necessary to restrict the domain to 
+        $M\times \{0\}$. In this way, the restriction $e_{|M\times\{0\}}:M\times\{0\}\to S$ reduces to the embedding $i$, since for a fixed 
+        $b\in M$, $g(b,0)\in N-N_{0}$ is the constant path in $S$ equal to $b\in M$, and thus:
+
+        \
+
+        $ \begin{array}{rl}
+        	e(b,0) \ = & \xi\circ g(b,0) \\
+        	= &   \\
+        	= & b \\
+        	= & i(b)
+        \end{array} $
+
+        \
+
+        Hence, we obtain for any $x\in H^{m-t}(S;\Z_{2})$ and $y\in H^{t+k}(S,S-M;\Z_{2})$ that $e^{*}(x\ccup y)=i^{*}(x)\ccup e^{*}(y)$.
+
+        With this, the diagram shown above is indeed commutative.
+
+        \
+        
+        Moreover, recalling that $\overline{i}:H^{t}(M;\Z_{2})\to H^{t+k}(S;\Z_{2})$ is the homomorphism defined by 
+        $\overline{i}(x)=A(x\times \varphi)$, where $\varphi\in H^{k}(\R^{k},\R^{k}-\{0\};\Z_{2})$, we can obtain for any 
+        $x\in H^{t}(M;\Z_{2})$ and $y\in H^{m-t}(S;\Z_{2})$ that:
+
+        \
+
+        $ \begin{array}{rl}
+        	A(i^{*}(y)\ccup (x\times\varphi)) \ = & y\ccup c^{*}((e^{*})^{-1}(x\times\varphi)) \\
+        	= & y\ccup A(x\times\varphi) \\
+        	= & y\ccup \overline{i}(x)
+        \end{array} $
+
+        \
+
+        Therefore, we have for any $x\in H^{t}(M;\Z_{2})$ and $y\in H^{m-t}(S;\Z_{2})$ that:
+
+        \
+
+        $ \begin{array}{rl}
+        	<\overline{i}(x)\ccup y,[S]> \ = & <A(i^{*}(y)\ccup (x\times\varphi)),[S]> \\
+        	= & <i^{*}(y)\ccup (x\times\varphi),B([S])> \\
+        	= & <i^{*}(y),([M]\times\sigma)\ccap (x\times\varphi)> \\
+        	= & <i^{*}(y),([M]\ccap x)\times (\sigma\ccap\varphi)> \\
+        	= & <i^{*}(y),[M]\ccap x> \\
+        	= & <x\ccup i^{*}(y),[M]>
+        \end{array} $
+
+        \
+
+        \
+
+        Finally, we are ready to prove that $i^{*}(v(S))=v(M)$. To do so, due to the uniqueness of the Wu classes\index{class!Wu class}, it 
+        suffices to show that for all $0\leq t\leq n$:
+        $$ <i^{*}(v_{t}(S))\ccup x,[M]>=<Sq^{t}(x),[M]>, \ \forall x\in H^{m-t}(M;\Z_{2}) $$
+
+        \
+
+        But first, note that $Sq^{t}(\varphi)=0$ when $t>0$, since $H^{k+t}(\R^{k},\R^{k}-\{0\};\Z_{2})=0$ for $t>0$ and 
+        $Sq^{t}(\varphi)\in H^{k+t}(\R^{k},\R^{k}-\{0\};\Z_{2})$. With this, we obtain that $Sq^{t}(x\times \varphi)=Sq^{t}(x)\times\varphi$, 
+        for any $x\in H^{*}(M;\Z_{2})$.
+
+        Thus, we have for any $0\leq t\leq m$ and $x\in H^{m-t}(M;\Z_{2})$ that:
+
+        \
+
+        $ \begin{array}{rl}
+        	<i^{*}(v_{t}(S))\ccup x,[M]> \ = & <\overline{i}(x)\ccup v_{t}(S),[S]> \\
+        	= & <Sq^{t}(\overline{i}(x)),[S]> \\
+        	= & <Sq^{t}(A(x\times\varphi)),[S]> \\
+        	= & <A(Sq^{t}(x)\times\varphi),[S]> \\
+        	= & <\overline{i}(Sq^{t}(x)),[S]> \\
+        	= & <\overline{i}(Sq^{t}(x))\ccup 1,[S]> \\
+        	= & <i^{*}(1)\ccup Sq^{t}(x),[M]> \\
+        	= & <Sq^{t}(x),[M]>
+        \end{array} $
+
+        \
+
+        Therefore, $i^{*}(v(S))=v(M)$.
+
+    \end{proof}
+
+    Thus, we conclude this chapter with several contributions in the context of characteristic classes of topological manifolds. More 
+    specifically, we presented maps related to the Stiefel–Whitney\index{class!Stiefel–Whitney}, Euler\index{class!Euler}, and 
+    Wu\index{class!Wu} classes of closed topological manifolds.
+
+    Among these contributions, we highlight:
+
+    \begin{itemize}
+        \item A second proof of the topological version of the Wu formula\index{formula!Wu}, with some of the preliminary lemmas developed 
+        both for $\Z_{2}-$modules and for $\Z-$modules of singular (co)homology\index{singular (co)homology}.
+        \item How the preliminary lemmas of the Wu formula allowed us to relate the Euler class\index{class!Euler} and the Euler 
+        characteristic of a topological manifold and, consequently, ensure the vanishing of the Euler characteristic of an odd-dimensional 
+        topological manifold.
+        \item An alternative proof of one direction of the topological version of the Poincaré–Hopf theorem\index{theorem!Poincaré–Hopf}, 
+        which shows the relationship between the existence of a nonsingular path field\index{field!path!nonsingular} on a topological manifold 
+        and the vanishing of its Euler characteristic\index{Euler characteristic}, using the Euler class in its proof.
+        \item How the theory of generalized bundles was essential to relate the Wu classes\index{class!Wu} of topological manifolds via a 
+        local-flat embedding\index{embedding!local-flat} with a trivial generalized normal 
+        bundle\index{bundle!generalized!normal}\index{bundle!generalized!trivial}.
+    \end{itemize}
+
+    Furthermore, with all the results presented so far, we also conclude the importance of generalized bundles\index{bundle!generalized} not 
+    only as a tool for the theory of characteristic classes of topological manifolds\index{manifold!topological}, but as a theory in its own 
+    right.
 
 
 
 
     
-
-
-
     \chapter{Characteristic Classes of Generalized Manifolds}\label{cap_wu_gen}
     \thispagestyle{empty}
 
