@@ -2520,15 +2520,348 @@ footskip=10mm}
 
     Now, let us examine some consequences of the Stiefel–Whitney classes.
 
+    \begin{teo}\label{res_SW_fht_1}
+	Let $(\mathcal{F},\mathcal{F}_{0})$ be a $\R^{n}-$generalized bundle. Then $w_{0}(\mathcal{F},\mathcal{F}_{0})=1$ and 
+    $w_{k}(\mathcal{F},\mathcal{F}_{0})=0$ for $k>n$. In other words, 
+    $W(\mathcal{F},\mathcal{F}_{0})=1+\ds\sum_{k=1}^{n}w_{k}(\mathcal{F},\mathcal{F}_{0})$.
+    \end{teo}
 
+    \begin{proof}
+    
+        \
 
+        Consider $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,B)$, $\phi$ its Thom isomorphism, and $\tau\in H^{n}(E,E_{0};\Z_{2})$ its Thom 
+        class. Since $\phi(1)=\tau$ and $Sq^{0}=1$, we have:
 
+        \
 
+        $\begin{array}{rl}
+        	w_{0}(\mathcal{F},\mathcal{F}_{0}) \ = & \phi^{-1}\circ Sq^{0}(\tau) \\
+        	= & \phi^{-1}(\tau) \\
+        	= & 1
+        \end{array}$
 
+        \
 
+        On the other hand, for $k>n$, we have $Sq^{k}=0$, and thus $w_{k}(\mathcal{F},\mathcal{F}_{0})=0$. Therefore, the total 
+        Stiefel-Whitney class of $(\mathcal{F},\mathcal{F}_{0})$ is 
+        $W(\mathcal{F},\mathcal{F}_{0})=1+\ds\sum_{k=1}^{n}w_{k}(\mathcal{F},\mathcal{F}_{0})$.
 
+    \end{proof}
 
+    Note that, given a $\R^{n}-$generalized bundle $(\mathcal{F},\mathcal{F}_{0})$ over $B$, since Theorem \ref{res_SW_fht_1} guarantees 
+    that $w_{0}(\mathcal{F},\mathcal{F}_{0})=1$, the total Stiefel-Whitney class is an invertible 
+    element\footnote{See Theorem \ref{teo_elemento_inversivel}.} in the ring $H^{*}(B;\Z_{2})$, whose inverse element will be denoted by 
+    $W^{-1}(\mathcal{F},\mathcal{F}_{0})$.
 
+    \begin{teo}\label{res_SW_fht_2}
+    	Let $(\mathcal{F},\mathcal{F}_{0})$ and $(\mathcal{F'},\mathcal{F'}_{0})$ be two $\R^{n}-$generalized bundles over $B$ and $B'$, 
+        respectively. If $f:B\to B'$ is a map such that $(\mathcal{F},\mathcal{F}_{0})\sim_{f} f^{*}(\mathcal{F'},\mathcal{F'}_{0})$, then 
+        $W(\mathcal{F},\mathcal{F}_{0})=f^{*}(W(\mathcal{F'},\mathcal{F'}_{0}))$.
+    \end{teo}
+    \begin{proof}
+
+        \
+
+        Initially, consider $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,B)$ and $(\mathcal{F'},\mathcal{F'}_{0})=(E',E'_{0},q,B')$, and recall 
+        that $f^{*}(\mathcal{F'},\mathcal{F'}_{0})=(f^{*}E',f^{*}E'_{0},p_{1},B)$ is the $\R^{n}-$ generalizedbundle such that:
+        $$f^{*}E'=\{ (b,e')\in B\times E' \ : \ f(b)=q(e') \}$$
+        $$f^{*}E'_{0}=\{ (b,e')\in f^{*}E' \ : \ e'\in E'_{0} \}$$
+
+        \
+
+        Since $(\mathcal{F},\mathcal{F}_{0})\sim_{f} f^{*}(\mathcal{F'},\mathcal{F'}_{0})$, Definition \ref{defi_iso_homot} ensures that 
+        there exists a fibered map\index{map!fibered} $g:(E,E_{0})\to (f^{*}E',f^{*}E'_{0})$ such that $g$ is, in particular, a homotopy 
+        equivalence.
+
+        Thus, considering the Thom classes\index{class!Thom} of $(\mathcal{F},\mathcal{F}_{0})$ and $f^{*}(\mathcal{F'},\mathcal{F'}_{0})$ as 
+        the generators $(\tau)=H^{n}(E,E_{0};\Z_{2})$ and $(\tau^{*})=H^{n}(f^{*}E',f^{*}E'_{0};\Z_{2})$, respectively, the fact that $g$ is 
+        a homotopy equivalence allows us to assert that:
+        $$ g^{*}(\tau^{*})=\tau $$
+
+        \
+
+        Conversely, by regarding the Thom class of $(\mathcal{F'},\mathcal{F'}_{0})$ as the generator $(\tau')=H^{n}(E',E'_{0};\Z_{2})$, 
+        the canonical projection $p_{2}:(f^{*}E',f^{*}E'_{0})\to (E',E'_{0})$ satisfies, guarantees by Lemma \ref{lema_thom_2}, that :
+        $$ p_{2}^{*}(\tau')=\tau^{*}=1\times \tau' $$
+
+        \
+
+        Therefore, we have:
+        $$ g^{*}\circ p_{2}^{*}(\tau')=\tau $$
+
+        \
+
+        Furthermore, by definition, we have the following commutative diagram:
+        $$ \xymatrix @C=0.5cm {
+        	E \ar[rrrrr]^-{g} \ar[rrrrrddd]^-{p} &&&&& f^{*}E' \ar[rrrrr]^-{p_{2}} \ar[ddd]^-{p_{1}} &&&&& E' \ar[ddd]^-{q} \\
+        	&&&&& &&&&& \\
+        	&&&&& &&&&& \\
+        	&&&&& B \ar[rrrrr]^-{f} &&&&& B'
+        } $$
+
+        \
+
+        Now, denoting the Thom isomorphisms\index{isomorphism!Thom} of $(\mathcal{F},\mathcal{F}_{0})$ and $(\mathcal{F'},\mathcal{F'}_{0})$ 
+        respectively by $\phi:H^{k}(B;\Z_{2})\to H^{k+n}(E,E_{0};\Z_{2})$ and $\phi':H^{k}(B';\Z_{2})\to H^{k+n}(E',E'_{0};\Z_{2})$, we can 
+        also assert that $\phi\circ f^{*}=g^{*}\circ p_{2}^{*}\circ\phi'$. Indeed:
+
+        \
+
+        $\begin{array}{rl}
+        	\forall x\in H^{*}(B';\Z_{2}), \ g^{*}\circ p_{2}^{*}\circ\phi'(x) \ = & g^{*}\circ p_{2}^{*}(q^{*}(x)\ccup \tau') \\
+        	= & [g^{*}\circ p_{2}^{*}\circ q^{*}(x)]\ccup [g^{*}\circ p_{2}^{*}(\tau')] \\
+        	= & [p^{*}\circ f^{*}(x)]\ccup \tau \\
+        	= & \phi\circ f^{*}(x)
+        \end{array}$
+
+        \
+
+        With this, we have:
+
+        \
+
+        $\begin{array}{rl}
+        	\forall k\geq 0, f^{*}(w_{k}(\mathcal{F'},\mathcal{F'}_{0})) \ = & f^{*}\circ\phi'^{-1}\circ Sq^{k}(\tau') \\
+        	= & \phi^{-1}\circ g^{*}\circ p_{2}^{*}\circ Sq^{k}(\tau') \\
+        	= & \phi^{-1}\circ Sq^{k}\circ g^{*}\circ p_{2}^{*}(\tau') \\
+        	= & \phi^{-1}\circ Sq^{k}(\tau) \\
+        	= & w_{k}(\mathcal{F},\mathcal{F}_{0})
+        \end{array}$
+
+        \
+
+        Therefore, $f^{*}(W(\mathcal{F'},\mathcal{F'}_{0}))=W(\mathcal{F},\mathcal{F}_{0})$.
+
+    \end{proof}
+
+    \begin{cor}\label{res_SW_fht 3}
+	Let $(\mathcal{F},\mathcal{F}_{0})$ and $(\mathcal{F'},\mathcal{F'}_{0})$ be two $\R^{n}$-generalized bundles over the same base. 
+    If $(\mathcal{F},\mathcal{F}_{0})\sim_{f} (\mathcal{F'},\mathcal{F'}_{0})$, then 
+    $W(\mathcal{F},\mathcal{F}_{0})=W(\mathcal{F'},\mathcal{F'}_{0})$.
+    \end{cor}
+
+    \begin{proof}
+
+        \
+
+    	Let $B$ be the base of both $(\mathcal{F},\mathcal{F}_{0})$ and $(\mathcal{F'},\mathcal{F'}_{0})$, and let $1:B\to B$ be the 
+        identity map. From Example \ref{fht_pullback_ex1}, we know that 
+        $(\mathcal{F},\mathcal{F}_{0})\sim_{f} 1^{*}(\mathcal{F'},\mathcal{F'}_{0})$.
+
+    	Thus, it follows from Theorem \ref{res_SW_fht_2} that:
+    	$$ W(\mathcal{F},\mathcal{F}_{0})=1^{*}(W(\mathcal{F'},\mathcal{F'}_{0}))=W(\mathcal{F'},\mathcal{F'}_{0}) $$
+
+    \end{proof}
+
+    \begin{cor}\label{res_SW_fht_4}
+    	If $(\mathcal{F},\mathcal{F}_{0})$ is a trivial $\R^{n}$-generalized bundle\index{generalized bundle!trivial}, then 
+        $W(\mathcal{F},\mathcal{F}_{0})=1$.
+    \end{cor}
+
+    \begin{proof}
+
+        \
+
+    	Initially, it follows from Theorem \ref{res_SW_fht_1} that $w_{0}(\mathcal{F},\mathcal{F}_{0})=1$.
+
+    	Now, let $B$ be the base of $(\mathcal{F},\mathcal{F}_{0})$. Since $(\mathcal{F},\mathcal{F}_{0})$ is a trivial 
+        $\R^{n}$-generalized bundle, we have $(\mathcal{F},\mathcal{F}_{0})\sim_{f} (\varepsilon^{n}_{B},\varepsilon^{n,0}_{B})$. Moreover, 
+        given any $b\in B$, let $c:B\to \{ b \}$ be the constant map. From Example \ref{fht_pullback_ex2}, it follows that 
+        $(\varepsilon^{n}_{B},\varepsilon^{n,0}_{B})\sim_{f} c^{*}(\varepsilon^{n}_{\{ b \}},\varepsilon^{n,0}_{\{ b \}})$.
+
+    	Thus, combining Corollary \ref{res_SW_fht 3} with Theorem \ref{res_SW_fht_2}, we obtain:
+    	$$ W(\mathcal{F},\mathcal{F}_{0})=c^{*}(W(\varepsilon^{n}_{\{ b \}},\varepsilon^{n,0}_{\{ b \}})) $$
+
+        \
+
+    	But since $w_{k}(\varepsilon^{n}_{\{ b \}},\varepsilon^{n,0}_{\{ b \}})\in H^{k}(\{ b \};\Z_{2})=0$ for $k>0$, it follows that 
+        $w_{k}(\mathcal{F},\mathcal{F}_{0})=0$ for $k>0$.
+
+    	Therefore, $W(\mathcal{F},\mathcal{F}_{0})=1$.
+
+    \end{proof}
+
+    \begin{teo}\label{res_SW_fht_5}
+	Let $(\mathcal{F},\mathcal{F}_{0})$ and $(\mathcal{F'},\mathcal{F'}_{0})$ be an $\R^{n}-$generalized bundle and an $\R^{m}-$generalized 
+    bundle, respectively. Then:
+	$$ W[(\mathcal{F},\mathcal{F}_{0})\times (\mathcal{F'},\mathcal{F'}_{0})]=W(\mathcal{F},\mathcal{F}_{0})\times W(\mathcal{F'},\mathcal{F'}_{0}) $$
+    \end{teo}
+    \begin{proof}
+
+        \
+
+    	Initially, let us denote $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,B)$, $(\mathcal{F'},\mathcal{F'}_{0})=(E',E'_{0},q,B')$ and recall 
+        that $(\mathcal{F},\mathcal{F}_{0})\times (\mathcal{F'},\mathcal{F'}_{0})=(E'',E''_{0},r,B'')$ is the $\R^{n+m}-$generalized bundle 
+        such that:
+
+    	$E''=E\times E'$
+
+    	$E''_{0}=(E\times E'_{0})\bigcup (E_{0}\times E')$
+
+    	$r=p\times q$
+
+    	$B''=B\times B'$
+
+        \
+
+    	Considering the Thom classes\index{Thom class} of $(\mathcal{F},\mathcal{F}_{0})$, $(\mathcal{F'},\mathcal{F'}_{0})$, and 
+        $(\mathcal{F},\mathcal{F}_{0})\times (\mathcal{F'},\mathcal{F'}_{0})$ as the generators 
+        $(\tau)\in H^{n}(E,E_{0};\Z_{2})$, $(\tau')\in H^{m}(E',E'_{0};\Z_{2})$, and $(\tau'')\in H^{n+m}(E'',E''_{0};\Z_{2})$, respectively, 
+        we know from Lemma \ref{lema_thom_3} that $\tau''=\tau\times\tau'$.
+
+        \
+
+    	Now, let $\phi:H^{k}(B;\Z_{2})\to H^{k+n}(E,E_{0};\Z_{2})$, $\phi':H^{k}(B';\Z_{2})\to H^{k+m}(E',E'_{0};\Z_{2})$ and 
+        $\phi'':H^{k}(B'';\Z_{2})\to H^{k+n+m}(E'',E''_{0};\Z_{2})$ be the Thom isomorphisms\index{Thom isomorphism} of 
+        $(\mathcal{F},\mathcal{F}_{0})$, $(\mathcal{F'},\mathcal{F'}_{0})$, and 
+        $(\mathcal{F},\mathcal{F}_{0})\times (\mathcal{F'},\mathcal{F'}_{0})$, respectively. We obtain that $\phi''=\phi\times\phi'$. In fact:
+
+        \
+
+    	$\begin{array}{rl}
+    		\forall x\times x'\in H^{*}(B'';\Z_{2}), \ \phi''(x\times x') \ = & r^{*}(x\times x')\ccup \tau'' \\
+    		= & [p^{*}(x)\times q^{*}(x')]\ccup (\tau\times \tau') \\
+    		= & [p^{*}(x)\ccup \tau]\times [q^{*}(x')\ccup \tau'] \\
+    		= & \phi(x)\times \phi'(x') \\
+    		= & (\phi\times\phi')(x\times x')
+    	\end{array}$
+
+        \
+
+    	With this, we conclude that:
+
+    	$\begin{array}{rl}
+    		\forall k\geq 0, \ w_{k}[(\mathcal{F},\mathcal{F}_{0})\times (\mathcal{F'},\mathcal{F'}_{0})] \ = & \phi''^{-1}\circ Sq^{k}(\tau'') \\
+    		= & \phi''^{-1}\circ Sq^{k}(\tau\times \tau') \\
+    		= & \phi''^{-1}\left[ \ds\sum_{a+b=k}\left( Sq^{a}(\tau)\times Sq^{b}(\tau')\right) \right] \\
+    		= & \ds\sum_{a+b=k}\left[\phi''^{-1} \left( Sq^{a}(\tau)\times Sq^{b}(\tau')\right) \right] \\
+    		= & \ds\sum_{a+b=k}\left[ \left( \phi^{-1}\circ Sq^{a}(\tau) \right)\times \left( \phi'^{-1}\circ Sq^{b}(\tau') \right)\right] \\
+    		= & \ds\sum_{a+b=k}\left[ w_{a}(\mathcal{F},\mathcal{F}_{0})\times w_{b}(\mathcal{F'},\mathcal{F'}_{0}) \right]
+    	\end{array}$
+
+        \
+
+    	Therefore, 
+        $W[(\mathcal{F},\mathcal{F}_{0})\times (\mathcal{F'},\mathcal{F'}_{0})]=W(\mathcal{F},\mathcal{F}_{0})\times W(\mathcal{F'},\mathcal{F'}_{0})$.
+
+    \end{proof}
+
+    \begin{cor}{\bf (Whitney product)\index{product!Whitney}}\label{res_SW_fht_6}
+	Let $(\mathcal{F},\mathcal{F}_{0})$ be an $\R^{n}$-generalized bundle and $(\mathcal{F'},\mathcal{F'}_{0})$ an $\R^{m}$-generalized bundle, 
+    both over the same base. Then:
+	$$ W[(\mathcal{F},\mathcal{F}_{0})\oplus (\mathcal{F'},\mathcal{F'}_{0})]=W(\mathcal{F},\mathcal{F}_{0})\ccup W(\mathcal{F'},\mathcal{F'}_{0}) $$
+    \end{cor}
+    \begin{proof}
+
+        \
+
+    	Let $B$ be the base of both $(\mathcal{F},\mathcal{F}_{0})$ and $(\mathcal{F'},\mathcal{F'}_{0})$, and let $d:B\to B\times B$ be the 
+        diagonal map\index{map!diagonal}. Then, we know that 
+        $(\mathcal{F},\mathcal{F}_{0})\oplus (\mathcal{F'},\mathcal{F'}_{0})=d^{*}[(\mathcal{F},\mathcal{F}_{0})\times (\mathcal{F'},\mathcal{F'}_{0})]$.
+
+    	Theorems \ref{res_SW_fht_2} and \ref{res_SW_fht_5} then ensure that:
+
+        \
+
+        $\begin{array}{rl}
+    		W[(\mathcal{F},\mathcal{F}_{0})\oplus (\mathcal{F'},\mathcal{F'}_{0})] \ = & d^{*}[W[(\mathcal{F},\mathcal{F}_{0})\times (\mathcal{F'},\mathcal{F'}_{0})]] \\
+    		= & d^{*}[W(\mathcal{F},\mathcal{F}_{0})\times W(\mathcal{F'},\mathcal{F'}_{0})] \\
+    		= & W(\mathcal{F},\mathcal{F}_{0})\ccup W(\mathcal{F'},\mathcal{F'}_{0})
+    	\end{array}$
+
+    \end{proof}
+
+    As a direct combination of the Whitney product\index{product!Whitney} with Corollary \ref{res_SW_fht_4}, we obtain the following:
+
+    \begin{cor}\label{res_SW_fht_7}
+    	Let $(\mathcal{F},\mathcal{F}_{0})$ and $(\mathcal{F'},\mathcal{F'}_{0})$ be an $\R^{n}$-generalized bundle and an $\R^{m}$-generalized 
+        bundle, respectively, both over the same base. Then:
+    	\begin{enumerate}
+    		\item if $(\mathcal{F},\mathcal{F}_{0})$ is trivial, then 
+            $W[(\mathcal{F},\mathcal{F}_{0})\oplus (\mathcal{F'},\mathcal{F'}_{0})]=W(\mathcal{F'},\mathcal{F'}_{0})$
+    		\item if $(\mathcal{F},\mathcal{F}_{0})\oplus (\mathcal{F'},\mathcal{F'}_{0})$ is trivial, then 
+            $W(\mathcal{F},\mathcal{F}_{0})=W^{-1}(\mathcal{F'},\mathcal{F'}_{0})$
+    	\end{enumerate}
+    \end{cor}
+
+    Now, let us examine how the Stiefel–Whitney classes\index{class!Stiefel–Whitney} behave in the context of topological 
+    manifolds\index{manifold!topological}. For this purpose, we need the following:
+
+    \begin{defi}\label{defi_SW_top}
+    	Given a topological manifold $M$, we denote its total Stiefel–Whitney class by $W(M)=W(\tau M,\tau_{0}M)$.
+    \end{defi}
+
+    \begin{teo}\label{SW_var_suave}
+    	If $M^{m}$ is a smooth manifold\index{manifold!smooth}, then the construction of $W(M)$ (developed in this section) coincides with the classical notion of the Stiefel–Whitney classes as in (\cite{milnor_1}, Chapter 8).
+    \end{teo}
+    \begin{proof}
+
+        \
+
+    	Since $M$ is smooth, we can combine Proposition \ref{fht_tang} with Corollary \ref{res_SW_fht 3}, since denoting by $\xi$ the 
+        tangent $\R^{m}$-vector bundle\index{bundle!vector!tangent} of $M$, and by $(\xi,\xi_{0})$ its associated $\R^{m}$-generalized bundle, 
+        the construction of $W(\xi,\xi_{0})$ coincides with the classical construction of $W(\xi)$ as in (\cite{milnor_1}, Chapter 8).
+
+    \end{proof}
+
+    \begin{prop}\label{res_SW_fht_8}
+	Let $M$ and $S$ be two topological manifolds. Then:
+	$$ W(M\times S)=W(M)\times W(S) $$
+    \end{prop}
+
+    \begin{proof}
+
+        \
+    
+    	It follows directly from the combination of Proposition \ref{fht_tang_cart}, Corollary \ref{res_SW_fht 3}, and Theorem 
+        \ref{res_SW_fht_5}.
+    
+    \end{proof}
+
+    As a direct combination of Lemma \ref{iso_homot_2} with Theorem \ref{res_SW_fht_2}, we obtain the following:
+
+    \begin{prop}\label{res_SW_fht_9}
+    	If $h:M\to S$ is a homeomorphism between two topological manifolds, then $W(M)=h^{*}(W(S))$.
+    \end{prop}
+
+    Proposition \ref{res_SW_fht_9} can be extended to homotopy equivalence; however, since its proof requires more advanced tools, we 
+    postpone it to the next chapter.
+
+    Let us also consider the behavior of Stiefel–Whitney classes under local-flat embeddings\index{embedding!local-flat}.
+
+    \begin{teo}{\bf (Whitney Duality)\index{duality!Whitney}}\label{res_SW_fht_10}
+    	If $i:M^{m}\hookrightarrow S^{m+k}$ is a local-flat embedding with $\R^{k}-$generalized normal bundle\index{generalized bundle!normal} 
+        $(\mathcal{N},\mathcal{N}_{0})$, then:
+    	$$ W(M)\ccup W(\mathcal{N},\mathcal{N}_{0})=i^{*}(W(S)) $$
+    \end{teo}
+
+    \begin{proof}
+
+        \
+    
+    	Due to Theorem \ref{iso_merg_lf_1} and Proposition \ref{iso_merg_lf_2}, we have:
+    	$$ (\tau M,\tau_{0}M)\oplus (\mathcal{N},\mathcal{N}_{0})\sim_{f} (\tau S,\tau_{0}S)_{|M} $$	
+    	$$ (\tau S,\tau_{0}S)_{|M}\sim_{f} i^{*}(\tau S,\tau_{0}S) $$
+
+        \
+    
+    	Combining the Whitney product\index{product!Whitney} with Corollary \ref{res_SW_fht 3} and Theorem \ref{res_SW_fht_2}, we conclude 
+        that $W(M)\ccup W(\mathcal{N},\mathcal{N}_{0})=i^{*}(W(S))$.
+    
+    \end{proof}
+
+    \begin{cor}\label{res_SW_fht_11}
+    	If $M^{m}\subset \R^{m+k}$ is a local-flat embedding with $\R^{k}-$generalized normal bundle $(\mathcal{N},\mathcal{N}_{0})$, 
+        then $W(M)=W^{-1}(\mathcal{N},\mathcal{N}_{0})$.
+    \end{cor}
+
+    \begin{proof}
+    
+    	It follows directly from Theorem \ref{res_SW_fht_10}, since $\R^{m+k}$ is a contractible topological space\index{contractible}, and 
+        consequently, $W(\R^{n+k})=1$.
+    
+    \end{proof}
 
 
 
@@ -2546,7 +2879,7 @@ footskip=10mm}
     In this section, only Proposition \ref{euler_2} was taken from \cite{fadell_1}.
 
     \begin{defi}{\bf (Euler Class)}
-    	Let $(\mathcal{F},\mathcal{F}_{0})$ be a $\Z-$orientable $\R^{n}$-generalized bundle\index{bundle!generalized!orientable} over a base 
+    	Let $(\mathcal{F},\mathcal{F}_{0})$ be a $\Z-$orientable $\R^{n}-$generalized bundle\index{bundle!generalized!orientable} over a base 
         $B$, and let $\phi$ and $\tau$ denote its Thom isomorphism\index{isomorphism!Thom} and Thom class\index{class!Thom}, respectively. 
         The Euler class\index{class!Euler} of $(\mathcal{F},\mathcal{F}_{0})$ is defined as the following class:
     	$$ e(\mathcal{F},\mathcal{F}_{0}) = \phi^{-1}(\tau \ccup \tau) \in H^{n}(B;\Z) $$
@@ -2557,20 +2890,352 @@ footskip=10mm}
     	$$ e(M) = e(\tau M, \tau_{0} M) $$
     \end{defi}
 
+    Recalling Observation \ref{obs_proj_iso}, the next result provides an alternative characterization of the Euler class, whose proof can be 
+    found in (\cite{fadell_1}, Proposition 7.11, p. 510).
 
+    \begin{prop}\label{euler_2}
+    	Let us consider $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,B)$ an $\R^{n}-$generalized bundle that is 
+        $\Z-$orientable\index{bundle!generalized!orientable}, $\tau$ its Thom class\index{class!Thom}, and $i_{E}:E\hookrightarrow (E,E_{0})$ 
+        the canonical inclusion. Then:
+    	$$ e(\mathcal{F},\mathcal{F}_{0})=(p^{*})^{-1}\circ i_{E}^{*}(\tau) $$
+    \end{prop}
 
+    Now, we show how the Stiefel–Whitney and Euler classes are related.
 
+    \begin{teo}\label{euler_sw}
+    	Let $(\mathcal{F},\mathcal{F}_{0})$ be an $\R^{n}-$generalized bundle that is $\Z-$orientable\index{bundle!generalized!orientable}. 
+        Then, the $n$-th Stiefel–Whitney class\index{class!Stiefel-Whitney} of $(\mathcal{F},\mathcal{F}_{0})$ is the mod 2 
+        reduction\index{homomorphism!reduction} of its Euler class. In other words, the canonical projection $\rho_{2}:\Z\to\Z_{2}$ is such 
+        that:
+    	$$ (\rho_{2})_{n}(e(\mathcal{F},\mathcal{F}_{0}))=w_{n}(\mathcal{F},\mathcal{F}_{0}) $$
+    \end{teo}
 
+    \begin{proof}
 
+        \
 
+        First, let us see how to construct a mod 2 reduction in the setting of singular cohomology modules. To do this, consider the 
+        following short exact sequence:
+        $$ \xymatrix @C=0.5cm { 0\ar[r] & \Z \ar[rr]^-{\times 2} && \Z \ar[rr]^-{\rho_{2}} && \Z_{2} \ar[r] & 0 } $$
 
+        \
 
+        If $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,B)$, we deduce from (\cite{spanier}, Theorem 11, p. 239) that there are 
+        homomorphisms\footnote{The connecting homomorphism $\beta^{k}$ is known as the Bockstein cohomology 
+        homomorphism\index{homomorphism!Bockstein}.} 
+        $(\times 2)_{k}:H^{k}(B;\Z)\to H^{k}(B;\Z)$, $(\rho_{2})_{k}:H^{k}(B;\Z)\to H^{k}(B;\Z_{2})$, and 
+        $\beta^{k}:H^{k}(B;\Z_{2})\to H^{k+1}(B;\Z)$ such that the following is a long exact sequence:
+        $$ \xymatrix @C=0.5cm { \cdots \ar[r] & H^{k}(B;\Z) \ar[rr]^-{(\times 2)_{k}} && H^{k}(B;\Z) \ar[rr]^-{(\rho_{2})_{k}} && H^{k}(B;\Z_{2}) \ar[rr]^-{\beta^{k}} && H^{k+1}(B;\Z) \ar[r] & \cdots } $$
 
+        Similarly, the same homomorphisms above are also defined for the pair $(E,E_{0})$.
+
+        Since $(\mathcal{F},\mathcal{F}_{0})$ is an $\Z-$orientable $\R^{n}-$generalized bundle, we may define its Thom class 
+        $\tau\in H^{n}(E,E_{0};\Z)$ and Thom isomorphism $\phi:H^{k}(B;\Z)\to H^{k+n}(E,E_{0};\Z)$.
+
+        \
+
+        On the other hand, since $(\mathcal{F},\mathcal{F}_{0})$ is also an $\Z_{2}-$orientable $\R^{n}-$generalized bundle, we can also 
+        consider its Thom class and Thom isomorphism $\tau_{2}\in H^{n}(E,E_{0};\Z_{2})$ and 
+        $\phi_{2}:H^{k}(B;\Z_{2})\to H^{k+n}(E,E_{0};\Z_{2})$, respectively.
+
+        Due to the naturality of the mod 2 reduction homomorphism\index{homomorphism!reduction}, we obtain that the following diagram commutes:
+        $$ \xymatrix @C=0.5cm {
+        	H^{k}(B;\Z) \ar[rrrrr]^-{(\rho_{2})_{k}} \ar[ddd]^-{\phi} &&&&& H^{k}(B;\Z_{2}) \ar[ddd]^-{\phi_{2}} \\
+        	&&&&& \\		 
+        	&&&&& \\		 
+        	H^{k+n}(E,E_{0};\Z) \ar[rrrrr]^-{(\overline{\rho_{2}})_{k+n}} &&&&& H^{k+n}(E,E_{0};\Z_{2})
+        } $$
+
+        \
+
+        Just to clarify the notation above, $\rho_{2}$ and $\overline{\rho_{2}}$ denote the mod 2 reductions for $B$ and $(E,E_{0})$, 
+        respectively.
+
+        In particular, if we consider the diagram above for $k=0$, we obtain:
+
+        \
+
+        $ \begin{array}{rl}
+        	(\overline{\rho_{2}})_{n}(\tau) \ = & (\overline{\rho_{2}})_{n}\circ\phi(1) \\
+        	= & \phi_{2}\circ (\rho_{2})_{0}(1) \\
+        	= & \phi_{2}(1) \\
+        	= & \tau_{2}
+        \end{array} $
+
+        \
+
+        Hence, we conclude that:
+
+        \
+
+        $ \begin{array}{rl}
+        	(\rho_{2})_{n}(e(\mathcal{F},\mathcal{F}_{0})) \ = & (\rho_{2})_{n}\circ \phi^{-1}(\tau\ccup \tau) \\
+        	= & \phi_{2}^{-1}\circ (\overline{\rho_{2}})_{2n}(\tau\ccup \tau) \\
+        	= & \phi_{2}^{-1}((\overline{\rho_{2}})_{n}(\tau)\ccup (\overline{\rho_{2}})_{n}(\tau)) \\
+        	= & \phi_{2}^{-1}(\tau_{2}\ccup \tau_{2}) \\
+        	= & \phi_{2}^{-1}\circ Sq^{n}(\tau_{2}) \\
+        	= & w_{n}(\mathcal{F},\mathcal{F}_{0})
+        \end{array} $
+
+    \end{proof}
+
+    \begin{teo}\label{euler_pullback}
+	Let $(\mathcal{F},\mathcal{F}_{0})$ be an $\Z-$orientable $\R^{n}-$generalized bundle\index{bundle!generalized!orientable} over a base $B$, 
+    and let $f:B'\to B$ be any map. Then:
+	$$ e\left( f^{*}(\mathcal{F},\mathcal{F}_{0}) \right)=f^{*}\left( e(\mathcal{F},\mathcal{F}_{0}) \right) $$
+    \end{teo}
+
+    \begin{proof}
+
+        \
+
+    	First, denote $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,B)$ and $f^{*}(\mathcal{F},\mathcal{F}_{0})=(f^{*}E,f^{*}E_{0},p_{1},B')$, 
+        where:
+    	$$f^{*}E=\{ (b',e)\in B'\times E \ : \ f(b')=p(e) \}$$
+    	$$f^{*}E_{0}=\{ (b',e)\in f^{*}E \ : \ e\in E_{0} \}$$
+
+    	Now, consider the Thom classes\index{class!Thom} of $(\mathcal{F},\mathcal{F}_{0})$ and $f^{*}(\mathcal{F},\mathcal{F}_{0})$ as 
+        being, respectively, the generators $(\tau)\in H^{n}(E,E_{0};\Z)$ and $(\tau^{*})\in H^{n}(f^{*}E,f^{*}E_{0};\Z)$.
+        
+        Let $p_{2}:(f^{*}E,f^{*}E_{0})\to (E,E_{0})$ be the canonical projection; then Lemma \ref{lema_thom_2} ensures that:
+    	$$ p_{2}^{*}(\tau)=\tau^{*}=1\times\tau $$
+
+        \
+
+    	On the other hand, considering the Thom isomorphisms\index{isomorphism!Thom} of $(\mathcal{F},\mathcal{F}_{0})$ and 
+        $f^{*}(\mathcal{F},\mathcal{F}_{0})$ as $\phi:H^{k}(B;\Z)\to H^{n+k}(E,E_{0};\Z)$ and 
+        $\psi:H^{k}(B';\Z)\to H^{k+n}(f^{*}E,f^{*}E_{0};\Z)$, respectively, we obtain, via computations analogous to those in 
+        Theorem \ref{res_SW_fht_2}, that:
+    	$$ p_{2}^{*}\circ \phi=\psi\circ f^{*} $$
+
+        \
+
+    	Therefore, we conclude that:
+
+        \
+
+    	$\begin{array}{rl}
+    		e\left( f^{*}(\mathcal{F},\mathcal{F}_{0}) \right) \ = & \psi^{-1}(\tau^{*}\ccup\tau^{*}) \\
+    		= & \psi^{-1}(p_{2}^{*}(\tau)\ccup p_{2}^{*}(\tau)) \\
+    		= & \psi^{-1}\circ p_{2}^{*}(\tau\ccup\tau) \\
+    		= & f^{*}\circ\phi^{-1}(\tau\ccup\tau) \\
+    		= & f^{*}\left( e(\mathcal{F},\mathcal{F}_{0}) \right)
+    	\end{array}$
+
+    \end{proof}
+
+    \begin{teo}\label{euler_prod}
+	Let $(\mathcal{F},\mathcal{F}_{0})$ be a $\R^{n}-$generalized bundle and $(\mathcal{F'},\mathcal{F'}_{0})$ a $\R^{m}-$generalized bundle, 
+    both $\Z-$orientable\index{generalized bundle!orientable}. Then:
+	$$ e[(\mathcal{F},\mathcal{F}_{0})\times (\mathcal{F'},\mathcal{F'}_{0})]=e(\mathcal{F},\mathcal{F}_{0})\times e(\mathcal{F'},\mathcal{F'}_{0}) $$
+    \end{teo}
+
+    \begin{proof}
+
+        \
+
+    	First, let us denote $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,B)$, $(\mathcal{F'},\mathcal{F'}_{0})=(E',E'_{0},q,B')$ and 
+        $(\mathcal{F},\mathcal{F}_{0})\times (\mathcal{F'},\mathcal{F'}_{0})=(E'',E''_{0},r,B'')$, where:
+
+        \
+
+    	$E''=E\times E'$
+
+    	$E''_{0}=(E\times E'_{0})\cup (E_{0}\times E')$
+
+    	$r=p\times q$
+
+    	$B''=B\times B'$
+        
+        \
+
+    	Considering the generators $(\tau)=H^{n}(E,E_{0};\Z)$, $(\tau')=H^{m}(E',E'_{0};\Z)$ and $(\tau'')=H^{n+m}(E'',E''_{0};\Z)$ as the 
+        Thom classes\index{Thom class} of $(\mathcal{F},\mathcal{F}_{0})$, $(\mathcal{F'},\mathcal{F'}_{0})$ and 
+        $(\mathcal{F},\mathcal{F}_{0})\times (\mathcal{F'},\mathcal{F'}_{0})$, respectively, we know from Lemma \ref{lema_thom_3} that 
+        $\tau''=\tau\times\tau'$.
+
+        \
+
+    	Now, letting $\phi:H^{n}(B;\Z)\to H^{2n}(E,E_{0};\Z)$, $\phi':H^{m}(B';\Z)\to H^{2m}(E',E'_{0};\Z)$ and $\phi'':H^{n+m}(B'';\Z)\to H^{2(n+m)}(E'',E''_{0};\Z)$ be the Thom isomorphisms\index{Thom isomorphism} of $(\mathcal{F},\mathcal{F}_{0})$, $(\mathcal{F'},\mathcal{F'}_{0})$ and $(\mathcal{F},\mathcal{F}_{0})\times (\mathcal{F'},\mathcal{F'}_{0})$, respectively, we obtain by arguments analogous to Theorem \ref{res_SW_fht_5} that:
+    	$$ \phi''=(-1)^{nm}(\phi\times\phi') $$
+
+        \
+
+    	Thus, we conclude that:
+
+    	$\begin{array}{rl}
+    		e\left[ (\mathcal{F},\mathcal{F}_{0})\times (\mathcal{F'},\mathcal{F'}_{0}) \right] \ = & \phi''^{-1}(\tau''\ccup\tau'') \\
+    		= & (-1)^{nm}(\phi^{-1}\times\phi'^{-1})\left( \tau''\ccup\tau'' \right) \\
+    		= & (-1)^{nm}(\phi^{-1}\times\phi'^{-1})\left( (\tau\times\tau')\ccup (\tau\times\tau') \right) \\
+    		= & (-1)^{nm}(\phi^{-1}\times\phi'^{-1})\left( (-1)^{nm}(\tau\ccup\tau)\times (\tau'\ccup\tau') \right) \\
+    		= & (-1)^{2nm}(\phi^{-1}\times\phi'^{-1})\left( (\tau\ccup\tau)\times (\tau'\ccup\tau') \right) \\
+    		= & \phi^{-1}(\tau\ccup\tau)\times\phi'^{-1}(\tau'\ccup\tau') \\
+    		= & e(\mathcal{F},\mathcal{F}_{0})\times e(\mathcal{F'},\mathcal{F'}_{0})
+    	\end{array}$
+
+    \end{proof}
+
+    \begin{cor}{\bf (Whitney Product)\index{Whitney product}}
+    	Let $(\mathcal{F},\mathcal{F}_{0})$ be a $\R^{n}-$generalized bundle\index{generalized bundle!orientable} and 
+        $(\mathcal{F'},\mathcal{F'}_{0})$ a $\R^{m}-$generalized bundle, both $R-$orientable and over the same base. Then:
+    	$$ e[(\mathcal{F},\mathcal{F}_{0})\oplus (\mathcal{F'},\mathcal{F'}_{0})]=e(\mathcal{F},\mathcal{F}_{0})\ccup e(\mathcal{F'},\mathcal{F'}_{0}) $$
+    \end{cor}
+
+    \begin{proof}
+
+        \
+
+    	The proof is analogous to Corollary \ref{res_SW_fht_6}, by applying Theorems \ref{euler_pullback} and \ref{euler_prod}.
+
+    \end{proof}
+
+    \begin{prop}
+	Let $(\mathcal{F},\mathcal{F}_{0})$ be a $\R^{n}-$generalized bundle that is $\Z-$orientable\index{generalized bundle!orientable}. 
+    Denoting by $-(\mathcal{F},\mathcal{F}_{0})$ the same generalized bundle but with reversed orientation, we have:
+	$$ e\left( -(\mathcal{F},\mathcal{F}_{0}) \right) = -e(\mathcal{F},\mathcal{F}_{0}) $$
+    \end{prop}
+
+    \begin{proof}
+
+        \
+
+    	Let us denote $(\mathcal{F},\mathcal{F}_{0}) = (E,E_{0},p,B)$. Thus, considering the generators $(\tau) = H^{n}(E,E_{0};\Z)$ and 
+        $(\tau') = H^{n}(E,E_{0};\Z)$ as the Thom classes\index{Thom class} of $(\mathcal{F},\mathcal{F}_{0})$ and 
+        $-(\mathcal{F},\mathcal{F}_{0})$, respectively, then Lemma \ref{lema_thom_4} ensures that $\tau' = -\tau$.
+
+        \
+
+    	On the other hand, denoting the Thom isomorphisms\index{Thom isomorphism} of $(\mathcal{F},\mathcal{F}_{0})$ and 
+        $-(\mathcal{F},\mathcal{F}_{0})$ by $\phi: H^{k}(B;\Z) \to H^{k+n}(E,E_{0};\Z)$ and $\phi': H^{k}(B;\Z) \to H^{k+n}(E,E_{0};\Z)$, 
+        respectively, we obtain:
+
+        \
+    
+    	$\begin{array}{rl}
+    		\forall x \in H^{k}(B;\Z), \ \phi'(x) \ = & p^{*}(x) \ccup \tau' \\
+    		= & p^{*}(x) \ccup (-\tau) \\
+    		= & -\left( p^{*}(x) \ccup \tau \right) \\
+    		= & -\phi(x)
+    	\end{array}$
+
+        \
+
+    	Therefore, we conclude that:
+
+    	\
+
+    	$\begin{array}{rl}
+    		e\left( -(\mathcal{F},\mathcal{F}_{0}) \right) \ = & \phi'^{-1}(\tau' \ccup \tau') \\
+    		= & \phi'^{-1}((-\tau) \ccup (-\tau)) \\
+    		= & \phi'^{-1}(\tau \ccup \tau) \\
+    		= & -\phi^{-1}(\tau \ccup \tau) \\
+    		= & -e(\mathcal{F},\mathcal{F}_{0})
+    	\end{array}$
+
+    \end{proof}
+
+    Finally, let us see under which conditions the Euler class\index{Euler class} vanishes.
+
+    \begin{prop}\label{prop_nulidade_euler}
+    	If $M$ is a closed $\Z-$orientable topological manifold\index{topological manifold} of odd dimension, then $e(M) = 0$.
+    \end{prop}
+
+    \begin{proof}
+
+        \
+
+        Let $m = \dim(M)$ and denote $(\tau M,\tau_{0}M) = (TM,T_{0}M,p,M)$ the $\R^{m}-$generalized tangent
+        bundle\index{generalized bundle!tangent} of $M$, and consider the generator $(\tau) = H^{m}(TM,T_{0}M;\Z)$ as the Thom class of 
+        $(\tau M,\tau_{0}M)$.
+
+    	We already know from Lemma \ref{lema_thom_5} that $\tau \ccup \tau = 0$.
+
+    	Thus, denoting by $\phi: H^{k}(M;\Z) \to H^{k+m}(TM,T_{0}M;\Z)$ the Thom isomorphism of $(\tau M,\tau_{0}M)$, we obtain that 
+        $e(M) = \phi^{-1}(\tau \ccup \tau) = 0$.
+
+    \end{proof}
+
+    \begin{prop}\label{poincare-hopf}
+	Let us consider $(\mathcal{F},\mathcal{F}_{0})=(E,E_{0},p,B)$ an $\R^{n}-$generalized bundle that is 
+    $\Z-$orientable\index{generalized bundle!orientable}. If $(\mathcal{F},\mathcal{F}_{0})$ admits a section $s:B\to E$ such that 
+    $s(B)\subset E_{0}$, then $e(\mathcal{F},\mathcal{F}_{0})=0$.
+    \end{prop}
+
+    \begin{proof}
+
+        \
+
+    	We already know from Observation \ref{obs_proj_iso} that if $(\mathcal{F},\mathcal{F}_{0})$ is a $\Z-$orientable generalized bundle, 
+        then $p^{*}:H^{n}(B;\Z)\to H^{n}(E;\Z)$ is an isomorphism. Since $s$ is a section of $p$, that is, $p\circ s=1$, it follows that 
+        $s^{*}=(p^{*})^{-1}$.
+
+        \
+
+    	On the one hand, from Proposition \ref{euler_2} we have that $e(\mathcal{F},\mathcal{F}_{0})=s^{*}\circ i_{E}^{*}(\tau)$, 
+        where $i_{E}:E\hookrightarrow (E,E_{0})$ is the canonical inclusion and $\tau\in H^{n}(E,E_{0};\Z)$ is the Thom 
+        class\index{Thom class} of $(\mathcal{F},\mathcal{F}_{0})$.
+
+    	On the other hand, denoting by $j:(E_{0},E_{0})\hookrightarrow (E,E_{0})$ the canonical inclusion, we have the following commutative 
+        diagram:
+
+    	$$ \xymatrix @C=0.5cm {
+    		B \ar[rrrrr]^-{s} \ar[ddd]^-{s} &&&&& E_{0} \ar@{^(->}[rrrrr]^-{(i_{E})_{|E_{0}}} &&&&& (E_{0},E_{0}) \ar@{^(->}[ddd]^-{j} \\
+    		&&&&& &&&&& \\
+    		&&&&& &&&&& \\
+    		E \ar@{^(->}[rrrrrrrrrr]^-{i_{E}} &&&&& &&&&& (E,E_{0})
+    	} $$
+
+        \
+
+    	However, $j^{*}:H^{n}(E,E_{0};\Z)\to H^{n}(E_{0},E_{0};\Z)$ is the zero homomorphism, since $H^{n}(E_{0},E_{0};\Z)=0$. Thus, 
+        $s^{*}\circ i_{E}^{*}=s^{*}\circ (i_{E})_{|E_{0}}^{*}\circ j^{*}=0$.
+
+    	Hence, $e(\mathcal{F},\mathcal{F}_{0})=s^{*}\circ i_{E}^{*}(\tau)=0$.
+
+    \end{proof}
+
+    \
+
+    Thus, we conclude this chapter by presenting several results, taken from \cite{fadell_1} as well as original, about the Thom, 
+    Stiefel–Whitney, and Euler classes of generalized bundles and, consequently, of topological 
+    manifolds.\index{Thom class}\index{Stiefel–Whitney class}\index{Euler class}\index{generalized bundle}\index{topological manifold}
+
+    On the one hand, when we compare this chapter with the second half of the results presented by Fadell in \cite{fadell_1}, concerning the 
+    Stiefel–Whitney and Euler classes, we conclude that this chapter is a reinterpretation of Fadell's work in a more modern language and 
+    with more detailed proofs of a large part of the results in \cite{fadell_1}.
+
+    On the other hand, we also conclude that this chapter is a continuation of \cite{fadell_1}, as we present results related to the 
+    pullback generalized bundle\index{pullback!generalized bundle}, a concept not even mentioned in \cite{fadell_1}, and we also present 
+    results involving the orientability of generalized bundles\index{orientable!generalized bundle}, which were barely addressed in 
+    \cite{fadell_1}. In particular, Section \ref{secao_euler} on the Euler class consists almost entirely of original results.
+
+    In any case, the way we developed our contributions to the theory of characteristic classes of topological manifolds in this chapter 
+    reinforces the importance of all the properties of generalized bundles developed in the previous chapter.
 
 
 
     \chapter{Applications in Closed Topological Manifolds}\label{cap_aplic}
     \thispagestyle{empty}
+
+    \
+
+    In this chapter, we present some applications concerning the Stiefel–Whitney\index{Stiefel–Whitney class}, Euler\index{Euler class}, and Wu\index{Wu class} classes of closed topological manifolds\index{topological manifold}.
+
+    To begin with, in Section \ref{sec_form_wu}, we provide an alternative proof of the topological version of Wu's formula\index{Wu formula}, which was first presented by Fadell in \cite{fadell_1}. We also explore some consequences of this result.
+
+    Using the preliminary lemmas of Wu's formula, we show in Section \ref{sec_poincare} how the Euler class and the Euler characteristic\index{Euler characteristic} of a topological manifold are related, and how this allowed us to generalize one of the consequences of the Poincaré–Hopf theorem\index{Poincaré–Hopf theorem} from the smooth manifold\index{smooth manifold} setting to the topological one.
+
+    To conclude the chapter, in Section \ref{sec_tubular}, we show how the theory of generalized bundles\index{generalized bundle} enabled us to extend, once again from the smooth to the topological context, one of the results presented by de Stong in \cite{stong}, involving Wu classes, whose proof relies heavily on the existence of tubular neighborhoods\index{tubular neighborhood} for smooth embeddings\index{smooth embedding}.
+
+
+
+
+
+
+
+
+
+    
 
 
 
