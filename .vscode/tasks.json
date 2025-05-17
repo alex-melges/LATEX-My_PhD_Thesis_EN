@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compilar Tese (LaTeX + Biber + Índice)",
+      "type": "shell",
+      "command": "pdflatex My_PhD_Thesis_EN.tex && biber My_PhD_Thesis_EN && makeindex My_PhD_Thesis_EN && pdflatex My_PhD_Thesis_EN.tex && pdflatex My_PhD_Thesis_EN.tex",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}
