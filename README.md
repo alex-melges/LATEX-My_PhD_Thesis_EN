@@ -17,16 +17,9 @@ In this project, we rewrite some results from Fadell's paper using more modern l
 
 Additionally, the work aimed to define the Stiefel-Whitney classes for generalized manifolds through the Poincaré and Poincaré-Lefschetz dualities. For the first time in the literature, we present a proof of Wu's formula for these manifolds.
 
-## 📄 Structure
-
-- `My_PhD_Thesis_EN.tex`: Main file to compile the full thesis.
-- `chapters/`: LaTeX source files for each chapter.
-- `bib/`: `.bib` file containing all bibliography entries.
-- `figures/`: All images and diagrams used.
-- `.gitignore`: Optimized for LaTeX projects.
-
 ## 🔗 Where to Find the Thesis
 The thesis (PDF) will be available on arXiv:
+
 ➡️ arXiv link – to be updated soon
 
 ## 📜 License
