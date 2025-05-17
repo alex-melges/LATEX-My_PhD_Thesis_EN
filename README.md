@@ -5,6 +5,10 @@
 
 This repository contains the complete LaTeX source code of the **English (en-US)** version of my PhD thesis, defended in **03/24/2022** at **UFSCar (Federal University of São Carlos, Brazil)**.
 
+The LaTeX source code is not included in this repository to avoid unauthorized modifications or reuse.
+
+If you're interested in the source or would like to cite or adapt something, feel free to contact me.
+
 ## 📘 Abstract
 
 My thesis had two main objectives. The work was initially based on the paper "Generalized Normal Bundles for Locally-Flat Embeddings" by Edward Fadell, published in 1965, where he defines the notions of tangent and normal bundles for topological manifolds, with the aim of constructing the Stiefel-Whitney and Euler classes, as well as obtaining Whitney's duality and Wu's formula in their topological versions.
@@ -20,24 +24,6 @@ Additionally, the work aimed to define the Stiefel-Whitney classes for generaliz
 - `bib/`: `.bib` file containing all bibliography entries.
 - `figures/`: All images and diagrams used.
 - `.gitignore`: Optimized for LaTeX projects.
-
-## 📦 Compilation
-
-You can compile the full PDF with:
-
-```bash
-latexmk -pdf My_PhD_Thesis_EN.tex
-```
-
-Or step by step:
-
-```bash
-pdflatex My_PhD_Thesis_EN.tex
-biber My_PhD_Thesis_EN
-makeindex My_PhD_Thesis_EN
-pdflatex My_PhD_Thesis_EN.tex
-pdflatex My_PhD_Thesis_EN.tex
-```
 
 ## 🔗 Where to Find the Thesis
 The thesis (PDF) will be available on arXiv:
